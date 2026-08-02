@@ -76,6 +76,40 @@ NAMES = {
 }
 
 
+# Verb pools used to name entries that have no curated name. The verb is
+# chosen from MEASURED behaviour (input model + goal + length), so the
+# instruction card always matches what the microgame actually asks for --
+# rather than inventing a fictional theme for it.
+DERIVED = {
+    ("tap", "act"):   [("Quick Tap", "TAP!"), ("Snap To It", "PRESS!"), ("On Cue", "NOW!"),
+                       ("Hit It", "HIT!"), ("React", "REACT!"), ("Strike", "STRIKE!"),
+                       ("Punch In", "PUNCH!"), ("Trigger", "FIRE!"), ("Catch It", "CATCH!"),
+                       ("Grab", "GRAB!"), ("Smack", "SMACK!"), ("Poke", "POKE!")],
+    ("hold", "aim"):  [("Hold Steady", "HOLD!"), ("Line It Up", "AIM!"), ("Steady", "STEADY!"),
+                       ("Charge Up", "CHARGE!"), ("Keep It There", "HOLD!"), ("Wind Up", "WIND!")],
+    ("dpad", "aim"):  [("Steer", "STEER!"), ("Guide It", "GUIDE!"), ("Line Up", "AIM!"),
+                       ("Move It", "MOVE!"), ("Navigate", "GO!")],
+    ("none", "avoid"):[("Hang On", "SURVIVE!"), ("Don't Blink", "WAIT!"), ("Stay Put", "WAIT!"),
+                       ("Ride It Out", "HOLD ON!"), ("Weather It", "SURVIVE!"), ("Endure", "LAST!"),
+                       ("Sit Tight", "WAIT!"), ("Brace", "BRACE!")],
+}
+
+SUMMARY = {
+    "act":   "React the instant the moment arrives.",
+    "aim":   "Line it up and commit.",
+    "avoid": "Stay alive until the timer runs out.",
+}
+
+
+def derive_name(spec_id, inp, goal):
+    pool = DERIVED.get((inp, goal)) or DERIVED[("tap", "act")]
+    name, instr = pool[spec_id % len(pool)]
+    n = spec_id // len(pool)
+    if n:
+        name = "%s %d" % (name, n + 1)
+    return name, instr, SUMMARY.get(goal, SUMMARY["act"])
+
+
 def classify(spec):
     ig = spec.get("inputGlobals") or []
     keys = spec.get("keys") or []
@@ -105,10 +139,11 @@ def main():
     for i, l in enumerate(linked):
         sid = l["id"]
         s = specs.get(sid, {})
-        if sid not in NAMES:
-            continue
-        name, instruction, summary = NAMES[sid]
         inp, goal = classify(s)
+        if sid in NAMES:
+            name, instruction, summary = NAMES[sid]
+        else:
+            name, instruction, summary = derive_name(sid, inp, goal)
 
         moduli = sorted(set(
             (s.get("start", {}).get("randomModuli") or []) +

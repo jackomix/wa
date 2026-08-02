@@ -28,15 +28,17 @@ from capstone import Cs, CS_ARCH_ARM, CS_MODE_THUMB
 
 ROM_BASE = 0x08000000
 ROM_END = 0x08800000
-LOAD_GRAPHICS = 0x08002124
-LOAD_GRAPHICS_ALT = 0x080021C8
+# Several graphics-loading entry points exist; all take the GraphicsTable
+# in r1. 0x08002598 is the one the majority of unresolved microgames use,
+# which is why tracing only 0x08002124 left 69 unlinked.
+LOADERS = (0x08002124, 0x080021C8, 0x08002598, 0x08002530, 0x0800260C)
 
 
 def is_rom(v):
     return ROM_BASE <= v < ROM_END
 
 
-def trace_graphics_tables(rom, addr, max_bytes=0x800):
+def trace_graphics_tables(rom, addr, max_bytes=0xC00):
     """Return every GraphicsTable address passed to load_graphics()."""
     md = Cs(CS_ARCH_ARM, CS_MODE_THUMB)
     a = addr & ~1
@@ -73,7 +75,7 @@ def trace_graphics_tables(rom, addr, max_bytes=0x800):
                 tgt = int(op.strip("# "), 0)
             except Exception:
                 continue
-            if tgt in (LOAD_GRAPHICS, LOAD_GRAPHICS_ALT):
+            if tgt in LOADERS:
                 v = regs.get("r1")
                 if v and is_rom(v):
                     tables.append(v)
@@ -88,6 +90,7 @@ def main():
     ap.add_argument("rom")
     ap.add_argument("table")
     ap.add_argument("out")
+    ap.add_argument("--scan", type=lambda x:int(x,0), default=0x800)
     args = ap.parse_args()
 
     rom = open(args.rom, "rb").read()

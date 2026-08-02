@@ -295,9 +295,14 @@ movs r2, #0x80 ; lsls r2,#6
 bl   #0x8002124
 ```
 
-Tracking literal-pool loads into `r1` up to that call resolves **72 of 141**
-microgames to a real table; **71** match an already-extracted bundle, and **41** have
-a full background renderable at true colour.
+There is more than one loader entry point. Tracing only `0x08002124` resolved just
+72 of 141; the majority of the remainder call **`0x08002598`**, which takes the table
+in `r1` as well. Tracing the full set
+(`0x08002124 / 0x080021C8 / 0x08002598 / 0x08002530 / 0x0800260C`) resolves
+**141 of 141**.
+
+**139** match an already-extracted bundle, giving **91 true-colour backgrounds** and
+**555 sprites**.
 
 ---
 
@@ -340,9 +345,13 @@ The ROM is required and is not redistributed by this repo.
 
 ## 9. Honest limits
 
-- **41 of 213** microgames are recreated. The blocker is the `startFunc` → R1 trace,
-  which resolves 72; the rest load graphics through a helper or a jump table that the
-  current linear tracer does not follow. Extending it is the highest-value next step.
+- **139 of 213** microgames are recreated. The `startFunc` → R1 trace now resolves
+  all 141 table entries; 139 map onto extracted bundles. The gap to 213 is that the
+  master table `D_083A50E0` parses cleanly for 141 entries — the remainder are
+  reached through the stage scripts rather than that table, and following those is
+  the next step.
+- **91 of 139** have a full background; the rest resolve to sprite-only bundles
+  (their backdrop is drawn by a shared host-level table).
 - The recreations reproduce **art, timing, input model, difficulty tiering and
   outcome shape**. They do not yet reproduce every bespoke animation curve — that
   needs per-microgame reading of `updateFunc`, which is done for the timing/input
