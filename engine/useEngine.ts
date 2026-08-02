@@ -147,14 +147,9 @@ function beginRun(c: Core, startBeat: number, stageId?: string) {
   const stage = c.currentStage ? STAGES[c.currentStage] : null;
   if (stage) c.bpm = stage.startBpm;
   c.phase = {
-    kind: "interlude",
+    kind: "stage_intro",
     startBeat,
-    lengthBeats: 8,
-    result: "start",
-    speedUp: false,
-    bpmBumped: false,
-    toGameOver: false,
-    lostLife: false,
+    stageId: c.currentStage,
   };
 }
 
@@ -277,6 +272,21 @@ function tick(c: Core, dt: number) {
       const stageId = startStageId;
       startStageId = null;
       beginRun(c, p.startAtBeat, stageId ?? undefined);
+    }
+  } else if (p.kind === "stage_intro") {
+    const local = c.beatClock - p.startBeat;
+    // Stage intro lasts 4 beats, then transitions to the first interlude
+    if (local >= 4) {
+      c.phase = {
+        kind: "interlude",
+        startBeat: p.startBeat + 4,
+        lengthBeats: 8,
+        result: "start",
+        speedUp: false,
+        bpmBumped: false,
+        toGameOver: false,
+        lostLife: false,
+      };
     }
   } else if (p.kind === "interlude") {
     const local = c.beatClock - p.startBeat;

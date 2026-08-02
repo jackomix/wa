@@ -242,7 +242,7 @@ export const Doors: React.FC<{ open: number }> = ({ open }) =>
 /* ================================================================== */
 
 /* Wario's Boombox */
-const WarioBoombox: React.FC<{ snap: EngineSnapshot; bar: number; pop: number }> = ({ snap, bar, pop }) => {
+const WarioBoombox: React.FC<{ snap: EngineSnapshot; bar: number; pop: number }> = ({ snap, pop }) => {
   const warioFace = snap.phase.kind === 'interlude' && snap.phase.result === 'win'
     ? '😄' : snap.phase.kind === 'interlude' && snap.phase.result === 'lose'
     ? '😖' : '😈';
@@ -324,7 +324,7 @@ const JimmyElevator: React.FC<{ snap: EngineSnapshot; bar: number; pop: number }
 };
 
 /* 9-Volt's TV */
-const NineVoltTV: React.FC<{ snap: EngineSnapshot; bar: number; pop: number }> = ({ snap, bar, pop }) => (
+const NineVoltTV: React.FC<{ snap: EngineSnapshot; bar: number; pop: number }> = ({ snap, pop }) => (
   <div className="absolute inset-0 flex flex-col items-center justify-center">
     <div className="relative" style={{ transform: `scale(${pop})` }}>
       <div className="bg-[#1a1a2e] rounded-lg border-4 border-[#ef4444] overflow-hidden" style={{ width: '50cqw', height: '36cqw' }}>
@@ -347,7 +347,7 @@ const NineVoltTV: React.FC<{ snap: EngineSnapshot; bar: number; pop: number }> =
 );
 
 /* Dribble & Spitz's UFO */
-const DribbleUFO: React.FC<{ snap: EngineSnapshot; bar: number; pop: number }> = ({ snap, bar, pop }) => (
+const DribbleUFO: React.FC<{ snap: EngineSnapshot; bar: number; pop: number }> = ({ snap, pop }) => (
   <div className="absolute inset-0 flex flex-col items-center justify-center">
     <div className="absolute inset-0 bg-[#0a0a1a]">
       {Array.from({ length: 20 }).map((_, i) => (
@@ -373,7 +373,7 @@ const DribbleUFO: React.FC<{ snap: EngineSnapshot; bar: number; pop: number }> =
 );
 
 /* Mona's Stage */
-const MonaStage: React.FC<{ snap: EngineSnapshot; bar: number; pop: number }> = ({ snap, bar, pop }) => (
+const MonaStage: React.FC<{ snap: EngineSnapshot; bar: number; pop: number }> = ({ snap, pop }) => (
   <div className="absolute inset-0 flex flex-col items-center justify-center">
     <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, #7c2d12 0%, #9a3412 50%, #7c2d12 100%)' }}>
       <div className="absolute left-0 top-0 bottom-0 w-[15%]" style={{ background: 'linear-gradient(90deg, #5c1d02, #7c2d12, #5c1d02)' }} />
@@ -388,7 +388,7 @@ const MonaStage: React.FC<{ snap: EngineSnapshot; bar: number; pop: number }> = 
 );
 
 /* Dr. Crygor's Lab */
-const CrygorLab: React.FC<{ snap: EngineSnapshot; bar: number; pop: number }> = ({ snap, bar, pop }) => (
+const CrygorLab: React.FC<{ snap: EngineSnapshot; bar: number; pop: number }> = ({ snap, pop }) => (
   <div className="absolute inset-0 flex flex-col items-center justify-center">
     <div className="absolute inset-0 bg-[#0a1628]">
       <div className="absolute bg-[#22c55e]/20 rounded-lg border border-[#22c55e]/40" style={{ left: '5%', top: '10%', width: '20cqw', height: '30cqw' }}>
@@ -406,7 +406,7 @@ const CrygorLab: React.FC<{ snap: EngineSnapshot; bar: number; pop: number }> = 
 );
 
 /* Orbulon's Cockpit */
-const OrbulonCockpit: React.FC<{ snap: EngineSnapshot; bar: number; pop: number }> = ({ snap, bar, pop }) => (
+const OrbulonCockpit: React.FC<{ snap: EngineSnapshot; bar: number; pop: number }> = ({ snap, pop }) => (
   <div className="absolute inset-0 flex flex-col items-center justify-center">
     <div className="absolute inset-0 bg-[#0c4a6e]">
       <div className="absolute rounded-full" style={{ top: '5%', left: '10%', width: '80%', height: '50%', background: 'radial-gradient(ellipse, #0a0a2a 0%, #0c4a6e 100%)', border: '3px solid #06b6d4' }}>
@@ -427,7 +427,7 @@ const OrbulonCockpit: React.FC<{ snap: EngineSnapshot; bar: number; pop: number 
 );
 
 /* Kat & Ana's Dojo */
-const KatAnaDojo: React.FC<{ snap: EngineSnapshot; bar: number; pop: number }> = ({ snap, bar, pop }) => (
+const KatAnaDojo: React.FC<{ snap: EngineSnapshot; bar: number; pop: number }> = ({ snap, pop }) => (
   <div className="absolute inset-0 flex flex-col items-center justify-center">
     <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, #064e3b 0%, #0a3a2e 50%, #064e3b 100%)' }}>
       {[20, 40, 60, 80].map((x, i) => (
@@ -526,6 +526,7 @@ export const InterludeUI: React.FC<{ snap: EngineSnapshot }> = ({ snap }) => {
             {interludeStyle === 'cat' && <MonaStage snap={snap} bar={bar} pop={pop} />}
             {interludeStyle === 'lab' && <CrygorLab snap={snap} bar={bar} pop={pop} />}
             {interludeStyle === 'crystal' && <KatAnaDojo snap={snap} bar={bar} pop={pop} />}
+            {interludeStyle === 'cockpit' && <OrbulonCockpit snap={snap} bar={bar} pop={pop} />}
           </div>
           {/* Result overlay */}
           <div className="absolute inset-0 flex flex-col items-center justify-center">
@@ -572,6 +573,7 @@ export const InterludeUI: React.FC<{ snap: EngineSnapshot }> = ({ snap }) => {
             {interludeStyle === 'cat' && <MonaStage snap={snap} bar={bar} pop={pop} />}
             {interludeStyle === 'lab' && <CrygorLab snap={snap} bar={bar} pop={pop} />}
             {interludeStyle === 'crystal' && <KatAnaDojo snap={snap} bar={bar} pop={pop} />}
+            {interludeStyle === 'cockpit' && <OrbulonCockpit snap={snap} bar={bar} pop={pop} />}
           </div>
           <div className="absolute inset-0 flex flex-col items-center justify-center">
             <div className="font-black text-white/60 tracking-widest" style={{ fontSize: "3cqw" }}>
@@ -622,6 +624,59 @@ export const InterludeUI: React.FC<{ snap: EngineSnapshot }> = ({ snap }) => {
         style={{ right: "3%", top: "3%", fontSize: "3cqw" }}
       >
         FLOOR {snap.gamesPlayed + 1}
+      </div>
+    </div>
+  );
+};
+
+/* ================================================================== */
+/*  Stage Intro — Brief character intro before a stage begins          */
+/* ================================================================== */
+const STAGE_INTRO_EMOJI: Record<string, string> = {
+  intro: '😈', sports: '😎', scifi: '🛸', strange: '💃',
+  nintendo: '🎮', iq: '👽', reality: '🧑‍🔬', nature: '👧', anything_goes: '😈',
+};
+const STAGE_INTRO_MSG: Record<string, string> = {
+  intro: "WARIO'S STAGE", sports: "JIMMY T.'S STAGE", scifi: "DRIBBLE & SPITZ'S STAGE",
+  strange: "MONA'S STAGE", nintendo: "9-VOLT'S STAGE", iq: "ORBULON'S STAGE",
+  reality: "DR. CRYGOR'S STAGE", nature: "KAT & ANA'S STAGE", anything_goes: "ANYTHING GOES!",
+};
+export const StageIntro: React.FC<{ snap: EngineSnapshot }> = ({ snap }) => {
+  const p = snap.phase;
+  if (p.kind !== "stage_intro") return null;
+  const local = snap.beatClock - p.startBeat;
+  const progress = clamp(local / 4, 0, 1);
+  const stage = STAGES[p.stageId];
+  if (!stage) return null;
+
+  const emoji = STAGE_INTRO_EMOJI[p.stageId] || '😈';
+  const msg = STAGE_INTRO_MSG[p.stageId] || p.stageId.toUpperCase();
+
+  // Slide in from left, then center
+  const slideX = progress < 0.3 ? -50 + progress / 0.3 * 50 : 0;
+  const scaleIn = progress < 0.3 ? 0.5 + progress / 0.3 * 0.5 : 1;
+  const fadeOut = progress > 0.8 ? 1 - (progress - 0.8) / 0.2 : 1;
+
+  return (
+    <div className="absolute inset-0 z-[80] flex items-center justify-center" style={{ opacity: fadeOut }}>
+      <div style={{ background: stage.colors.bg, width: '100%', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+        <div className="relative" style={{ transform: `translateX(${slideX}%) scale(${scaleIn * beatPop(snap.beatPhase, 0.15)})` }}>
+          <div style={{ fontSize: '20cqw', marginBottom: '2cqw' }}>{emoji}</div>
+        </div>
+        <div className="font-black tracking-widest" style={{
+          fontSize: '5cqw',
+          color: stage.colors.primary,
+          WebkitTextStroke: '0.3cqw #14082b',
+          transform: `scale(${scaleIn * beatPop(snap.beatPhase, 0.1)})`,
+        }}>
+          {msg}
+        </div>
+        <div className="font-bold mt-[2cqw]" style={{ fontSize: '2.5cqw', color: stage.colors.primary + '88' }}>
+          ♩ = {Math.round(snap.bpm)} BPM
+        </div>
+        {/* Decorative lines */}
+        <div className="absolute" style={{ left: '10%', right: '10%', top: '30%', height: '1px', background: `linear-gradient(90deg, transparent, ${stage.colors.primary}44, transparent)` }} />
+        <div className="absolute" style={{ left: '10%', right: '10%', bottom: '30%', height: '1px', background: `linear-gradient(90deg, transparent, ${stage.colors.primary}44, transparent)` }} />
       </div>
     </div>
   );

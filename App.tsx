@@ -8,6 +8,7 @@ import {
   MicrogameLayer,
   RhythmHUD,
   Stage,
+  StageIntro,
   TitleScreen,
 } from "./components/Screens";
 import { Editor, LibraryModal } from "./editor/Editor";
@@ -64,6 +65,7 @@ export default function App() {
       <Instruction snap={snap} />
       <TitleScreen snap={snap} />
       <GameOverScreen snap={snap} />
+      <StageIntro snap={snap} />
       <RhythmHUD snap={snap} />
 
       {/* ROM status indicator */}

@@ -9,7 +9,7 @@
  * This system recreates that pipeline in the browser.
  */
 
-import React, { useRef, useEffect, useState, useCallback } from 'react';
+import React, { useRef, useEffect } from 'react';
 
 // ============================================================
 // GBA Color Palettes (from ROM decompilation)
@@ -146,11 +146,13 @@ export function spriteToDataURL(sprite: SpriteData, scale: number = 1): string {
 // Sprite Cache
 // ============================================================
 
+// Sprite cache for pre-rendered data URLs
 const _spriteCache = new Map<string, string>();
 
-function getSpriteURL(id: string, sprite: SpriteData, scale: number = 1): string {
-  const key = `${id}_${scale}`;
-  if (_spriteCache.has(key)) return _spriteCache.get(key)!;
+/** Get a cached sprite data URL, or generate and cache it */
+export function getCachedSpriteURL(key: string, sprite: SpriteData, scale: number = 1): string {
+  const cached = _spriteCache.get(key);
+  if (cached) return cached;
   const url = spriteToDataURL(sprite, scale);
   _spriteCache.set(key, url);
   return url;
