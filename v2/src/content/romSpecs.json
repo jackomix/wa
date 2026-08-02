@@ -1,0 +1,2627 @@
+[
+  {
+    "id": 0,
+    "name": "Hang On",
+    "instruction": "SURVIVE!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "wario",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      3,
+      16
+    ],
+    "keys": [
+      "A",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 1,
+    "name": "Line It Up",
+    "instruction": "AIM!",
+    "summary": "Line it up and commit.",
+    "host": "jimmy",
+    "input": "hold",
+    "goal": "aim",
+    "timer": 15,
+    "readsDifficulty": false,
+    "usesRandom": true,
+    "randomModuli": [
+      2,
+      128,
+      168
+    ],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Nose Dive",
+    "instruction": "PICK!",
+    "summary": "Guide the finger up the nostril before time runs out.",
+    "host": "ninevolt",
+    "input": "tap",
+    "goal": "act",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B",
+      "DOWN"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Pumped Up",
+    "instruction": "PUMP!",
+    "summary": "Fill the gauge to 100 by hammering the button.",
+    "host": "dribble",
+    "input": "tap",
+    "goal": "act",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Navigate",
+    "instruction": "GO!",
+    "summary": "Line it up and commit.",
+    "host": "kat",
+    "input": "dpad",
+    "goal": "aim",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      4,
+      100,
+      128,
+      192,
+      208
+    ],
+    "keys": [
+      "A",
+      "B",
+      "DOWN",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Sole Man",
+    "instruction": "STOMP!",
+    "summary": "Bring the foot down on the target.",
+    "host": "mona",
+    "input": "tap",
+    "goal": "act",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Nose Picker",
+    "instruction": "PICK!",
+    "summary": "Time the pick \u2014 the boogers are watching.",
+    "host": "crygor",
+    "input": "tap",
+    "goal": "act",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2,
+      3,
+      4
+    ],
+    "keys": [
+      "A",
+      "B",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Brace",
+    "instruction": "BRACE!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "orbulon",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      3,
+      16
+    ],
+    "keys": [
+      "A",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Quick Draw",
+    "instruction": "GRAB!",
+    "summary": "Snatch it the instant it appears.",
+    "host": "wario",
+    "input": "tap",
+    "goal": "act",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      6,
+      12,
+      48
+    ],
+    "keys": [
+      "A",
+      "B",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Grab",
+    "instruction": "GRAB!",
+    "summary": "React the instant the moment arrives.",
+    "host": "jimmy",
+    "input": "tap",
+    "goal": "act",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      4,
+      32,
+      128,
+      191,
+      192
+    ],
+    "keys": [
+      "A",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Hurdle",
+    "instruction": "JUMP!",
+    "summary": "Clear the bar without clipping it.",
+    "host": "ninevolt",
+    "input": "hold",
+    "goal": "aim",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      32,
+      128
+    ],
+    "keys": [
+      "A",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Guide It 3",
+    "instruction": "GUIDE!",
+    "summary": "Line it up and commit.",
+    "host": "dribble",
+    "input": "dpad",
+    "goal": "aim",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      96
+    ],
+    "keys": [
+      "A",
+      "LEFT",
+      "RIGHT",
+      "START"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Weather It 2",
+    "instruction": "SURVIVE!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "kat",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      96
+    ],
+    "keys": []
+  },
+  {
+    "id": 13,
+    "name": "Dig Dug",
+    "instruction": "DIG!",
+    "summary": "Break through the soil before the timer dies.",
+    "host": "mona",
+    "input": "hold",
+    "goal": "aim",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      0,
+      14,
+      30
+    ],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Chop Chop",
+    "instruction": "CHOP!",
+    "summary": "One clean swing, on the beat.",
+    "host": "crygor",
+    "input": "tap",
+    "goal": "act",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Hit It 2",
+    "instruction": "HIT!",
+    "summary": "React the instant the moment arrives.",
+    "host": "orbulon",
+    "input": "tap",
+    "goal": "act",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      4,
+      128
+    ],
+    "keys": [
+      "A",
+      "B",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Swat It",
+    "instruction": "SWAT!",
+    "summary": "Flatten the fly.",
+    "host": "wario",
+    "input": "tap",
+    "goal": "act",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Don't Blink 3",
+    "instruction": "WAIT!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "jimmy",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": []
+  },
+  {
+    "id": 18,
+    "name": "Move It 4",
+    "instruction": "MOVE!",
+    "summary": "Line it up and commit.",
+    "host": "ninevolt",
+    "input": "dpad",
+    "goal": "aim",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B",
+      "RIGHT"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Catch!",
+    "instruction": "CATCH!",
+    "summary": "Get under it and take the catch.",
+    "host": "dribble",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      4,
+      6,
+      15,
+      24,
+      25
+    ],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Bounce",
+    "instruction": "BOUNCE!",
+    "summary": "Keep it in the air.",
+    "host": "kat",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      6
+    ],
+    "keys": []
+  },
+  {
+    "id": 21,
+    "name": "Endure 3",
+    "instruction": "LAST!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "mona",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      3,
+      12,
+      94,
+      240
+    ],
+    "keys": [
+      "B",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Duck",
+    "instruction": "DUCK!",
+    "summary": "Get under the swing.",
+    "host": "crygor",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      12
+    ],
+    "keys": [
+      "B",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Spin Cycle",
+    "instruction": "SPIN!",
+    "summary": "Wind it all the way round.",
+    "host": "orbulon",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2
+    ],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Hang On 4",
+    "instruction": "SURVIVE!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "wario",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Don't Blink 4",
+    "instruction": "WAIT!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "jimmy",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": false,
+    "usesRandom": true,
+    "randomModuli": [
+      3,
+      8,
+      12
+    ],
+    "keys": []
+  },
+  {
+    "id": 26,
+    "name": "Tap Out",
+    "instruction": "TAP!",
+    "summary": "Tap the moment the signal shows.",
+    "host": "ninevolt",
+    "input": "tap",
+    "goal": "act",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      4
+    ],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Balance",
+    "instruction": "BALANCE!",
+    "summary": "Hold it steady until the bell.",
+    "host": "dribble",
+    "input": "tap",
+    "goal": "act",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Keep It There 5",
+    "instruction": "HOLD!",
+    "summary": "Line it up and commit.",
+    "host": "kat",
+    "input": "hold",
+    "goal": "aim",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      1,
+      2,
+      6,
+      12,
+      128,
+      192
+    ],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Wind Up 5",
+    "instruction": "WIND!",
+    "summary": "Line it up and commit.",
+    "host": "mona",
+    "input": "hold",
+    "goal": "aim",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2,
+      192
+    ],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Slice",
+    "instruction": "SLICE!",
+    "summary": "Cut it in one pass.",
+    "host": "crygor",
+    "input": "tap",
+    "goal": "act",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      3,
+      4,
+      8
+    ],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Reel It In",
+    "instruction": "REEL!",
+    "summary": "Land the catch before it escapes.",
+    "host": "orbulon",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2
+    ],
+    "keys": []
+  },
+  {
+    "id": 32,
+    "name": "Hang On 5",
+    "instruction": "SURVIVE!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "wario",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 30,
+    "readsDifficulty": false,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Don't Blink 5",
+    "instruction": "WAIT!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "jimmy",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2,
+      4,
+      6
+    ],
+    "keys": [
+      "B",
+      "DOWN"
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Smack 3",
+    "instruction": "SMACK!",
+    "summary": "React the instant the moment arrives.",
+    "host": "ninevolt",
+    "input": "tap",
+    "goal": "act",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2,
+      4,
+      6
+    ],
+    "keys": [
+      "A",
+      "B",
+      "DOWN"
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Ride It Out 5",
+    "instruction": "HOLD ON!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "dribble",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Dodge",
+    "instruction": "DODGE!",
+    "summary": "Do not get hit.",
+    "host": "kat",
+    "input": "tap",
+    "goal": "act",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2,
+      5,
+      186
+    ],
+    "keys": [
+      "A",
+      "B",
+      "RIGHT",
+      "SELECT",
+      "UP"
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Fetch",
+    "instruction": "FETCH!",
+    "summary": "Meet it where it lands.",
+    "host": "mona",
+    "input": "tap",
+    "goal": "act",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2,
+      5
+    ],
+    "keys": [
+      "A",
+      "B",
+      "RIGHT",
+      "SELECT",
+      "UP"
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Sit Tight 5",
+    "instruction": "WAIT!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "crygor",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Stack",
+    "instruction": "STACK!",
+    "summary": "Drop it square on the pile.",
+    "host": "orbulon",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 40,
+    "name": "React 4",
+    "instruction": "REACT!",
+    "summary": "React the instant the moment arrives.",
+    "host": "wario",
+    "input": "tap",
+    "goal": "act",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      8,
+      186
+    ],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Don't Blink 6",
+    "instruction": "WAIT!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "jimmy",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 30,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2
+    ],
+    "keys": []
+  },
+  {
+    "id": 42,
+    "name": "Stay Put 6",
+    "instruction": "WAIT!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "ninevolt",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Pop",
+    "instruction": "POP!",
+    "summary": "Burst it before it drifts off.",
+    "host": "dribble",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      10
+    ],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Sprint",
+    "instruction": "RUN!",
+    "summary": "Reach the line in time.",
+    "host": "kat",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 20,
+    "readsDifficulty": false,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Endure 6",
+    "instruction": "LAST!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "mona",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Aim",
+    "instruction": "AIM!",
+    "summary": "Line it up and fire.",
+    "host": "crygor",
+    "input": "tap",
+    "goal": "act",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Sweep",
+    "instruction": "SWEEP!",
+    "summary": "Clear the floor.",
+    "host": "orbulon",
+    "input": "hold",
+    "goal": "aim",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      128
+    ],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Hang On 7",
+    "instruction": "SURVIVE!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "wario",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": []
+  },
+  {
+    "id": 49,
+    "name": "Escape",
+    "instruction": "ESCAPE!",
+    "summary": "Get out before it closes.",
+    "host": "jimmy",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Launch",
+    "instruction": "LAUNCH!",
+    "summary": "Fire at the top of the arc.",
+    "host": "ninevolt",
+    "input": "tap",
+    "goal": "act",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 51,
+    "name": "Charge Up 9",
+    "instruction": "CHARGE!",
+    "summary": "Line it up and commit.",
+    "host": "dribble",
+    "input": "hold",
+    "goal": "aim",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2
+    ],
+    "keys": [
+      "A",
+      "B",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 52,
+    "name": "Weather It 7",
+    "instruction": "SURVIVE!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "kat",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      3,
+      16
+    ],
+    "keys": [
+      "A",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 53,
+    "name": "Squash",
+    "instruction": "SQUASH!",
+    "summary": "Flatten it flat.",
+    "host": "mona",
+    "input": "dpad",
+    "goal": "aim",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B",
+      "LEFT",
+      "SELECT",
+      "START"
+    ]
+  },
+  {
+    "id": 54,
+    "name": "Hold Steady 10",
+    "instruction": "HOLD!",
+    "summary": "Line it up and commit.",
+    "host": "crygor",
+    "input": "hold",
+    "goal": "aim",
+    "timer": 15,
+    "readsDifficulty": false,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 55,
+    "name": "Thread It",
+    "instruction": "THREAD!",
+    "summary": "Line up and pass through.",
+    "host": "orbulon",
+    "input": "hold",
+    "goal": "aim",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2,
+      3
+    ],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 56,
+    "name": "Catch It 5",
+    "instruction": "CATCH!",
+    "summary": "React the instant the moment arrives.",
+    "host": "wario",
+    "input": "tap",
+    "goal": "act",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 57,
+    "name": "Snap",
+    "instruction": "SNAP!",
+    "summary": "Shut it at the right instant.",
+    "host": "jimmy",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 58,
+    "name": "Climb",
+    "instruction": "CLIMB!",
+    "summary": "Get to the top.",
+    "host": "ninevolt",
+    "input": "tap",
+    "goal": "act",
+    "timer": 25,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 59,
+    "name": "Wake Up",
+    "instruction": "WAKE!",
+    "summary": "Rouse them before the alarm stops.",
+    "host": "dribble",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2,
+      4,
+      48,
+      128
+    ],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 60,
+    "name": "Serve",
+    "instruction": "SERVE!",
+    "summary": "Return it over the net.",
+    "host": "kat",
+    "input": "hold",
+    "goal": "aim",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      0,
+      2,
+      3,
+      4,
+      10,
+      190
+    ],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 61,
+    "name": "Snap To It 6",
+    "instruction": "PRESS!",
+    "summary": "React the instant the moment arrives.",
+    "host": "mona",
+    "input": "tap",
+    "goal": "act",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      0,
+      2,
+      4,
+      10,
+      190
+    ],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 62,
+    "name": "Sit Tight 8",
+    "instruction": "WAIT!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "crygor",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 63,
+    "name": "Brace 8",
+    "instruction": "BRACE!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "orbulon",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 25,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": []
+  },
+  {
+    "id": 64,
+    "name": "Plug In",
+    "instruction": "PLUG!",
+    "summary": "Make the connection.",
+    "host": "wario",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      8
+    ],
+    "keys": [
+      "A",
+      "B",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 65,
+    "name": "Wind Up 11",
+    "instruction": "WIND!",
+    "summary": "Line it up and commit.",
+    "host": "jimmy",
+    "input": "hold",
+    "goal": "aim",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      186
+    ],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 66,
+    "name": "Stay Put 9",
+    "instruction": "WAIT!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "ninevolt",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      60
+    ],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 67,
+    "name": "Line It Up 12",
+    "instruction": "AIM!",
+    "summary": "Line it up and commit.",
+    "host": "dribble",
+    "input": "hold",
+    "goal": "aim",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2,
+      16
+    ],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 68,
+    "name": "Shoot",
+    "instruction": "SHOOT!",
+    "summary": "Hit the target dead on.",
+    "host": "kat",
+    "input": "tap",
+    "goal": "act",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B",
+      "SELECT",
+      "START"
+    ]
+  },
+  {
+    "id": 69,
+    "name": "Weave",
+    "instruction": "WEAVE!",
+    "summary": "Slip past everything.",
+    "host": "mona",
+    "input": "tap",
+    "goal": "act",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2,
+      30
+    ],
+    "keys": [
+      "A",
+      "B",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 70,
+    "name": "Land It",
+    "instruction": "LAND!",
+    "summary": "Touch down softly.",
+    "host": "crygor",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": false,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 71,
+    "name": "Feed",
+    "instruction": "FEED!",
+    "summary": "Get it in the mouth.",
+    "host": "orbulon",
+    "input": "hold",
+    "goal": "aim",
+    "timer": 25,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2
+    ],
+    "keys": [
+      "A",
+      "B",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 72,
+    "name": "Line Up 15",
+    "instruction": "AIM!",
+    "summary": "Line it up and commit.",
+    "host": "wario",
+    "input": "dpad",
+    "goal": "aim",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2
+    ],
+    "keys": [
+      "LEFT",
+      "SELECT",
+      "UP"
+    ]
+  },
+  {
+    "id": 73,
+    "name": "Trim",
+    "instruction": "TRIM!",
+    "summary": "Cut to the line, no further.",
+    "host": "jimmy",
+    "input": "tap",
+    "goal": "act",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B",
+      "UP"
+    ]
+  },
+  {
+    "id": 74,
+    "name": "Lift",
+    "instruction": "LIFT!",
+    "summary": "Heave it up.",
+    "host": "ninevolt",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B",
+      "START"
+    ]
+  },
+  {
+    "id": 75,
+    "name": "Ride It Out 10",
+    "instruction": "HOLD ON!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "dribble",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 20,
+    "readsDifficulty": false,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 76,
+    "name": "Weather It 10",
+    "instruction": "SURVIVE!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "kat",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      16
+    ],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 77,
+    "name": "Hatch",
+    "instruction": "HATCH!",
+    "summary": "Crack it open.",
+    "host": "mona",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      16
+    ],
+    "keys": [
+      "A",
+      "B",
+      "RIGHT"
+    ]
+  },
+  {
+    "id": 78,
+    "name": "Finish",
+    "instruction": "FINISH!",
+    "summary": "Take the last step.",
+    "host": "crygor",
+    "input": "tap",
+    "goal": "act",
+    "timer": 25,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2,
+      15,
+      20
+    ],
+    "keys": [
+      "A",
+      "B",
+      "DOWN",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 79,
+    "name": "Line It Up 14",
+    "instruction": "AIM!",
+    "summary": "Line it up and commit.",
+    "host": "orbulon",
+    "input": "hold",
+    "goal": "aim",
+    "timer": 25,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 80,
+    "name": "Hang On 11",
+    "instruction": "SURVIVE!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "wario",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 10,
+    "readsDifficulty": false,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 81,
+    "name": "Don't Blink 11",
+    "instruction": "WAIT!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "jimmy",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      3,
+      186
+    ],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 82,
+    "name": "Smack 7",
+    "instruction": "SMACK!",
+    "summary": "React the instant the moment arrives.",
+    "host": "ninevolt",
+    "input": "tap",
+    "goal": "act",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 83,
+    "name": "Ride It Out 11",
+    "instruction": "HOLD ON!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "dribble",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      3,
+      16
+    ],
+    "keys": [
+      "A",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 84,
+    "name": "Weather It 11",
+    "instruction": "SURVIVE!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "kat",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 85,
+    "name": "Endure 11",
+    "instruction": "LAST!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "mona",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 20,
+    "readsDifficulty": false,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 86,
+    "name": "On Cue 8",
+    "instruction": "NOW!",
+    "summary": "React the instant the moment arrives.",
+    "host": "crygor",
+    "input": "tap",
+    "goal": "act",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 87,
+    "name": "Hit It 8",
+    "instruction": "HIT!",
+    "summary": "React the instant the moment arrives.",
+    "host": "orbulon",
+    "input": "tap",
+    "goal": "act",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 88,
+    "name": "Hang On 12",
+    "instruction": "SURVIVE!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "wario",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 30,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 89,
+    "name": "Strike 8",
+    "instruction": "STRIKE!",
+    "summary": "React the instant the moment arrives.",
+    "host": "jimmy",
+    "input": "tap",
+    "goal": "act",
+    "timer": 25,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      30
+    ],
+    "keys": [
+      "A",
+      "B",
+      "LEFT",
+      "SELECT",
+      "START"
+    ]
+  },
+  {
+    "id": 90,
+    "name": "Stay Put 12",
+    "instruction": "WAIT!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "ninevolt",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 25,
+    "readsDifficulty": false,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "LEFT",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 91,
+    "name": "Ride It Out 12",
+    "instruction": "HOLD ON!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "dribble",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": false,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 92,
+    "name": "Weather It 12",
+    "instruction": "SURVIVE!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "kat",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 93,
+    "name": "Endure 12",
+    "instruction": "LAST!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "mona",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": false,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 94,
+    "name": "Smack 8",
+    "instruction": "SMACK!",
+    "summary": "React the instant the moment arrives.",
+    "host": "crygor",
+    "input": "tap",
+    "goal": "act",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 95,
+    "name": "Poke 8",
+    "instruction": "POKE!",
+    "summary": "React the instant the moment arrives.",
+    "host": "orbulon",
+    "input": "tap",
+    "goal": "act",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 96,
+    "name": "Hang On 13",
+    "instruction": "SURVIVE!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "wario",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 20,
+    "readsDifficulty": false,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 97,
+    "name": "Don't Blink 13",
+    "instruction": "WAIT!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "jimmy",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 30,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      150,
+      200
+    ],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 98,
+    "name": "Move It 20",
+    "instruction": "MOVE!",
+    "summary": "Line it up and commit.",
+    "host": "ninevolt",
+    "input": "dpad",
+    "goal": "aim",
+    "timer": 25,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "UP"
+    ]
+  },
+  {
+    "id": 99,
+    "name": "Hit It 9",
+    "instruction": "HIT!",
+    "summary": "React the instant the moment arrives.",
+    "host": "dribble",
+    "input": "tap",
+    "goal": "act",
+    "timer": 20,
+    "readsDifficulty": false,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 100,
+    "name": "Keep It There 17",
+    "instruction": "HOLD!",
+    "summary": "Line it up and commit.",
+    "host": "kat",
+    "input": "hold",
+    "goal": "aim",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 101,
+    "name": "Endure 13",
+    "instruction": "LAST!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "mona",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 25,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 102,
+    "name": "Hold Steady 18",
+    "instruction": "HOLD!",
+    "summary": "Line it up and commit.",
+    "host": "crygor",
+    "input": "hold",
+    "goal": "aim",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2,
+      9
+    ],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 103,
+    "name": "Line It Up 18",
+    "instruction": "AIM!",
+    "summary": "Line it up and commit.",
+    "host": "orbulon",
+    "input": "hold",
+    "goal": "aim",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      90
+    ],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 104,
+    "name": "Hang On 14",
+    "instruction": "SURVIVE!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "wario",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 25,
+    "readsDifficulty": false,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 105,
+    "name": "Charge Up 18",
+    "instruction": "CHARGE!",
+    "summary": "Line it up and commit.",
+    "host": "jimmy",
+    "input": "hold",
+    "goal": "aim",
+    "timer": 25,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 106,
+    "name": "Keep It There 18",
+    "instruction": "HOLD!",
+    "summary": "Line it up and commit.",
+    "host": "ninevolt",
+    "input": "hold",
+    "goal": "aim",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2
+    ],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 107,
+    "name": "Ride It Out 14",
+    "instruction": "HOLD ON!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "dribble",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      0,
+      3,
+      5,
+      136,
+      150,
+      208
+    ],
+    "keys": [
+      "A",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 108,
+    "name": "Quick Tap 10",
+    "instruction": "TAP!",
+    "summary": "React the instant the moment arrives.",
+    "host": "kat",
+    "input": "tap",
+    "goal": "act",
+    "timer": 30,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 109,
+    "name": "Snap To It 10",
+    "instruction": "PRESS!",
+    "summary": "React the instant the moment arrives.",
+    "host": "mona",
+    "input": "tap",
+    "goal": "act",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 110,
+    "name": "Sit Tight 14",
+    "instruction": "WAIT!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "crygor",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 25,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2,
+      3,
+      5,
+      7,
+      8,
+      16
+    ],
+    "keys": [
+      "A",
+      "B",
+      "RIGHT",
+      "START"
+    ]
+  },
+  {
+    "id": 111,
+    "name": "Brace 14",
+    "instruction": "BRACE!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "orbulon",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 112,
+    "name": "Hang On 15",
+    "instruction": "SURVIVE!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "wario",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      0,
+      2,
+      15,
+      40,
+      80
+    ],
+    "keys": [
+      "A",
+      "B",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 113,
+    "name": "Don't Blink 15",
+    "instruction": "WAIT!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "jimmy",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 114,
+    "name": "Stay Put 15",
+    "instruction": "WAIT!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "ninevolt",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      3,
+      4,
+      5
+    ],
+    "keys": [
+      "A",
+      "B",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 115,
+    "name": "Ride It Out 15",
+    "instruction": "HOLD ON!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "dribble",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 116,
+    "name": "Weather It 15",
+    "instruction": "SURVIVE!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "kat",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 117,
+    "name": "Endure 15",
+    "instruction": "LAST!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "mona",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2,
+      3,
+      30
+    ],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 118,
+    "name": "Sit Tight 15",
+    "instruction": "WAIT!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "crygor",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      32
+    ],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 119,
+    "name": "Poke 10",
+    "instruction": "POKE!",
+    "summary": "React the instant the moment arrives.",
+    "host": "orbulon",
+    "input": "tap",
+    "goal": "act",
+    "timer": 25,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2,
+      128
+    ],
+    "keys": [
+      "A",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 120,
+    "name": "Hang On 16",
+    "instruction": "SURVIVE!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "wario",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2,
+      6,
+      8,
+      10,
+      40,
+      48
+    ],
+    "keys": [
+      "A",
+      "B",
+      "SELECT",
+      "START"
+    ]
+  },
+  {
+    "id": 121,
+    "name": "Line It Up 21",
+    "instruction": "AIM!",
+    "summary": "Line it up and commit.",
+    "host": "jimmy",
+    "input": "hold",
+    "goal": "aim",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 122,
+    "name": "Steady 21",
+    "instruction": "STEADY!",
+    "summary": "Line it up and commit.",
+    "host": "ninevolt",
+    "input": "hold",
+    "goal": "aim",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      11,
+      30
+    ],
+    "keys": [
+      "A",
+      "B",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 123,
+    "name": "Hit It 11",
+    "instruction": "HIT!",
+    "summary": "React the instant the moment arrives.",
+    "host": "dribble",
+    "input": "tap",
+    "goal": "act",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 124,
+    "name": "React 11",
+    "instruction": "REACT!",
+    "summary": "React the instant the moment arrives.",
+    "host": "kat",
+    "input": "tap",
+    "goal": "act",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 125,
+    "name": "Strike 11",
+    "instruction": "STRIKE!",
+    "summary": "React the instant the moment arrives.",
+    "host": "mona",
+    "input": "tap",
+    "goal": "act",
+    "timer": 30,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 126,
+    "name": "Sit Tight 16",
+    "instruction": "WAIT!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "crygor",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 25,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 127,
+    "name": "Brace 16",
+    "instruction": "BRACE!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "orbulon",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 128,
+    "name": "Hang On 17",
+    "instruction": "SURVIVE!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "wario",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 129,
+    "name": "Don't Blink 17",
+    "instruction": "WAIT!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "jimmy",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      6,
+      9
+    ],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 130,
+    "name": "Smack 11",
+    "instruction": "SMACK!",
+    "summary": "React the instant the moment arrives.",
+    "host": "ninevolt",
+    "input": "tap",
+    "goal": "act",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      3
+    ],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 131,
+    "name": "Ride It Out 17",
+    "instruction": "HOLD ON!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "dribble",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 132,
+    "name": "Weather It 17",
+    "instruction": "SURVIVE!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "kat",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      4,
+      7
+    ],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 133,
+    "name": "Snap To It 12",
+    "instruction": "PRESS!",
+    "summary": "React the instant the moment arrives.",
+    "host": "mona",
+    "input": "tap",
+    "goal": "act",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2
+    ],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 134,
+    "name": "Sit Tight 17",
+    "instruction": "WAIT!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "crygor",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 30,
+    "readsDifficulty": false,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 135,
+    "name": "Brace 17",
+    "instruction": "BRACE!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "orbulon",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      150,
+      225
+    ],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 136,
+    "name": "Hang On 18",
+    "instruction": "SURVIVE!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "wario",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 10,
+    "readsDifficulty": false,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 137,
+    "name": "Don't Blink 18",
+    "instruction": "WAIT!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "jimmy",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 138,
+    "name": "Stay Put 18",
+    "instruction": "WAIT!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "ninevolt",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      3
+    ],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 139,
+    "name": "Ride It Out 18",
+    "instruction": "HOLD ON!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "dribble",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      4
+    ],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 140,
+    "name": "Weather It 18",
+    "instruction": "SURVIVE!",
+    "summary": "Stay alive until the timer runs out.",
+    "host": "kat",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": false,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A"
+    ]
+  }
+]

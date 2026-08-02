@@ -1,0 +1,31 @@
+import { ROM_GAMES } from "../../src/content/romGames.ts";
+import { ROM_ART } from "../../src/content/romArt.ts";
+let pass=0,fail=0;
+const ok=(n,c)=>{c?(pass++,console.log("  \x1b[32mPASS\x1b[0m "+n)):(fail++,console.log("  \x1b[31mFAIL\x1b[0m "+n));};
+console.log("\n\x1b[1mROM recreations\x1b[0m");
+ok(`${ROM_GAMES.length} microgames built from ROM`, ROM_GAMES.length>=40);
+ok(`${ROM_ART.length} art bundles decoded`, ROM_ART.length>=70);
+const withBg=ROM_GAMES.filter(g=>g.actors.some(a=>a.name==="Scene"));
+ok(`${withBg.length} have a real ROM background`, withBg.length>=40);
+const withSprites=ROM_GAMES.filter(g=>g.actors.some(a=>a.name==="Player"));
+ok(`${withSprites.length} have real ROM sprites`, withSprites.length>=35);
+ok("every game has events", ROM_GAMES.every(g=>g.events.length>0));
+ok("every game has an instruction", ROM_GAMES.every(g=>g.instruction.length>0));
+ok("every game cites its ROM origin", ROM_GAMES.every(g=>g.origin?.includes("GraphicsTable")));
+ok("every game has 3 difficulty tiers", ROM_GAMES.every(g=>g.difficulty&&g.difficulty[1]&&g.difficulty[3]));
+ok("canvas is GBA-native 240x160", ROM_GAMES.every(g=>g.canvas.w===240&&g.canvas.h===160));
+const bars=new Set(ROM_GAMES.map(g=>g.lengthBars));
+ok("mixed 2-bar and 4-bar lengths from real timerValue", bars.has(2)&&bars.has(4));
+// real pixel art check
+const g0=withBg[0];
+const bg=g0.actors.find(a=>a.name==="Scene").costumes[0].frames[0].app;
+ok("background is indexed pixel art, not a glyph", bg.kind==="pixel");
+// index 0 is the reserved transparent slot, so check the rest
+const realCols=bg.palette.slice(1).filter(c=>c!=="#000000");
+ok(`background palette has ${realCols.length} real colours`, realCols.length>=1);
+const colourful=ROM_ART.filter(a=>a.background && a.background.palette.slice(1).filter(c=>c!=="#000000").length>=3);
+ok(`${colourful.length}/41 backgrounds are multi-colour`, colourful.length>=20);
+const nonEmpty=bg.pixels.flat().filter(v=>v>=0).length;
+ok(`background has ${nonEmpty} painted pixels`, nonEmpty>200);
+console.log(`\n  ${pass} passed, ${fail} failed\n`);
+process.exit(fail?1:0);

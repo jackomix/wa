@@ -1,0 +1,1153 @@
+[
+  {
+    "id": 0,
+    "subscene": "0x083CB918",
+    "spriteData": "0x083FE768",
+    "graphicsTables": [
+      "0x083CB78C"
+    ],
+    "timerValue": 20
+  },
+  {
+    "id": 1,
+    "subscene": "0x083CBA3C",
+    "spriteData": "0x083FE77C",
+    "graphicsTables": [],
+    "timerValue": 15
+  },
+  {
+    "id": 2,
+    "subscene": "0x083CBB68",
+    "spriteData": "0x083FE790",
+    "graphicsTables": [
+      "0x083CBA60",
+      "0x08345720",
+      "0x083CBB8C",
+      "0x083459B8"
+    ],
+    "timerValue": 15
+  },
+  {
+    "id": 3,
+    "subscene": "0x083CBC7C",
+    "spriteData": "0x083FE7A4",
+    "graphicsTables": [
+      "0x083CBB8C",
+      "0x083459B8",
+      "0x083CBCB0"
+    ],
+    "timerValue": 20
+  },
+  {
+    "id": 4,
+    "subscene": "0x083CBD7C",
+    "spriteData": "0x083FE7B8",
+    "graphicsTables": [
+      "0x083CBCB0"
+    ],
+    "timerValue": 10
+  },
+  {
+    "id": 5,
+    "subscene": "0x083CBFF8",
+    "spriteData": "0x083FE858",
+    "graphicsTables": [
+      "0x083CBF08",
+      "0x08346104",
+      "0x083CC180"
+    ],
+    "timerValue": 15
+  },
+  {
+    "id": 6,
+    "subscene": "0x083CC2D0",
+    "spriteData": "0x083FE7E0",
+    "graphicsTables": [
+      "0x083CC180",
+      "0x083CC328"
+    ],
+    "timerValue": 20
+  },
+  {
+    "id": 7,
+    "subscene": "0x083CB918",
+    "spriteData": "0x083FE808",
+    "graphicsTables": [
+      "0x083CB78C"
+    ],
+    "timerValue": 10
+  },
+  {
+    "id": 8,
+    "subscene": "0x083CC3F4",
+    "spriteData": "0x083FE808",
+    "graphicsTables": [
+      "0x083CC328"
+    ],
+    "timerValue": 10
+  },
+  {
+    "id": 9,
+    "subscene": "0x083CC4F8",
+    "spriteData": "0x083FE830",
+    "graphicsTables": [
+      "0x083CC418",
+      "0x083CC51C"
+    ],
+    "timerValue": 20
+  },
+  {
+    "id": 10,
+    "subscene": "0x083CC60C",
+    "spriteData": "0x083FE844",
+    "graphicsTables": [
+      "0x083CC51C"
+    ],
+    "timerValue": 15
+  },
+  {
+    "id": 11,
+    "subscene": "0x083CC728",
+    "spriteData": "0x083FE7F4",
+    "graphicsTables": [
+      "0x083CC650"
+    ],
+    "timerValue": 15
+  },
+  {
+    "id": 12,
+    "subscene": "0x083CC97C",
+    "spriteData": "0x083FE81C",
+    "graphicsTables": [
+      "0x083CC884"
+    ],
+    "timerValue": 15
+  },
+  {
+    "id": 13,
+    "subscene": "0x083CCC28",
+    "spriteData": "0x083FE7A4",
+    "graphicsTables": [
+      "0x083CCB44",
+      "0x083CCC4C"
+    ],
+    "timerValue": 20
+  },
+  {
+    "id": 14,
+    "subscene": "0x083CCD54",
+    "spriteData": "0x083FE7A4",
+    "graphicsTables": [
+      "0x083CCC4C"
+    ],
+    "timerValue": 20
+  },
+  {
+    "id": 15,
+    "subscene": "0x083CCE78",
+    "spriteData": "0x083FB248",
+    "graphicsTables": [
+      "0x083CCDA8",
+      "0x083CCED0"
+    ],
+    "timerValue": 20
+  },
+  {
+    "id": 16,
+    "subscene": "0x083CCFC0",
+    "spriteData": "0x083FE7F4",
+    "graphicsTables": [
+      "0x083CCED0",
+      "0x083CCFE8"
+    ],
+    "timerValue": 20
+  },
+  {
+    "id": 17,
+    "subscene": "0x083CD0B4",
+    "spriteData": "0x083FE8BC",
+    "graphicsTables": [
+      "0x083CCFE8"
+    ],
+    "timerValue": 15
+  },
+  {
+    "id": 18,
+    "subscene": "0x083CD254",
+    "spriteData": "0x083FE8E4",
+    "graphicsTables": [
+      "0x083CD188",
+      "0x083CD2C0"
+    ],
+    "timerValue": 10
+  },
+  {
+    "id": 19,
+    "subscene": "0x083CD398",
+    "spriteData": "0x083FE8D0",
+    "graphicsTables": [
+      "0x083CD2C0"
+    ],
+    "timerValue": 15
+  },
+  {
+    "id": 20,
+    "subscene": "0x083CD4D8",
+    "spriteData": "0x083FE880",
+    "graphicsTables": [
+      "0x083CD3BC"
+    ],
+    "timerValue": 20
+  },
+  {
+    "id": 21,
+    "subscene": "0x083CD64C",
+    "spriteData": "0x083FB298",
+    "graphicsTables": [
+      "0x083CD53C"
+    ],
+    "timerValue": 15
+  },
+  {
+    "id": 22,
+    "subscene": "0x083CD784",
+    "spriteData": "0x083FE768",
+    "graphicsTables": [
+      "0x083CD67C"
+    ],
+    "timerValue": 15
+  },
+  {
+    "id": 23,
+    "subscene": "0x083CD8D4",
+    "spriteData": "0x083FE8A8",
+    "graphicsTables": [
+      "0x083CD7E4"
+    ],
+    "timerValue": 20
+  },
+  {
+    "id": 24,
+    "subscene": "0x083CDA00",
+    "spriteData": "0x083FB270",
+    "graphicsTables": [
+      "0x083CD910"
+    ],
+    "timerValue": 10
+  },
+  {
+    "id": 25,
+    "subscene": "0x083CDB98",
+    "spriteData": "0x083FE808",
+    "graphicsTables": [],
+    "timerValue": 15
+  },
+  {
+    "id": 26,
+    "subscene": "0x083CDCF4",
+    "spriteData": "0x083FE77C",
+    "graphicsTables": [
+      "0x083CDC04",
+      "0x083CDE28"
+    ],
+    "timerValue": 10
+  },
+  {
+    "id": 27,
+    "subscene": "0x083CDF3C",
+    "spriteData": "0x083FE77C",
+    "graphicsTables": [
+      "0x083CDE28",
+      "0x083CDF84"
+    ],
+    "timerValue": 10
+  },
+  {
+    "id": 28,
+    "subscene": "0x083CE050",
+    "spriteData": "0x083FE844",
+    "graphicsTables": [
+      "0x083CDF84"
+    ],
+    "timerValue": 15
+  },
+  {
+    "id": 29,
+    "subscene": "0x083CE288",
+    "spriteData": "0x083FE8F8",
+    "graphicsTables": [
+      "0x083CE1B0",
+      "0x083CE2AC"
+    ],
+    "timerValue": 10
+  },
+  {
+    "id": 30,
+    "subscene": "0x083CE39C",
+    "spriteData": "0x083FE7F4",
+    "graphicsTables": [
+      "0x083CE2AC"
+    ],
+    "timerValue": 10
+  },
+  {
+    "id": 31,
+    "subscene": "0x083CE574",
+    "spriteData": "0x083FB234",
+    "graphicsTables": [
+      "0x083CE490"
+    ],
+    "timerValue": 15
+  },
+  {
+    "id": 32,
+    "subscene": "0x083CE830",
+    "spriteData": "0x083FE830",
+    "graphicsTables": [],
+    "timerValue": 30
+  },
+  {
+    "id": 33,
+    "subscene": "0x083CE9BC",
+    "spriteData": "0x083FE77C",
+    "graphicsTables": [
+      "0x083CE8A4"
+    ],
+    "timerValue": 20
+  },
+  {
+    "id": 34,
+    "subscene": "0x083CEAF4",
+    "spriteData": "0x083FE77C",
+    "graphicsTables": [
+      "0x083CEA28"
+    ],
+    "timerValue": 10
+  },
+  {
+    "id": 35,
+    "subscene": "0x083CECB4",
+    "spriteData": "0x083FE81C",
+    "graphicsTables": [
+      "0x083CEBE8"
+    ],
+    "timerValue": 20
+  },
+  {
+    "id": 36,
+    "subscene": "0x083CEDBC",
+    "spriteData": "0x083FB1E4",
+    "graphicsTables": [
+      "0x083CECD8"
+    ],
+    "timerValue": 10
+  },
+  {
+    "id": 37,
+    "subscene": "0x083CEEC4",
+    "spriteData": "0x083FEF24",
+    "graphicsTables": [
+      "0x083CEDE0"
+    ],
+    "timerValue": 15
+  },
+  {
+    "id": 38,
+    "subscene": "0x083CF014",
+    "spriteData": "0x083FED94",
+    "graphicsTables": [],
+    "timerValue": 10
+  },
+  {
+    "id": 39,
+    "subscene": "0x083CF1B4",
+    "spriteData": "0x083FE81C",
+    "graphicsTables": [
+      "0x083CF0B8"
+    ],
+    "timerValue": 15
+  },
+  {
+    "id": 40,
+    "subscene": "0x083CF2C8",
+    "spriteData": "0x083FE768",
+    "graphicsTables": [
+      "0x083CF1D8"
+    ],
+    "timerValue": 20
+  },
+  {
+    "id": 41,
+    "subscene": "0x083CF5FC",
+    "spriteData": "0x083FE86C",
+    "graphicsTables": [
+      "0x083CF524"
+    ],
+    "timerValue": 30
+  },
+  {
+    "id": 42,
+    "subscene": "0x083CF870",
+    "spriteData": "0x083FB1E4",
+    "graphicsTables": [],
+    "timerValue": 10
+  },
+  {
+    "id": 43,
+    "subscene": "0x083CF9F0",
+    "spriteData": "0x083FE7E0",
+    "graphicsTables": [
+      "0x083CF900"
+    ],
+    "timerValue": 15
+  },
+  {
+    "id": 44,
+    "subscene": "0x083CFB2C",
+    "spriteData": "0x083FE8D0",
+    "graphicsTables": [
+      "0x083CFA3C"
+    ],
+    "timerValue": 20
+  },
+  {
+    "id": 45,
+    "subscene": "0x083CFC48",
+    "spriteData": "0x083FE7F4",
+    "graphicsTables": [
+      "0x083CFB70"
+    ],
+    "timerValue": 15
+  },
+  {
+    "id": 46,
+    "subscene": "0x083CFD7C",
+    "spriteData": "0x083FE8A8",
+    "graphicsTables": [
+      "0x083CFC6C"
+    ],
+    "timerValue": 15
+  },
+  {
+    "id": 47,
+    "subscene": "0x083D02B4",
+    "spriteData": "0x083FE77C",
+    "graphicsTables": [
+      "0x083D01B8"
+    ],
+    "timerValue": 10
+  },
+  {
+    "id": 48,
+    "subscene": "0x083D05A8",
+    "spriteData": "0x083FE808",
+    "graphicsTables": [],
+    "timerValue": 15
+  },
+  {
+    "id": 49,
+    "subscene": "0x083D0704",
+    "spriteData": "0x083FE7F4",
+    "graphicsTables": [
+      "0x083D062C"
+    ],
+    "timerValue": 10
+  },
+  {
+    "id": 50,
+    "subscene": "0x083D083C",
+    "spriteData": "0x083FE858",
+    "graphicsTables": [
+      "0x083D074C",
+      "0x083D0868"
+    ],
+    "timerValue": 10
+  },
+  {
+    "id": 51,
+    "subscene": "0x083D0940",
+    "spriteData": "0x083FE81C",
+    "graphicsTables": [
+      "0x083D0868"
+    ],
+    "timerValue": 10
+  },
+  {
+    "id": 52,
+    "subscene": "0x083CB918",
+    "spriteData": "0x083FE81C",
+    "graphicsTables": [
+      "0x083CB78C"
+    ],
+    "timerValue": 10
+  },
+  {
+    "id": 53,
+    "subscene": "0x083D0B20",
+    "spriteData": "0x083FE8E4",
+    "graphicsTables": [
+      "0x083D09D0",
+      "0x083D0A30",
+      "0x08351F28"
+    ],
+    "timerValue": 10
+  },
+  {
+    "id": 54,
+    "subscene": "0x083D0C34",
+    "spriteData": "0x083FE7B8",
+    "graphicsTables": [
+      "0x083D0B44",
+      "0x083D0C74"
+    ],
+    "timerValue": 15
+  },
+  {
+    "id": 55,
+    "subscene": "0x083D0D70",
+    "spriteData": "0x083FE920",
+    "graphicsTables": [
+      "0x083D0C74"
+    ],
+    "timerValue": 20
+  },
+  {
+    "id": 56,
+    "subscene": "0x083D0E84",
+    "spriteData": "0x083FE768",
+    "graphicsTables": [
+      "0x083D0D94"
+    ],
+    "timerValue": 15
+  },
+  {
+    "id": 57,
+    "subscene": "0x083D0FAC",
+    "spriteData": "0x083FE81C",
+    "graphicsTables": [
+      "0x083D0EBC"
+    ],
+    "timerValue": 20
+  },
+  {
+    "id": 58,
+    "subscene": "0x083D10FC",
+    "spriteData": "0x083FE790",
+    "graphicsTables": [
+      "0x083D100C"
+    ],
+    "timerValue": 25
+  },
+  {
+    "id": 59,
+    "subscene": "0x083D1210",
+    "spriteData": "0x083FE7E0",
+    "graphicsTables": [
+      "0x083D1120"
+    ],
+    "timerValue": 10
+  },
+  {
+    "id": 60,
+    "subscene": "0x083D147C",
+    "spriteData": "0x083FE81C",
+    "graphicsTables": [
+      "0x083D138C"
+    ],
+    "timerValue": 10
+  },
+  {
+    "id": 61,
+    "subscene": "0x083D1914",
+    "spriteData": "0x083FE77C",
+    "graphicsTables": [
+      "0x083D1770"
+    ],
+    "timerValue": 10
+  },
+  {
+    "id": 62,
+    "subscene": "0x083D1A48",
+    "spriteData": "0x083FE8E4",
+    "graphicsTables": [
+      "0x083D1960"
+    ],
+    "timerValue": 20
+  },
+  {
+    "id": 63,
+    "subscene": "0x083D1C30",
+    "spriteData": "0x083FE8D0",
+    "graphicsTables": [],
+    "timerValue": 25
+  },
+  {
+    "id": 64,
+    "subscene": "0x083D1EA8",
+    "spriteData": "0x083FE7F4",
+    "graphicsTables": [
+      "0x083D1DAC"
+    ],
+    "timerValue": 20
+  },
+  {
+    "id": 65,
+    "subscene": "0x083D1FFC",
+    "spriteData": "0x083FE7B8",
+    "graphicsTables": [
+      "0x083D1F3C"
+    ],
+    "timerValue": 10
+  },
+  {
+    "id": 66,
+    "subscene": "0x083D21D0",
+    "spriteData": "0x083FB25C",
+    "graphicsTables": [
+      "0x083D20E0"
+    ],
+    "timerValue": 15
+  },
+  {
+    "id": 67,
+    "subscene": "0x083D22FC",
+    "spriteData": "0x083FE830",
+    "graphicsTables": [],
+    "timerValue": 20
+  },
+  {
+    "id": 68,
+    "subscene": "0x083D2458",
+    "spriteData": "0x083FE7F4",
+    "graphicsTables": [
+      "0x083D247C"
+    ],
+    "timerValue": 15
+  },
+  {
+    "id": 69,
+    "subscene": "0x083D2578",
+    "spriteData": "0x083FE7F4",
+    "graphicsTables": [
+      "0x083D247C"
+    ],
+    "timerValue": 15
+  },
+  {
+    "id": 70,
+    "subscene": "0x083D26B8",
+    "spriteData": "0x083FEF38",
+    "graphicsTables": [
+      "0x083D259C"
+    ],
+    "timerValue": 15
+  },
+  {
+    "id": 71,
+    "subscene": "0x083D2990",
+    "spriteData": "0x083FE8A8",
+    "graphicsTables": [
+      "0x083D2888"
+    ],
+    "timerValue": 25
+  },
+  {
+    "id": 72,
+    "subscene": "0x083D2AB0",
+    "spriteData": "0x083FE844",
+    "graphicsTables": [
+      "0x083D29B4"
+    ],
+    "timerValue": 15
+  },
+  {
+    "id": 73,
+    "subscene": "0x083D2BDC",
+    "spriteData": "0x083FE8E4",
+    "graphicsTables": [
+      "0x083D2AD4"
+    ],
+    "timerValue": 15
+  },
+  {
+    "id": 74,
+    "subscene": "0x083D2CF0",
+    "spriteData": "0x083FEF74",
+    "graphicsTables": [
+      "0x083D2C00"
+    ],
+    "timerValue": 15
+  },
+  {
+    "id": 75,
+    "subscene": "0x083D2E78",
+    "spriteData": "0x083FB1F8",
+    "graphicsTables": [],
+    "timerValue": 20
+  },
+  {
+    "id": 76,
+    "subscene": "0x083D2F74",
+    "spriteData": "0x083FE844",
+    "graphicsTables": [
+      "0x083D2E9C"
+    ],
+    "timerValue": 15
+  },
+  {
+    "id": 77,
+    "subscene": "0x083D309C",
+    "spriteData": "0x083FEF10",
+    "graphicsTables": [
+      "0x083D2FA0"
+    ],
+    "timerValue": 15
+  },
+  {
+    "id": 78,
+    "subscene": "0x083D31A4",
+    "spriteData": "0x083FEF60",
+    "graphicsTables": [
+      "0x083D30C0"
+    ],
+    "timerValue": 25
+  },
+  {
+    "id": 79,
+    "subscene": "0x083D32C0",
+    "spriteData": "0x083FE830",
+    "graphicsTables": [],
+    "timerValue": 25
+  },
+  {
+    "id": 80,
+    "subscene": "0x083D33F4",
+    "spriteData": "0x083FB20C",
+    "graphicsTables": [
+      "0x083D3304"
+    ],
+    "timerValue": 10
+  },
+  {
+    "id": 81,
+    "subscene": "0x083D35FC",
+    "spriteData": "0x083FEEAC",
+    "graphicsTables": [],
+    "timerValue": 20
+  },
+  {
+    "id": 82,
+    "subscene": "0x083D3710",
+    "spriteData": "0x083FE830",
+    "graphicsTables": [],
+    "timerValue": 15
+  },
+  {
+    "id": 83,
+    "subscene": "0x083CB918",
+    "spriteData": "0x083FE948",
+    "graphicsTables": [
+      "0x083CB78C"
+    ],
+    "timerValue": 10
+  },
+  {
+    "id": 84,
+    "subscene": "0x083D3860",
+    "spriteData": "0x083FB220",
+    "graphicsTables": [],
+    "timerValue": 15
+  },
+  {
+    "id": 85,
+    "subscene": "0x083D3974",
+    "spriteData": "0x083FE830",
+    "graphicsTables": [],
+    "timerValue": 20
+  },
+  {
+    "id": 86,
+    "subscene": "0x083D3AB4",
+    "spriteData": "0x083FE8BC",
+    "graphicsTables": [],
+    "timerValue": 10
+  },
+  {
+    "id": 87,
+    "subscene": "0x083D3BE4",
+    "spriteData": "0x083FED58",
+    "graphicsTables": [],
+    "timerValue": 15
+  },
+  {
+    "id": 88,
+    "subscene": "0x083D3D70",
+    "spriteData": "0x083FE7E0",
+    "graphicsTables": [],
+    "timerValue": 30
+  },
+  {
+    "id": 89,
+    "subscene": "0x083D3E94",
+    "spriteData": "0x083FB234",
+    "graphicsTables": [],
+    "timerValue": 25
+  },
+  {
+    "id": 90,
+    "subscene": "0x083D4058",
+    "spriteData": "0x083FE998",
+    "graphicsTables": [],
+    "timerValue": 25
+  },
+  {
+    "id": 91,
+    "subscene": "0x083D41FC",
+    "spriteData": "0x083FE7E0",
+    "graphicsTables": [],
+    "timerValue": 15
+  },
+  {
+    "id": 92,
+    "subscene": "0x083D4528",
+    "spriteData": "0x083FB270",
+    "graphicsTables": [],
+    "timerValue": 15
+  },
+  {
+    "id": 93,
+    "subscene": "0x083D4728",
+    "spriteData": "0x083FEE98",
+    "graphicsTables": [],
+    "timerValue": 15
+  },
+  {
+    "id": 94,
+    "subscene": "0x083D48F0",
+    "spriteData": "0x083FE830",
+    "graphicsTables": [],
+    "timerValue": 10
+  },
+  {
+    "id": 95,
+    "subscene": "0x083D4BA8",
+    "spriteData": "0x083FE81C",
+    "graphicsTables": [],
+    "timerValue": 15
+  },
+  {
+    "id": 96,
+    "subscene": "0x083D4DF4",
+    "spriteData": "0x083FE95C",
+    "graphicsTables": [],
+    "timerValue": 20
+  },
+  {
+    "id": 97,
+    "subscene": "0x083D4F14",
+    "spriteData": "0x083FED94",
+    "graphicsTables": [],
+    "timerValue": 30
+  },
+  {
+    "id": 98,
+    "subscene": "0x083D5044",
+    "spriteData": "0x083FE7E0",
+    "graphicsTables": [],
+    "timerValue": 25
+  },
+  {
+    "id": 99,
+    "subscene": "0x083D51C8",
+    "spriteData": "0x083FEF4C",
+    "graphicsTables": [],
+    "timerValue": 20
+  },
+  {
+    "id": 100,
+    "subscene": "0x083D52C4",
+    "spriteData": "0x083FB1F8",
+    "graphicsTables": [],
+    "timerValue": 15
+  },
+  {
+    "id": 101,
+    "subscene": "0x083D56F8",
+    "spriteData": "0x083FE9AC",
+    "graphicsTables": [],
+    "timerValue": 25
+  },
+  {
+    "id": 102,
+    "subscene": "0x083D58AC",
+    "spriteData": "0x083FED58",
+    "graphicsTables": [],
+    "timerValue": 10
+  },
+  {
+    "id": 103,
+    "subscene": "0x083D59D0",
+    "spriteData": "0x083FE8D0",
+    "graphicsTables": [],
+    "timerValue": 15
+  },
+  {
+    "id": 104,
+    "subscene": "0x083D5C28",
+    "spriteData": "0x083FE8E4",
+    "graphicsTables": [],
+    "timerValue": 25
+  },
+  {
+    "id": 105,
+    "subscene": "0x083D5D58",
+    "spriteData": "0x083FED80",
+    "graphicsTables": [],
+    "timerValue": 25
+  },
+  {
+    "id": 106,
+    "subscene": "0x083D5E74",
+    "spriteData": "0x083FEF88",
+    "graphicsTables": [],
+    "timerValue": 10
+  },
+  {
+    "id": 107,
+    "subscene": "0x083D60B0",
+    "spriteData": "0x083FE844",
+    "graphicsTables": [],
+    "timerValue": 20
+  },
+  {
+    "id": 108,
+    "subscene": "0x083D61CC",
+    "spriteData": "0x083FEEFC",
+    "graphicsTables": [],
+    "timerValue": 30
+  },
+  {
+    "id": 109,
+    "subscene": "0x083D6324",
+    "spriteData": "0x083FEDA8",
+    "graphicsTables": [],
+    "timerValue": 15
+  },
+  {
+    "id": 110,
+    "subscene": "0x083D6438",
+    "spriteData": "0x083FE984",
+    "graphicsTables": [],
+    "timerValue": 25
+  },
+  {
+    "id": 111,
+    "subscene": "0x083D6548",
+    "spriteData": "0x083FE7E0",
+    "graphicsTables": [],
+    "timerValue": 15
+  },
+  {
+    "id": 112,
+    "subscene": "0x083D66E4",
+    "spriteData": "0x083FB284",
+    "graphicsTables": [],
+    "timerValue": 15
+  },
+  {
+    "id": 113,
+    "subscene": "0x083D6AD8",
+    "spriteData": "0x083FE768",
+    "graphicsTables": [],
+    "timerValue": 20
+  },
+  {
+    "id": 114,
+    "subscene": "0x083D70A0",
+    "spriteData": "0x083FED44",
+    "graphicsTables": [],
+    "timerValue": 15
+  },
+  {
+    "id": 115,
+    "subscene": "0x083D78D0",
+    "spriteData": "0x083FE970",
+    "graphicsTables": [],
+    "timerValue": 20
+  },
+  {
+    "id": 116,
+    "subscene": "0x083D79E4",
+    "spriteData": "0x083FED80",
+    "graphicsTables": [],
+    "timerValue": 15
+  },
+  {
+    "id": 117,
+    "subscene": "0x083D7B20",
+    "spriteData": "0x083FEC7C",
+    "graphicsTables": [],
+    "timerValue": 10
+  },
+  {
+    "id": 118,
+    "subscene": "0x083D7D7C",
+    "spriteData": "0x083FEC68",
+    "graphicsTables": [],
+    "timerValue": 10
+  },
+  {
+    "id": 119,
+    "subscene": "0x083D7EE8",
+    "spriteData": "0x083FECE0",
+    "graphicsTables": [],
+    "timerValue": 25
+  },
+  {
+    "id": 120,
+    "subscene": "0x083D8094",
+    "spriteData": "0x083FECA4",
+    "graphicsTables": [],
+    "timerValue": 20
+  },
+  {
+    "id": 121,
+    "subscene": "0x083D81C8",
+    "spriteData": "0x083FE9C0",
+    "graphicsTables": [],
+    "timerValue": 15
+  },
+  {
+    "id": 122,
+    "subscene": "0x083D839C",
+    "spriteData": "0x083FEC68",
+    "graphicsTables": [],
+    "timerValue": 15
+  },
+  {
+    "id": 123,
+    "subscene": "0x083D84BC",
+    "spriteData": "0x083FECCC",
+    "graphicsTables": [],
+    "timerValue": 15
+  },
+  {
+    "id": 124,
+    "subscene": "0x083D8C88",
+    "spriteData": "0x083FEC90",
+    "graphicsTables": [],
+    "timerValue": 20
+  },
+  {
+    "id": 125,
+    "subscene": "0x083D8FC4",
+    "spriteData": "0x083FECE0",
+    "graphicsTables": [],
+    "timerValue": 30
+  },
+  {
+    "id": 126,
+    "subscene": "0x083D90EC",
+    "spriteData": "0x083FECB8",
+    "graphicsTables": [],
+    "timerValue": 25
+  },
+  {
+    "id": 127,
+    "subscene": "0x083D920C",
+    "spriteData": "0x083FECA4",
+    "graphicsTables": [],
+    "timerValue": 15
+  },
+  {
+    "id": 128,
+    "subscene": "0x083D93B4",
+    "spriteData": "0x083FED08",
+    "graphicsTables": [],
+    "timerValue": 10
+  },
+  {
+    "id": 129,
+    "subscene": "0x083D94FC",
+    "spriteData": "0x083FA3E8",
+    "graphicsTables": [],
+    "timerValue": 15
+  },
+  {
+    "id": 130,
+    "subscene": "0x083D97CC",
+    "spriteData": "0x083FE7A4",
+    "graphicsTables": [],
+    "timerValue": 15
+  },
+  {
+    "id": 131,
+    "subscene": "0x083D99B8",
+    "spriteData": "0x083FEC54",
+    "graphicsTables": [],
+    "timerValue": 15
+  },
+  {
+    "id": 132,
+    "subscene": "0x083D9ACC",
+    "spriteData": "0x083FECF4",
+    "graphicsTables": [],
+    "timerValue": 10
+  },
+  {
+    "id": 133,
+    "subscene": "0x083D9CB8",
+    "spriteData": "0x083FECB8",
+    "graphicsTables": [],
+    "timerValue": 15
+  },
+  {
+    "id": 134,
+    "subscene": "0x083D9E90",
+    "spriteData": "0x083FEC68",
+    "graphicsTables": [],
+    "timerValue": 30
+  },
+  {
+    "id": 135,
+    "subscene": "0x083DA624",
+    "spriteData": "0x083FA3E8",
+    "graphicsTables": [],
+    "timerValue": 15
+  },
+  {
+    "id": 136,
+    "subscene": "0x083DAA68",
+    "spriteData": "0x083FEC40",
+    "graphicsTables": [],
+    "timerValue": 10
+  },
+  {
+    "id": 137,
+    "subscene": "0x083DABA0",
+    "spriteData": "0x083FEC40",
+    "graphicsTables": [],
+    "timerValue": 20
+  },
+  {
+    "id": 138,
+    "subscene": "0x083DAF2C",
+    "spriteData": "0x083FED08",
+    "graphicsTables": [],
+    "timerValue": 10
+  },
+  {
+    "id": 139,
+    "subscene": "0x083DB594",
+    "spriteData": "0x083FEC68",
+    "graphicsTables": [],
+    "timerValue": 20
+  },
+  {
+    "id": 140,
+    "subscene": "0x083DB694",
+    "spriteData": "0x083FECF4",
+    "graphicsTables": [],
+    "timerValue": 15
+  }
+]
