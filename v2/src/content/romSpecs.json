@@ -1,0 +1,781 @@
+[
+  {
+    "id": 2,
+    "name": "Nose Dive",
+    "instruction": "PICK!",
+    "summary": "Guide the finger up the nostril before time runs out.",
+    "host": "jimmy",
+    "input": "tap",
+    "goal": "act",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B",
+      "DOWN"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Pumped Up",
+    "instruction": "PUMP!",
+    "summary": "Fill the gauge to 100 by hammering the button.",
+    "host": "ninevolt",
+    "input": "tap",
+    "goal": "act",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Sole Man",
+    "instruction": "STOMP!",
+    "summary": "Bring the foot down on the target.",
+    "host": "kat",
+    "input": "tap",
+    "goal": "act",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Nose Picker",
+    "instruction": "PICK!",
+    "summary": "Time the pick \u2014 the boogers are watching.",
+    "host": "mona",
+    "input": "tap",
+    "goal": "act",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2,
+      3,
+      4
+    ],
+    "keys": [
+      "A",
+      "B",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Quick Draw",
+    "instruction": "GRAB!",
+    "summary": "Snatch it the instant it appears.",
+    "host": "orbulon",
+    "input": "tap",
+    "goal": "act",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      6,
+      12,
+      48
+    ],
+    "keys": [
+      "A",
+      "B",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Hurdle",
+    "instruction": "JUMP!",
+    "summary": "Clear the bar without clipping it.",
+    "host": "jimmy",
+    "input": "hold",
+    "goal": "aim",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      32,
+      128
+    ],
+    "keys": [
+      "A",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Dig Dug",
+    "instruction": "DIG!",
+    "summary": "Break through the soil before the timer dies.",
+    "host": "kat",
+    "input": "hold",
+    "goal": "aim",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      0,
+      14,
+      30
+    ],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Chop Chop",
+    "instruction": "CHOP!",
+    "summary": "One clean swing, on the beat.",
+    "host": "mona",
+    "input": "tap",
+    "goal": "act",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Swat It",
+    "instruction": "SWAT!",
+    "summary": "Flatten the fly.",
+    "host": "orbulon",
+    "input": "tap",
+    "goal": "act",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Catch!",
+    "instruction": "CATCH!",
+    "summary": "Get under it and take the catch.",
+    "host": "ninevolt",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      4,
+      6,
+      15,
+      24,
+      25
+    ],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Bounce",
+    "instruction": "BOUNCE!",
+    "summary": "Keep it in the air.",
+    "host": "dribble",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      6
+    ],
+    "keys": []
+  },
+  {
+    "id": 22,
+    "name": "Duck",
+    "instruction": "DUCK!",
+    "summary": "Get under the swing.",
+    "host": "mona",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      12
+    ],
+    "keys": [
+      "B",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Spin Cycle",
+    "instruction": "SPIN!",
+    "summary": "Wind it all the way round.",
+    "host": "crygor",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2
+    ],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Tap Out",
+    "instruction": "TAP!",
+    "summary": "Tap the moment the signal shows.",
+    "host": "wario",
+    "input": "tap",
+    "goal": "act",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      4
+    ],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Balance",
+    "instruction": "BALANCE!",
+    "summary": "Hold it steady until the bell.",
+    "host": "jimmy",
+    "input": "tap",
+    "goal": "act",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Slice",
+    "instruction": "SLICE!",
+    "summary": "Cut it in one pass.",
+    "host": "kat",
+    "input": "tap",
+    "goal": "act",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      3,
+      4,
+      8
+    ],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Reel It In",
+    "instruction": "REEL!",
+    "summary": "Land the catch before it escapes.",
+    "host": "mona",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2
+    ],
+    "keys": []
+  },
+  {
+    "id": 36,
+    "name": "Dodge",
+    "instruction": "DODGE!",
+    "summary": "Do not get hit.",
+    "host": "jimmy",
+    "input": "tap",
+    "goal": "act",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2,
+      5,
+      186
+    ],
+    "keys": [
+      "A",
+      "B",
+      "RIGHT",
+      "SELECT",
+      "UP"
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Fetch",
+    "instruction": "FETCH!",
+    "summary": "Meet it where it lands.",
+    "host": "ninevolt",
+    "input": "tap",
+    "goal": "act",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2,
+      5
+    ],
+    "keys": [
+      "A",
+      "B",
+      "RIGHT",
+      "SELECT",
+      "UP"
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Stack",
+    "instruction": "STACK!",
+    "summary": "Drop it square on the pile.",
+    "host": "dribble",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Pop",
+    "instruction": "POP!",
+    "summary": "Burst it before it drifts off.",
+    "host": "crygor",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      10
+    ],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Sprint",
+    "instruction": "RUN!",
+    "summary": "Reach the line in time.",
+    "host": "orbulon",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 20,
+    "readsDifficulty": false,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Aim",
+    "instruction": "AIM!",
+    "summary": "Line it up and fire.",
+    "host": "jimmy",
+    "input": "tap",
+    "goal": "act",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Sweep",
+    "instruction": "SWEEP!",
+    "summary": "Clear the floor.",
+    "host": "ninevolt",
+    "input": "hold",
+    "goal": "aim",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      128
+    ],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 49,
+    "name": "Escape",
+    "instruction": "ESCAPE!",
+    "summary": "Get out before it closes.",
+    "host": "dribble",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Launch",
+    "instruction": "LAUNCH!",
+    "summary": "Fire at the top of the arc.",
+    "host": "kat",
+    "input": "tap",
+    "goal": "act",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 53,
+    "name": "Squash",
+    "instruction": "SQUASH!",
+    "summary": "Flatten it flat.",
+    "host": "orbulon",
+    "input": "dpad",
+    "goal": "aim",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B",
+      "LEFT",
+      "SELECT",
+      "START"
+    ]
+  },
+  {
+    "id": 55,
+    "name": "Thread It",
+    "instruction": "THREAD!",
+    "summary": "Line up and pass through.",
+    "host": "jimmy",
+    "input": "hold",
+    "goal": "aim",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2,
+      3
+    ],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 57,
+    "name": "Snap",
+    "instruction": "SNAP!",
+    "summary": "Shut it at the right instant.",
+    "host": "dribble",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 58,
+    "name": "Climb",
+    "instruction": "CLIMB!",
+    "summary": "Get to the top.",
+    "host": "kat",
+    "input": "tap",
+    "goal": "act",
+    "timer": 25,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 59,
+    "name": "Wake Up",
+    "instruction": "WAKE!",
+    "summary": "Rouse them before the alarm stops.",
+    "host": "mona",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2,
+      4,
+      48,
+      128
+    ],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 60,
+    "name": "Serve",
+    "instruction": "SERVE!",
+    "summary": "Return it over the net.",
+    "host": "crygor",
+    "input": "hold",
+    "goal": "aim",
+    "timer": 10,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      0,
+      2,
+      3,
+      4,
+      10,
+      190
+    ],
+    "keys": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": 64,
+    "name": "Plug In",
+    "instruction": "PLUG!",
+    "summary": "Make the connection.",
+    "host": "jimmy",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 20,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      8
+    ],
+    "keys": [
+      "A",
+      "B",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 68,
+    "name": "Shoot",
+    "instruction": "SHOOT!",
+    "summary": "Hit the target dead on.",
+    "host": "kat",
+    "input": "tap",
+    "goal": "act",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B",
+      "SELECT",
+      "START"
+    ]
+  },
+  {
+    "id": 69,
+    "name": "Weave",
+    "instruction": "WEAVE!",
+    "summary": "Slip past everything.",
+    "host": "mona",
+    "input": "tap",
+    "goal": "act",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2,
+      30
+    ],
+    "keys": [
+      "A",
+      "B",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 70,
+    "name": "Land It",
+    "instruction": "LAND!",
+    "summary": "Touch down softly.",
+    "host": "crygor",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": false,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A"
+    ]
+  },
+  {
+    "id": 71,
+    "name": "Feed",
+    "instruction": "FEED!",
+    "summary": "Get it in the mouth.",
+    "host": "orbulon",
+    "input": "hold",
+    "goal": "aim",
+    "timer": 25,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2
+    ],
+    "keys": [
+      "A",
+      "B",
+      "SELECT"
+    ]
+  },
+  {
+    "id": 73,
+    "name": "Trim",
+    "instruction": "TRIM!",
+    "summary": "Cut to the line, no further.",
+    "host": "jimmy",
+    "input": "tap",
+    "goal": "act",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B",
+      "UP"
+    ]
+  },
+  {
+    "id": 74,
+    "name": "Lift",
+    "instruction": "LIFT!",
+    "summary": "Heave it up.",
+    "host": "ninevolt",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": false,
+    "randomModuli": [],
+    "keys": [
+      "A",
+      "B",
+      "START"
+    ]
+  },
+  {
+    "id": 77,
+    "name": "Hatch",
+    "instruction": "HATCH!",
+    "summary": "Crack it open.",
+    "host": "kat",
+    "input": "none",
+    "goal": "avoid",
+    "timer": 15,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      16
+    ],
+    "keys": [
+      "A",
+      "B",
+      "RIGHT"
+    ]
+  },
+  {
+    "id": 78,
+    "name": "Finish",
+    "instruction": "FINISH!",
+    "summary": "Take the last step.",
+    "host": "mona",
+    "input": "tap",
+    "goal": "act",
+    "timer": 25,
+    "readsDifficulty": true,
+    "usesRandom": true,
+    "randomModuli": [
+      2,
+      15,
+      20
+    ],
+    "keys": [
+      "A",
+      "B",
+      "DOWN",
+      "SELECT"
+    ]
+  }
+]

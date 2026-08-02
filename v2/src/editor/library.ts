@@ -1,4 +1,5 @@
 import { MICROGAMES } from "../microgames";
+import { ROM_GAMES } from "../content/romGames";
 import { compileMicrogame } from "./runtime";
 import {
   makeActorDef,
@@ -47,9 +48,20 @@ function load(): MicrogameData[] {
   return cache!;
 }
 
-/** every playable microgame = classic hand-crafted + user data games */
+/** every playable microgame = ROM recreations + hand-crafted + user games */
 export function getAllPlayable(): MicrogameDef[] {
-  return [...MICROGAMES, ...load().map(compileMicrogame)];
+  return [
+    // Recreations built from the real ROM: decoded art, real palettes,
+    // timing taken from the master microgame table.
+    ...ROM_GAMES.map(compileMicrogame),
+    ...MICROGAMES,
+    ...load().map(compileMicrogame),
+  ];
+}
+
+/** just the ROM-derived recreations, for the library's "Originals" tab */
+export function getRomGames(): MicrogameData[] {
+  return ROM_GAMES.map(clone);
 }
 
 export function getDataGames(): MicrogameData[] {
