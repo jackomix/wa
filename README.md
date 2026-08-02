@@ -16,6 +16,19 @@ kept side by side. They share `node_modules` but are otherwise independent.
 A data-driven microgame engine and editor, with **139 microgames recreated from the
 original GBA ROM** using real decompiled art and real disassembled logic.
 
+### One click (macOS)
+
+Double-click **`Play WarioWare v2.command`** in Finder. It checks for Node, installs
+dependencies the first time, starts the server and opens your browser.
+
+> First launch takes a minute or two while dependencies install. After that it's a
+> few seconds.
+>
+> If macOS blocks it with *"cannot be opened because it is from an unidentified
+> developer"*: right-click the file → **Open** → **Open**. Only needed once.
+
+### Or from a terminal
+
 ```bash
 npm install
 npm run dev:v2      # play + edit
