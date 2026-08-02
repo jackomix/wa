@@ -263,36 +263,47 @@ export const InterludeUI: React.FC<{ snap: EngineSnapshot }> = ({ snap }) => {
       />
 
       {speedBars ? (
-        /* ---------- SPEED UP! (2 extra bars) ---------- */
+        /* ---------- SPEED UP! ----------------------------------------
+         * The original's speed-up is a full-screen typographic slam with
+         * Wario legging it across the frame -- no BPM readout, because the
+         * player is meant to FEEL the change, not read it. v1 printed
+         * "♩ = 132 BPM" here; that number is gone.
+         * ------------------------------------------------------------- */
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <div
             className="font-black"
             style={{
-              fontSize: "12cqw",
+              fontSize: "13cqw",
               color: snap.barBeat % 2 ? "#ffd60a" : "#ff4d6d",
-              WebkitTextStroke: "0.7cqw #14082b",
-              transform: `scale(${beatPop(snap.beatPhase, 0.35)}) rotate(${snap.barBeat % 2 ? -4 : 4}deg)`,
+              WebkitTextStroke: "0.8cqw #14082b",
+              transform: `scale(${beatPop(snap.beatPhase, 0.4)}) rotate(${snap.barBeat % 2 ? -5 : 5}deg)`,
+              letterSpacing: "-0.02em",
             }}
           >
-            SPEED UP!!
+            SPEED UP!
           </div>
           <div
-            className="font-black text-white mt-[1cqw] tabular-nums"
-            style={{ fontSize: "4.5cqw", transform: `scale(${pop})` }}
+            style={{
+              fontSize: "9cqw",
+              marginTop: "1cqw",
+              // runs across the frame rather than jiggling in place
+              transform: `translateX(${((local - 8) / 8) * 60 - 30}cqw) scaleX(-1)`,
+            }}
           >
-            ♩ = {Math.round(snap.bpm)} BPM
-          </div>
-          <div style={{ fontSize: "8cqw", transform: `scale(${pop}) scaleX(${snap.barBeat % 2 ? -1 : 1})` }}>
-            🏃💨
+            🏃
           </div>
         </div>
       ) : bar === 0 ? (
-        /* ---------- Bar 1: RESULT ---------- */
+        /* ---------- Bar 1: RESULT -------------------------------------
+         * Original presentation: the host reacts, and that is all. No
+         * caption band, no separate broken-heart graphic -- the life
+         * counter below is where a loss is read.
+         * ------------------------------------------------------------- */
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <div
             style={{
-              fontSize: "17cqw",
-              transform: `scale(${beatPop(snap.beatPhase, 0.18)}) rotate(${p.result === "lose" ? bobble(snap.beatClock) : 0}deg)`,
+              fontSize: "20cqw",
+              transform: `scale(${beatPop(snap.beatPhase, 0.2)}) rotate(${p.result === "lose" ? bobble(snap.beatClock) : 0}deg)`,
             }}
           >
             {face}
@@ -300,51 +311,44 @@ export const InterludeUI: React.FC<{ snap: EngineSnapshot }> = ({ snap }) => {
           <div
             className="font-black tracking-widest"
             style={{
-              fontSize: "5cqw",
+              fontSize: "4.4cqw",
               color: p.result === "lose" ? "#ff4d6d" : "#ffd60a",
-              WebkitTextStroke: "0.35cqw #14082b",
+              WebkitTextStroke: "0.3cqw #14082b",
               transform: `scale(${pop})`,
+              marginTop: "0.5cqw",
             }}
           >
             {caption}
           </div>
-          {p.lostLife && (
-            <div
-              style={{
-                fontSize: "7cqw",
-                opacity: snap.beatPhase < 0.5 ? 1 : 0.25,
-                marginTop: "1cqw",
-              }}
-            >
-              💔
-            </div>
-          )}
         </div>
       ) : (
-        /* ---------- Bar 2: SCORE & PREP ---------- */
+        /* ---------- Bar 2: SCORE --------------------------------------
+         * Just the number, ticking up on the downbeat. The original shows
+         * the running total plainly; v1 stacked a label, the number and a
+         * second face on top of each other.
+         * ------------------------------------------------------------- */
         <div className="absolute inset-0 flex flex-col items-center justify-center">
-          <div className="font-black text-white/60 tracking-widest" style={{ fontSize: "3cqw" }}>
-            SCORE
-          </div>
           <div
             className="font-black text-white tabular-nums"
             style={{
-              fontSize: "16cqw",
-              WebkitTextStroke: "0.6cqw #14082b",
+              fontSize: "19cqw",
+              WebkitTextStroke: "0.7cqw #14082b",
               transform: `scale(${scorePop})`,
               color: "#ffd60a",
             }}
           >
             {snap.displayScore}
           </div>
-          <div style={{ fontSize: "6cqw", transform: `scale(${pop})` }}>{face}</div>
         </div>
       )}
 
-      {/* hearts */}
+      {/* ---- lives ----
+          The original draws four Wario heads and removes one on a miss.
+          A lost life blinks on the beat for the bar in which it was lost,
+          which is the only "embellishment" the source actually has here. */}
       <div
-        className="absolute flex gap-[1cqw]"
-        style={{ left: "50%", bottom: "6%", transform: "translateX(-50%)" }}
+        className="absolute flex gap-[1.2cqw]"
+        style={{ left: "50%", bottom: "7%", transform: "translateX(-50%)" }}
       >
         {Array.from({ length: snap.maxLives }).map((_, i) => {
           const lost = i >= snap.lives;
@@ -353,23 +357,16 @@ export const InterludeUI: React.FC<{ snap: EngineSnapshot }> = ({ snap }) => {
             <span
               key={i}
               style={{
-                fontSize: "4.5cqw",
-                transform: `scale(${lost ? 0.85 : pop})`,
-                opacity: justLost ? (snap.beatPhase < 0.5 ? 1 : 0.2) : 1,
+                fontSize: "5cqw",
+                filter: lost && !justLost ? "grayscale(1) brightness(0.45)" : "none",
+                transform: `scale(${lost && !justLost ? 0.82 : pop})`,
+                opacity: justLost ? (snap.beatPhase < 0.5 ? 1 : 0.15) : 1,
               }}
             >
-              {justLost ? "💔" : lost ? "🖤" : "❤️"}
+              🧄
             </span>
           );
         })}
-      </div>
-
-      {/* floor indicator = games played */}
-      <div
-        className="absolute font-black text-[#8f7ff0] tabular-nums"
-        style={{ right: "3%", top: "3%", fontSize: "3cqw" }}
-      >
-        FLOOR {snap.gamesPlayed + 1}
       </div>
     </div>
   );
