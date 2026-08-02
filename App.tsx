@@ -1,5 +1,5 @@
 import { useEffect, useState, type FC, type ReactNode } from "react";
-import { useEngine, setEngineActive, requestStart } from "./engine/useEngine";
+import { useEngine, setEngineActive, requestStart, requestStartStage, requestTitle } from "./engine/useEngine";
 import {
   Doors,
   GameOverScreen,
@@ -13,12 +13,14 @@ import {
 import { Editor, LibraryModal } from "./editor/Editor";
 import { blankGame } from "./editor/library";
 import type { MicrogameData } from "./editor/schema";
+import { STAGES, STAGE_ORDER } from "./microgames";
 
 export default function App() {
   const { snap } = useEngine();
   const [view, setView] = useState<"game" | "editor">("game");
   const [editing, setEditing] = useState<MicrogameData | null>(null);
   const [showLib, setShowLib] = useState(false);
+  const [showStageSelect, setShowStageSelect] = useState(false);
 
   // pause the global rhythm engine while the editor is open
   useEffect(() => {
@@ -56,9 +58,9 @@ export default function App() {
       <RhythmHUD snap={snap} />
 
       {/* Menu over the title screen */}
-      {onTitle && !(snap.phase as any).startAtBeat && (
+      {onTitle && !(snap.phase as any).startAtBeat && !showStageSelect && (
         <div className="absolute z-[85] left-1/2 -translate-x-1/2 flex gap-3" style={{ bottom: "9%" }}>
-          <MenuButton color="#9ef01a" onClick={() => requestStart()}>
+          <MenuButton color="#9ef01a" onClick={() => setShowStageSelect(true)}>
             ▶ PLAY
           </MenuButton>
           <MenuButton color="#f72585" onClick={() => openEditor(blankGame())}>
@@ -67,6 +69,46 @@ export default function App() {
           <MenuButton color="#ffd60a" onClick={() => setShowLib(true)}>
             📚 LIBRARY
           </MenuButton>
+        </div>
+      )}
+
+      {/* Stage Selection Panel */}
+      {onTitle && showStageSelect && (
+        <div className="absolute inset-0 z-[90] flex items-center justify-center bg-black/80">
+          <div className="bg-[#1a1030] rounded-2xl border-2 border-[#8f7ff0] p-4 max-w-[85%] w-full" style={{ maxHeight: "80%" }}>
+            <h2 className="font-black text-center mb-3" style={{ fontSize: "4cqw", color: "#ffd60a" }}>
+              CHOOSE STAGE
+            </h2>
+            <div className="grid grid-cols-3 gap-2">
+              {STAGE_ORDER.map(id => {
+                const s = STAGES[id];
+                return (
+                  <button key={id}
+                    onClick={() => { setShowStageSelect(false); requestStartStage(id); }}
+                    className="rounded-xl border-2 p-2 text-center transition-transform hover:scale-105 active:scale-95"
+                    style={{
+                      borderColor: s.colors.primary,
+                      background: `${s.colors.bg}88`,
+                    }}>
+                    <div className="font-black" style={{ fontSize: "3cqw", color: s.colors.primary }}>
+                      {s.name}
+                    </div>
+                    <div style={{ fontSize: "2cqw", color: "#8f7ff0" }}>
+                      {s.character}
+                    </div>
+                    <div style={{ fontSize: "1.8cqw", color: "#8f7ff0" }}>
+                      ♩={s.startBpm}
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+            <button onClick={() => setShowStageSelect(false)}
+              className="w-full mt-3 py-2 rounded-xl font-black bg-white/10 hover:bg-white/20"
+              style={{ fontSize: "3cqw", color: "#8f7ff0" }}>
+              ← BACK
+            </button>
+          </div>
         </div>
       )}
 

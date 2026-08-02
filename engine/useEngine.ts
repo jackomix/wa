@@ -10,6 +10,7 @@ import type {
   Phase,
 } from "./types";
 import { getAllPlayable } from "../editor/library";
+import { getMicrogamesForStage, STAGES, STAGE_ORDER } from "../microgames";
 
 /* The engine can be paused (e.g. while the editor is open) and the run can be
  * started/restarted from UI buttons instead of only the keyboard. */
@@ -20,6 +21,11 @@ export const setEngineActive = (b: boolean) => {
 let startReq = false;
 export const requestStart = () => {
   startReq = true;
+};
+let startStageId: string | null = null;
+export const requestStartStage = (stageId: string) => {
+  startReq = true;
+  startStageId = stageId;
 };
 let titleReq = false;
 export const requestTitle = () => {
@@ -59,6 +65,7 @@ interface Core {
   phase: Phase;
   mg: MgRuntime | null;
   lastGameId: string | null;
+  currentStage: string | null;
   score: number;
   displayScore: number;
   scorePopAt: number;
@@ -80,6 +87,7 @@ function freshCore(): Core {
     phase: { kind: "title", startAtBeat: null },
     mg: null,
     lastGameId: null,
+    currentStage: null,
     score: 0,
     displayScore: 0,
     scorePopAt: -99,
@@ -98,8 +106,11 @@ function freshCore(): Core {
 }
 
 function pickGame(c: Core): MicrogameDef {
-  // the pool = hand-crafted classic games + every user-made data game
-  const pool = getAllPlayable().filter((g) => g.id !== c.lastGameId);
+  // Stage-based selection: use the current stage's microgame pool
+  const stagePool = c.currentStage ? getMicrogamesForStage(c.currentStage) : [];
+  const pool = stagePool.length > 0
+    ? stagePool.filter((g) => g.id !== c.lastGameId)
+    : getAllPlayable().filter((g) => g.id !== c.lastGameId);
   const def = pool[Math.floor(Math.random() * pool.length)];
   c.lastGameId = def.id;
   return def;
@@ -122,7 +133,7 @@ function spawnMg(c: Core, controlStartBeat: number) {
   AUDIO.instruction();
 }
 
-function beginRun(c: Core, startBeat: number) {
+function beginRun(c: Core, startBeat: number, stageId?: string) {
   c.bpm = BASE_BPM;
   c.score = 0;
   c.displayScore = 0;
@@ -131,6 +142,10 @@ function beginRun(c: Core, startBeat: number) {
   c.speedLevel = 0;
   c.mg = null;
   c.lastGameId = null;
+  c.currentStage = stageId ?? c.currentStage ?? 'intro';
+  // Set BPM based on stage
+  const stage = c.currentStage ? STAGES[c.currentStage] : null;
+  if (stage) c.bpm = stage.startBpm;
   c.phase = {
     kind: "interlude",
     startBeat,
@@ -259,7 +274,9 @@ function tick(c: Core, dt: number) {
       AUDIO.coin();
     }
     if (p.startAtBeat !== null && c.beatClock >= p.startAtBeat) {
-      beginRun(c, p.startAtBeat);
+      const stageId = startStageId;
+      startStageId = null;
+      beginRun(c, p.startAtBeat, stageId ?? undefined);
     }
   } else if (p.kind === "interlude") {
     const local = c.beatClock - p.startBeat;
