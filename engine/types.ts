@@ -28,7 +28,7 @@ export interface MgCtx {
   beatPhase: number;
   /** nominal length in beats (8 or 16) */
   lengthBeats: number;
-  /** effective end in beats (may be shortened by framerules) */
+  /** effective end in beats (may be shortened at an internal checkpoint) */
   endBeats: number;
   bpm: number;
   /** true only when the player has control (t >= 0 and doors not closing) */
@@ -63,6 +63,8 @@ export interface MicrogamePalette {
 
 export interface MicrogameDef {
   id: string;
+  /** authored logical canvas; defaults to the native GBA frame for classic scenes */
+  canvas?: { width: number; height: number; label: string; activeX: number; activeY: number; activeWidth: number; activeHeight: number };
   /** imperative command, e.g. "JUMP!" */
   instruction: string;
   lengthBars: 2 | 4;
@@ -82,7 +84,7 @@ export interface MgRuntime {
   /** absolute beat at which the player gains control (t = 0) */
   startBeat: number;
   lengthBeats: number;
-  /** effective end (framerules may pull this in: 8, 12 or 16) */
+  /** effective end (internal checkpoint may pull this to 8, 12, or 16) */
   endBeats: number;
 }
 

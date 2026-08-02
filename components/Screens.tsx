@@ -36,7 +36,7 @@ export const RhythmHUD: React.FC<{ snap: EngineSnapshot }> = ({ snap }) => (
       className="font-black text-white/70 tabular-nums"
       style={{ fontSize: "2.2cqw", transform: `scale(${beatPop(snap.beatPhase, 0.15)})` }}
     >
-      ♩={Math.round(snap.bpm)}
+      BPM {Math.round(snap.bpm)}
     </div>
     {[0, 1, 2, 3].map((i) => (
       <div
@@ -70,7 +70,6 @@ export const MicrogameLayer: React.FC<{ snap: EngineSnapshot }> = ({ snap }) => 
   const pal = mg.def.palette;
   const t = snap.beatClock - mg.startBeat;
   const remaining = clamp(Math.ceil(mg.endBeats - t), 0, mg.endBeats);
-  const framerule = mg.endBeats < mg.lengthBeats;
 
   return (
     <div className="absolute inset-0 z-10" style={{ background: pal.outer }}>
@@ -138,14 +137,7 @@ export const MicrogameLayer: React.FC<{ snap: EngineSnapshot }> = ({ snap }) => 
             }}
           />
         ))}
-        {framerule && (
-          <div
-            className="font-black tracking-widest"
-            style={{ fontSize: "1.8cqw", color: pal.frame }}
-          >
-            FRAMERULE!
-          </div>
-        )}
+
       </div>
 
       {mg.lengthBeats === 16 && (
@@ -164,10 +156,10 @@ export const MicrogameLayer: React.FC<{ snap: EngineSnapshot }> = ({ snap }) => 
 /*  Instruction — slams in on the final interlude beat                 */
 /* ================================================================== */
 export const Instruction: React.FC<{ snap: EngineSnapshot }> = ({ snap }) => {
-  if (!snap.instruction || !snap.mg) return null;
-  const age = snap.instructionAge; // 0..3 beats
-  const inScale = age < 0.25 ? 2.2 - (age / 0.25) * 1.2 : beatPop(snap.beatPhase, 0.1);
-  const opacity = age > 2.4 ? clamp(1 - (age - 2.4) / 0.6, 0, 1) : 1;
+  if (!snap.instruction || !snap.mg || snap.instructionAge > 0.82) return null;
+  const age = snap.instructionAge; // short command cue, then gameplay owns the screen
+  const inScale = age < 0.18 ? 1.25 - (age / 0.18) * 0.25 : beatPop(snap.beatPhase, 0.08);
+  const opacity = age > 0.62 ? clamp(1 - (age - 0.62) / 0.2, 0, 1) : 1;
   return (
     <div className="absolute inset-0 z-[60] flex items-center justify-center pointer-events-none">
       <div
@@ -283,7 +275,7 @@ export const InterludeUI: React.FC<{ snap: EngineSnapshot }> = ({ snap }) => {
             className="font-black text-white mt-[1cqw] tabular-nums"
             style={{ fontSize: "4.5cqw", transform: `scale(${pop})` }}
           >
-            ♩ = {Math.round(snap.bpm)} BPM
+            {Math.round(snap.bpm)} BPM
           </div>
           <div style={{ fontSize: "8cqw", transform: `scale(${pop}) scaleX(${snap.barBeat % 2 ? -1 : 1})` }}>
             🏃💨

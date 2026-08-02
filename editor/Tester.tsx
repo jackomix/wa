@@ -100,7 +100,7 @@ export const Tester: React.FC<{ data: MicrogameData; onClose: () => void }> = ({
         };
         def.update(cur.s, ctx);
 
-        // framerules for 4-bar games
+        // internal checkpoint shortening for extended phrases
         if (lengthBeats === 16 && cur.outcome !== null && cur.endBeats === 16) {
           if (t <= 7) cur.endBeats = 8;
           else if (t <= 11) cur.endBeats = 12;
@@ -157,7 +157,7 @@ export const Tester: React.FC<{ data: MicrogameData; onClose: () => void }> = ({
         <span className="font-black text-lg" style={{ color: pal.text }}>
           ▶ TEST — {data.name}
         </span>
-        <span className="text-white/50 text-sm">♩ {Math.round(bpm)} · {data.instruction}</span>
+        <span className="text-white/50 text-sm">{Math.round(bpm)} BPM · {data.instruction}</span>
       </div>
 
       <div

@@ -17,7 +17,7 @@ export type FieldType =
   | "pattern"
   | "sfx"
   | "text"
-  | "emoji";
+  | "sprite";
 
 export interface FieldDef {
   key: string;
@@ -180,8 +180,12 @@ export const ACTION_SPECS: ActionSpec[] = [
     fields: [actorF("def", "actor"), expr("x", "x", 50), expr("y", "y", 20)],
   },
   {
-    id: "setEmoji", label: "Set emoji", category: "Appearance", sceneLevel: false,
-    fields: [{ key: "emoji", label: "emoji", type: "emoji", default: "😎" }],
+    id: "setSprite", label: "Switch sprite", category: "Appearance", sceneLevel: false,
+    fields: [{ key: "sprite", label: "asset", type: "sprite", default: "spark" }],
+  },
+  {
+    id: "switchCostume", label: "Switch costume", category: "Appearance", sceneLevel: false,
+    fields: [{ key: "costume", label: "costume", type: "text", default: "Default" }],
   },
   { id: "hide", label: "Hide", category: "Appearance", sceneLevel: false, fields: [] },
   { id: "show", label: "Show", category: "Appearance", sceneLevel: false, fields: [] },

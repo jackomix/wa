@@ -1,4 +1,5 @@
 import React from "react";
+import { SpriteAsset, type SpriteId } from "../engine/sprites";
 import type { MicrogameDef, MgCtx, ViewCtx } from "../engine/types";
 
 /* ================================================================== */
@@ -8,22 +9,32 @@ import type { MicrogameDef, MgCtx, ViewCtx } from "../engine/types";
 /*  beat-accurate timing system.                                       */
 /* ================================================================== */
 
-const clamp = (v: number, a: number, b) => Math.min(b, Math.max(a, v));
+const clamp = (v: number, a: number, b: number) => Math.min(b, Math.max(a, v));
 const rnd = (a: number, b: number) => a + Math.random() * (b - a);
-const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
 
-/** Sprite component — absolute-positioned emoji, coords in % of screen */
+/** Sprite component — asset references, coords in % of screen.
+ * Legacy authored labels are converted to registry IDs at the edge so no
+ * microgame renders a text/glyph object as its art. New content should pass
+ * spriteId directly. */
+const GLYPH_SPRITES: Record<string, SpriteId> = {
+  "🚗": "hurdle", "🚐": "hurdle", "🏎️": "hurdle", "😵": "face-sad", "🤸": "runner-jump", "🧍": "runner", "😈": "face-happy", "😋": "face-happy", "😎": "face-happy", "😫": "face-sad", "😮": "face-surprised", "🐹": "face-surprised", "🥳": "face-happy", "✨": "spark", "⭐": "star", "🪨": "rock", "💣": "explosion", "💥": "explosion", "💫": "spark", "💰": "spark", "💎": "spark", "🔨": "hurdle", "🔫": "gun", "🔺": "triangle", "🛸": "ufo", "🧺": "basket", "🫐": "apple", "🍇": "apple", "🍊": "apple", "🍌": "apple", "🍎": "apple", "🍓": "apple", "☕": "basket", "⚽": "rock", "🛡️": "target", "👊": "runner-jump", "👔": "hero", "🧥": "hero", "👕": "hero", "👹": "face-sad", "🧱": "hurdle",
+};
+const spriteFromNode = (node: React.ReactNode): SpriteId => {
+  if (typeof node === "string") return GLYPH_SPRITES[node] ?? "placeholder";
+  if (React.isValidElement(node)) return spriteFromNode((node.props as { children?: React.ReactNode }).children);
+  return "placeholder";
+};
 const Sp: React.FC<{
   x: number; y: number; size?: number; flip?: boolean;
-  rot?: number; scale?: number; z?: number; children: React.ReactNode;
-  opacity?: number;
-}> = ({ x, y, size = 12, flip, rot = 0, scale = 1, z = 1, children, opacity = 1 }) => (
+  rot?: number; scale?: number; z?: number; children?: React.ReactNode;
+  spriteId?: SpriteId; opacity?: number;
+}> = ({ x, y, size = 12, flip, rot = 0, scale = 1, z = 1, children, spriteId, opacity = 1 }) => (
   <div className="absolute select-none leading-none" style={{
-    left: `${x}%`, top: `${y}%`, fontSize: `${size}cqw`, zIndex: z,
+    left: `${x}%`, top: `${y}%`, width: `${size}cqw`, height: `${size}cqw`, zIndex: z,
     transform: `translate(-50%, -50%) rotate(${rot}deg) scale(${flip ? -scale : scale}, ${scale})`,
     opacity,
   }}>
-    {children}
+    <SpriteAsset id={spriteId ?? spriteFromNode(children)} className="w-full h-full" />
   </div>
 );
 
@@ -220,7 +231,6 @@ const warioWhirled: MicrogameDef = {
     }
   },
   View({ s, v }: { s: WarioWhirledS; v: ViewCtx }) {
-    const norm = ((s.angle % 360) + 360) % 360;
     return (
       <div className="absolute inset-0 flex items-center justify-center">
         {/* Target zone indicator */}
@@ -230,7 +240,7 @@ const warioWhirled: MicrogameDef = {
         {/* Spinning circle */}
         <div className="rounded-full border-4 border-yellow-400 bg-gradient-to-b from-yellow-600 to-yellow-800 flex items-center justify-center"
           style={{ width: "50%", height: "60%", transform: `rotate(${s.angle}deg)`, transition: s.stopped ? "none" : undefined }}>
-          <span style={{ fontSize: "20cqw", transform: "rotate(0deg)" }}>😈</span>
+          <SpriteAsset id="face-happy" style={{ width: "20cqw", height: "20cqw", transform: "rotate(0deg)" }} />
         </div>
         {/* Target marker at top */}
         <div className="absolute" style={{ top: "8%", left: "50%", transform: "translateX(-50%)", fontSize: "8cqw", color: "#22c55e" }}>
@@ -325,7 +335,7 @@ const diamondDig: MicrogameDef = {
 /*  5. DODGE BALLS — Dodge the falling balls (Intro / Wario)           */
 /* ================================================================== */
 interface DodgeBallsS {
-  px: number; balls: { x: number; landT: number }[];
+  lane: number; balls: { lane: number; landT: number }[];
 }
 const LANE_X = [22, 50, 78];
 const dodgeBalls: MicrogameDef = {
@@ -437,7 +447,6 @@ interface WarioWearS {
   correctIdx: number; selectedIdx: number;
 }
 const WARIO_CLOTHES = ['👔', '🧥', '👕'];
-const WARIO_CLOTHES_NAMES = ['shirt', 'jacket', 't-shirt'];
 const warioWear: MicrogameDef = {
   id: "wario_wear", instruction: "PUT ON!", lengthBars: 2, timeoutOutcome: "lose",
   palette: { outer: "#2b1d4f", frame: "#eab308", screen: "#fef3c7", text: "#eab308" },
@@ -635,14 +644,14 @@ const iSpy: MicrogameDef = {
   View({ s, v }: { s: ISpyS; v: ViewCtx }) {
     return (
       <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
-        <div className="font-black" style={{ fontSize: "6cqw", color: "#eab308" }}>
-          Find: {s.items[s.targetIdx]}
+        <div className="font-black flex items-center gap-2" style={{ fontSize: "6cqw", color: "#eab308" }}>
+          Find: <SpriteAsset id={spriteFromNode(s.items[s.targetIdx])} style={{ width: "8cqw", height: "8cqw" }} />
         </div>
         <div className="grid grid-cols-2 gap-2">
           {s.items.map((item, i) => (
             <div key={i} className="rounded-xl border-2 bg-white/10 p-2 flex items-center justify-center"
               style={{ fontSize: "10cqw", borderColor: s.selectedIdx === i ? '#ffd700' : 'rgba(255,255,255,0.3)' }}>
-              {item}
+              <SpriteAsset id={spriteFromNode(item)} style={{ width: "10cqw", height: "10cqw" }} />
             </div>
           ))}
         </div>
@@ -756,7 +765,7 @@ const INTRO_GAMES: MicrogameDef[] = [
 ];
 
 // Placeholder factory for stages not yet fully implemented
-function placeholderGame(id: string, instruction: string, stage: string, stagePalette: StageDef['palette']): MicrogameDef {
+function placeholderGame(id: string, instruction: string, _stage: string, stagePalette: StageDef['palette']): MicrogameDef {
   return {
     id, instruction, lengthBars: 2, timeoutOutcome: "lose",
     palette: stagePalette,

@@ -1,5 +1,7 @@
 node_modules/
 dist/
 assets/
-tools/
+.vite/
+*.log
+# Keep supplied ROMs out of new asset exports; the tracked research ROM remains tracked.
 *.gba

@@ -1,5 +1,5 @@
 import { useEffect, useState, type FC, type ReactNode } from "react";
-import { useEngine, setEngineActive, requestStart, requestStartStage, requestTitle } from "./engine/useEngine";
+import { useEngine, setEngineActive, requestStartStage, requestTitle } from "./engine/useEngine";
 import {
   Doors,
   GameOverScreen,
@@ -97,7 +97,7 @@ export default function App() {
                       {s.character}
                     </div>
                     <div style={{ fontSize: "1.8cqw", color: "#8f7ff0" }}>
-                      ♩={s.startBpm}
+                      {s.startBpm} BPM
                     </div>
                   </button>
                 );

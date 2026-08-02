@@ -10,7 +10,7 @@ import type {
   Phase,
 } from "./types";
 import { getAllPlayable } from "../editor/library";
-import { getMicrogamesForStage, STAGES, STAGE_ORDER } from "../microgames";
+import { getMicrogamesForStage, STAGES } from "../microgames";
 
 /* The engine can be paused (e.g. while the editor is open) and the run can be
  * started/restarted from UI buttons instead of only the keyboard. */
@@ -189,10 +189,10 @@ function updateMicrogame(c: Core, dt: number, dtBeats: number) {
   };
   mg.def.update(mg.s, ctx);
 
-  /* --- FRAMERULES: a 4-bar game whose outcome is already decided may exit
-     at the halfway (beat 8) or three-quarter (beat 12) checkpoint. The end
-     is only ever pulled to a checkpoint whose door-closing beat has not yet
-     begun, so the 4/4 flow is never broken. --- */
+  /* --- Internal checkpoint timing: an extended phrase whose outcome is
+     already decided may end at beat 8 or 12, before the closing beat begins.
+     This keeps the 4/4 flow intact without exposing implementation language
+     to the player or creator. --- */
   if (mg.lengthBeats === 16 && mg.outcome !== null && mg.endBeats === 16) {
     if (t <= 7) mg.endBeats = 8;
     else if (t <= 11) mg.endBeats = 12;
@@ -349,6 +349,7 @@ function tick(c: Core, dt: number) {
 
 function postTick(c: Core) {
   c.input.pressed.clear();
+  c.input.pointer.pressed = false;
 }
 
 /* ------------------------------------------------------------------ */
@@ -368,9 +369,9 @@ function snapshot(c: Core): EngineSnapshot {
   } else if (p.kind === "microgame" && c.mg) {
     const t = c.beatClock - c.mg.startBeat;
     doorOpen = t >= c.mg.endBeats - 1 ? 1 - easeInOut(t - (c.mg.endBeats - 1)) : 1;
-    if (t < 2) {
+    if (t < 0.18) {
       instruction = c.mg.def.instruction;
-      instructionAge = t + 1;
+      instructionAge = t;
     }
   }
 

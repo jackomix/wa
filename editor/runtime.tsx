@@ -1,5 +1,6 @@
 import React, { useMemo } from "react";
 import { AUDIO } from "../engine/audio";
+import { SpriteAsset } from "../engine/sprites";
 import type { MgCtx, MicrogameDef, ViewCtx } from "../engine/types";
 import type {
   Action,
@@ -26,10 +27,11 @@ interface RtActor {
   scale: number;
   rot: number;
   visible: boolean;
+  costumeId: string;
+  appearance: Appearance;
   grounded: boolean;
   groundedPrev: boolean;
   alive: boolean;
-  emoji: string | null;
   vars: Record<string, number>;
 }
 
@@ -212,6 +214,7 @@ interface EvalCtx {
   ctx: MgCtx;
   data: MicrogameData;
   self: RtActor | null;
+  other: RtActor | null;
   evid: string;
 }
 
@@ -303,11 +306,18 @@ function evalInstance(conds: Condition[], ec: EvalCtx): boolean {
       case "clicked":
         if (!(ctx.input.pointer.pressed && hitPointer(self, ctx))) return false;
         break;
-      case "collide":
-        if (!others(self, s, p.other).some((o) => overlap(self, o))) return false;
+      case "collide": {
+        const picked = others(self, s, p.other).find((o) => overlap(self, o));
+        if (!picked) return false;
+        // Keep the exact instance that satisfied the condition. Actions using
+        // the editor's "other (picked)" target resolve to this object.
+        ec.other = picked;
         break;
+      }
       case "onCollideStart": {
-        const now = others(self, s, p.other).some((o) => overlap(self, o));
+        const picked = others(self, s, p.other).find((o) => overlap(self, o));
+        const now = !!picked;
+        if (picked) ec.other = picked;
         const k = `ocs:${ec.evid}:${self.instId}`;
         const was = !!s.mem[k];
         s.mem[k] = now;
@@ -361,11 +371,13 @@ function applyAction(act: Action, ec: EvalCtx) {
   const p = act.params;
   const t = ctx.t;
 
-  const targets: RtActor[] = act.targetDef
-    ? s.actors.filter((a) => a.alive && a.def.id === act.targetDef)
-    : self
-      ? [self]
-      : [];
+  const targets: RtActor[] = act.targetDef === "__other"
+    ? (ec.other ? [ec.other] : [])
+    : act.targetDef
+      ? s.actors.filter((a) => a.alive && a.def.id === act.targetDef)
+      : self
+        ? [self]
+        : [];
 
   const per = (a: RtActor) => {
     switch (act.kind) {
@@ -381,7 +393,17 @@ function applyAction(act: Action, ec: EvalCtx) {
         break;
       }
       case "destroy": a.alive = false; break;
-      case "setEmoji": if (a.def.appearance.kind === "emoji") a.emoji = p.emoji; break;
+      case "setSprite":
+        a.appearance = { kind: "sprite", ref: p.sprite, label: a.def.name };
+        break;
+      case "switchCostume": {
+        const costume = a.def.costumes.find((entry) => entry.id === p.costume || entry.name === p.costume);
+        if (costume && costume.frames[0]) {
+          a.costumeId = costume.id;
+          a.appearance = costume.frames[0].appearance;
+        }
+        break;
+      }
       case "hide": a.visible = false; break;
       case "show": a.visible = true; break;
       case "setScale": a.scale = rv(p.value, a, s, t); break;
@@ -399,7 +421,7 @@ function applyAction(act: Action, ec: EvalCtx) {
         const inst: ActorInstance = {
           id: uid("inst"), defId: def.id,
           x: rv(p.x, self, s, t), y: rv(p.y, self, s, t),
-          scale: 1, rot: 0, visible: true, vars: {},
+          scale: 1, rot: 0, costumeId: def.defaultCostume, visible: true, vars: {},
         };
         s.actors.push(instToActor(inst, def));
       }
@@ -414,11 +436,18 @@ function applyAction(act: Action, ec: EvalCtx) {
 /* ================================================================== */
 /*  Init / step                                                        */
 /* ================================================================== */
+function appearanceFor(def: ActorDef, costumeId: string): Appearance {
+  const costume = def.costumes.find((entry) => entry.id === costumeId) ?? def.costumes.find((entry) => entry.id === def.defaultCostume) ?? def.costumes[0];
+  return costume?.frames[0]?.appearance ?? def.appearance;
+}
+
 function instToActor(inst: ActorInstance, def: ActorDef): RtActor {
+  const costumeId = inst.costumeId || def.defaultCostume || def.costumes[0]?.id || "default";
   return {
     instId: inst.id, def, x: inst.x, y: inst.y, vx: 0, vy: 0,
-    scale: inst.scale, rot: inst.rot, visible: inst.visible,
-    grounded: false, groundedPrev: false, alive: true, emoji: null,
+    scale: inst.scale, rot: inst.rot, visible: inst.visible, costumeId,
+    appearance: appearanceFor(def, costumeId),
+    grounded: false, groundedPrev: false, alive: true,
     vars: { ...def.vars, ...inst.vars },
   };
 }
@@ -446,13 +475,14 @@ function step(s: RtState, data: MicrogameData, ctx: MgCtx) {
 
   for (const ev of data.events) {
     if (!ev.enabled) continue;
-    const ec: EvalCtx = { s, ctx, data, self: null, evid: ev.id };
+    const ec: EvalCtx = { s, ctx, data, self: null, other: null, evid: ev.id };
     if (!evalGlobal(ev.conditions, ec)) continue;
 
     if (ev.forActor) {
       for (const a of [...s.actors]) {
         if (!a.alive || a.def.id !== ev.forActor) continue;
         ec.self = a;
+        ec.other = null;
         if (!evalInstance(ev.conditions, ec)) continue;
         for (const act of ev.actions) applyAction(act, ec);
       }
@@ -547,12 +577,10 @@ function DataView({ s, v, data }: { s: RtState; v: ViewCtx; data: MicrogameData 
             left: `${a.x}%`, top: `${a.y}%`, width: `${a.def.width}%`, height: `${a.def.height}%`,
             transform: `translate(-50%, -50%) rotate(${a.rot}deg) scale(${a.scale})`, zIndex: a.def.z,
           }}>
-            {a.def.appearance.kind === "emoji" ? (
-              <span className="leading-none select-none" style={{ fontSize: `${a.def.height * 0.85}cqw` }}>
-                {a.emoji ?? a.def.appearance.char}
-              </span>
+            {a.appearance.kind === "sprite" ? (
+              <SpriteAsset id={a.appearance.ref} className="w-full h-full" />
             ) : (
-              <PixelSprite app={a.def.appearance} />
+              <PixelSprite app={a.appearance} />
             )}
           </div>
         ))}
@@ -578,6 +606,7 @@ function DataView({ s, v, data }: { s: RtState; v: ViewCtx; data: MicrogameData 
 export function compileMicrogame(data: MicrogameData): MicrogameDef {
   return {
     id: data.id,
+    canvas: data.canvas,
     instruction: data.instruction,
     lengthBars: data.lengthBars,
     timeoutOutcome: data.timeoutOutcome,

@@ -23,6 +23,31 @@ export const subscribe = (fn: () => void) => {
 
 const clone = <T,>(x: T): T => JSON.parse(JSON.stringify(x));
 
+const legacySprite: Record<string, string> = {
+  "😀": "face-happy", "🐰": "runner", "🚀": "rocket", "⚽": "apple", "🍎": "apple", "🪙": "spark", "👾": "ufo", "🤖": "dancer", "🐱": "face-happy", "🦊": "face-happy", "⭐": "star", "❤️": "face-happy", "💥": "explosion", "🔥": "flame", "🧺": "basket", "📦": "hurdle", "🏁": "target", "⚡": "hurdle", "🛸": "ufo", "☄️": "meteor", "🥚": "face-surprised", "💎": "spark", "🍭": "spark",
+};
+
+/** Migrate early local drafts without putting glyph rendering back into the runtime. */
+function normalizeDataGame(input: any): MicrogameData {
+  const d = clone(input) as any;
+  d.canvas = d.canvas ?? { width: 240, height: 160, label: "GBA native", activeX: 0, activeY: 0, activeWidth: 240, activeHeight: 160 };
+  d.actors = (d.actors ?? []).map((actor: any) => {
+    const legacy = actor.appearance?.kind === "emoji";
+    const ref = legacy ? (legacySprite[actor.appearance.char] ?? "placeholder") : actor.appearance?.ref ?? "placeholder";
+    const appearance = legacy || actor.appearance?.kind !== "pixel" ? { kind: "sprite", ref, label: actor.name } : actor.appearance;
+    const costumes = Array.isArray(actor.costumes) && actor.costumes.length
+      ? actor.costumes.map((costume: any) => ({
+          id: costume.id ?? uid("costume"), name: costume.name ?? "Default", loop: costume.loop !== false, fps: costume.fps ?? 8,
+          frames: Array.isArray(costume.frames) && costume.frames.length ? costume.frames.map((frame: any) => ({ id: frame.id ?? uid("frame"), appearance: frame.appearance?.kind === "emoji" ? { kind: "sprite", ref: legacySprite[frame.appearance.char] ?? ref } : frame.appearance ?? appearance, duration: frame.duration ?? 0.12 })) : [{ id: uid("frame"), appearance, duration: 0.12 }],
+        }))
+      : [{ id: "default", name: "Default", loop: true, fps: 8, frames: [{ id: uid("frame"), appearance, duration: 0.12 }] }];
+    return { ...actor, appearance, costumes, defaultCostume: actor.defaultCostume ?? costumes[0].id };
+  });
+  d.scene.instances = (d.scene.instances ?? []).map((instance: any) => ({ ...instance, costumeId: instance.costumeId ?? "default" }));
+  d.events = (d.events ?? []).map((event: any) => ({ ...event, actions: (event.actions ?? []).map((action: any) => action.kind === "setEmoji" ? { ...action, kind: "setSprite", params: { sprite: legacySprite[action.params?.emoji] ?? "placeholder" } } : action) }));
+  return d as MicrogameData;
+}
+
 function persist() {
   try {
     localStorage.setItem(STORE, JSON.stringify(cache));
@@ -36,7 +61,7 @@ function load(): MicrogameData[] {
   if (cache) return cache;
   try {
     const raw = localStorage.getItem(STORE);
-    cache = raw ? (JSON.parse(raw) as MicrogameData[]) : null;
+    cache = raw ? (JSON.parse(raw) as MicrogameData[]).map(normalizeDataGame) : null;
   } catch {
     cache = null;
   }
@@ -97,7 +122,7 @@ export function decodeGame(code: string): MicrogameData | null {
     const d = JSON.parse(json);
     if (!d || !d.scene || !Array.isArray(d.actors) || !Array.isArray(d.events)) return null;
     if (!d.id) d.id = uid("game");
-    return d as MicrogameData;
+    return normalizeDataGame(d);
   } catch {
     return null;
   }
@@ -107,12 +132,13 @@ export function decodeGame(code: string): MicrogameData | null {
 /*  Blank game + presets (editable examples)                           */
 /* ================================================================== */
 export function blankGame(): MicrogameData {
-  const player = makeActorDef("Player", "😀");
+  const player = makeActorDef("Player", "hero");
   player.behavior = makeBehavior("8direction");
   player.z = 5;
   return {
     id: uid("game"),
     name: "My Microgame",
+    canvas: { width: 240, height: 160, label: "GBA native", activeX: 0, activeY: 0, activeWidth: 240, activeHeight: 160 },
     instruction: "DO IT!",
     lengthBars: 2,
     timeoutOutcome: "lose",
@@ -143,13 +169,13 @@ const PRESETS: MicrogameData[] = [];
 
 /* ---- Preset 1: HOP! (platformer + reach the goal) ---------------- */
 {
-  const player = makeActorDef("Hero", "🐰");
+  const player = makeActorDef("Hero", "runner");
   player.behavior = makeBehavior("platformer");
   player.z = 5;
-  const spike = makeActorDef("Spike", "⚡");
+  const spike = makeActorDef("Spike", "hurdle");
   spike.solid = false;
   spike.z = 2;
-  const goal = makeActorDef("Goal", "🏁");
+  const goal = makeActorDef("Goal", "target");
   goal.z = 1;
   PRESETS.push({
     id: "preset_hop",
@@ -195,10 +221,10 @@ const PRESETS: MicrogameData[] = [];
 
 /* ---- Preset 2: BOUNCY CATCH (8-dir player + physics ball) --------- */
 {
-  const bowl = makeActorDef("Bowl", "🧺");
+  const bowl = makeActorDef("Bowl", "basket");
   bowl.behavior = makeBehavior("8direction");
   bowl.z = 5;
-  const ball = makeActorDef("Ball", "⚽");
+  const ball = makeActorDef("Ball", "apple");
   ball.behavior = makeBehavior("physics");
   ball.behavior.gravity = 46;
   ball.behavior.bounce = 0.78;
@@ -233,7 +259,7 @@ const PRESETS: MicrogameData[] = [];
       {
         id: uid("ev"), name: "catch", forActor: bowl.id, enabled: true,
         conditions: [{ kind: "collide", params: { other: ball.id } }],
-        actions: [{ kind: "win", params: {} }, { kind: "playSfx", params: { sfx: "coin" } }],
+        actions: [{ kind: "destroy", params: {}, targetDef: "__other" }, { kind: "win", params: {} }, { kind: "playSfx", params: { sfx: "coin" } }],
       },
     ],
   });
@@ -241,10 +267,10 @@ const PRESETS: MicrogameData[] = [];
 
 /* ---- Preset 3: METEOR STORM (spawn every beat + survive) --------- */
 {
-  const ship = makeActorDef("Ship", "🚀");
+  const ship = makeActorDef("Ship", "rocket");
   ship.behavior = makeBehavior("8direction");
   ship.z = 5;
-  const rock = makeActorDef("Meteor", "☄️");
+  const rock = makeActorDef("Meteor", "meteor");
   rock.behavior = makeBehavior("physics");
   rock.behavior.gravity = 26;
   rock.behavior.friction = 0;
@@ -287,10 +313,10 @@ const PRESETS: MicrogameData[] = [];
 
 /* ---- Preset 4: DROP ZONE (drag & drop into the goal) ------------- */
 {
-  const crate = makeActorDef("Crate", "📦");
+  const crate = makeActorDef("Crate", "hurdle");
   crate.behavior = makeBehavior("dragdrop");
   crate.z = 5;
-  const zone = makeActorDef("Goal", "🎯");
+  const zone = makeActorDef("Goal", "target");
   zone.z = 1;
   PRESETS.push({
     id: "preset_drop",
@@ -325,10 +351,10 @@ const PRESETS: MicrogameData[] = [];
 
 /* ---- Preset 5: TAP ATTACK (rhythm: press on the beat) ----------- */
 {
-  const target = makeActorDef("Target", "🟢");
+  const target = makeActorDef("Target", "target");
   target.behavior = makeBehavior("static");
   target.z = 3;
-  const dancer = makeActorDef("Dancer", "🤖");
+  const dancer = makeActorDef("Dancer", "dancer");
   dancer.behavior = makeBehavior("static");
   dancer.z = 5;
   PRESETS.push({
@@ -354,7 +380,7 @@ const PRESETS: MicrogameData[] = [];
         id: uid("ev"), name: "hit on beat", forActor: null, enabled: true,
         conditions: [{ kind: "keyPressed", params: { key: "space" } }],
         actions: [
-          { kind: "setEmoji", params: { emoji: "💥" }, targetDef: target.id },
+          { kind: "setSprite", params: { sprite: "explosion" }, targetDef: target.id },
           { kind: "win", params: {} },
           { kind: "playSfx", params: { sfx: "pop" } },
         ],
@@ -362,7 +388,7 @@ const PRESETS: MicrogameData[] = [];
       {
         id: uid("ev"), name: "reset target", forActor: null, enabled: true,
         conditions: [{ kind: "keyReleased", params: { key: "space" } }],
-        actions: [{ kind: "setEmoji", params: { emoji: "🟢" }, targetDef: target.id }],
+        actions: [{ kind: "setSprite", params: { sprite: "target" }, targetDef: target.id }],
       },
     ],
   });

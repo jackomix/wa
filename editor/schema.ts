@@ -31,7 +31,7 @@ export interface Behavior {
 
 /* ---- appearance -------------------------------------------------- */
 export type Appearance =
-  | { kind: "emoji"; char: string }
+  | { kind: "sprite"; ref: string; label?: string }
   | {
       kind: "pixel";
       grid: number; // cells per side (8/12/16)
@@ -39,11 +39,27 @@ export type Appearance =
       pixels: number[][]; // [row][col] = palette index, -1 = transparent
     };
 
+export interface SpriteFrame {
+  id: string;
+  appearance: Appearance;
+  duration: number;
+}
+
+export interface Costume {
+  id: string;
+  name: string;
+  frames: SpriteFrame[];
+  loop: boolean;
+  fps: number;
+}
+
 /* ---- actor template ---------------------------------------------- */
 export interface ActorDef {
   id: string;
   name: string;
-  appearance: Appearance;
+  appearance: Appearance; // default/legacy view; costumes are the authored source
+  costumes: Costume[];
+  defaultCostume: string;
   width: number; // units (percent of screen width)
   height: number; // units (percent of screen height)
   solid: boolean; // acts as a platform / wall for physics + platformer
@@ -60,6 +76,7 @@ export interface ActorInstance {
   y: number;
   scale: number;
   rot: number;
+  costumeId: string;
   visible: boolean;
   vars: Record<string, number>;
 }
@@ -105,9 +122,20 @@ export interface Palette {
   text: string;
 }
 
+export interface CanvasSpec {
+  width: number;
+  height: number;
+  label: string;
+  activeX: number;
+  activeY: number;
+  activeWidth: number;
+  activeHeight: number;
+}
+
 export interface MicrogameData {
   id: string;
   name: string;
+  canvas?: CanvasSpec;
   instruction: string;
   lengthBars: 2 | 4;
   timeoutOutcome: "win" | "lose";
@@ -138,11 +166,14 @@ export function makeBehavior(t: BehaviorType): Behavior {
   }
 }
 
-export function makeActorDef(name: string, char = "⭐"): ActorDef {
+export function makeActorDef(name: string, spriteRef = "spark"): ActorDef {
+  const defaultAppearance: Appearance = { kind: "sprite", ref: spriteRef, label: name };
   return {
     id: uid("act"),
     name,
-    appearance: { kind: "emoji", char },
+    appearance: defaultAppearance,
+    costumes: [{ id: "default", name: "Default", frames: [{ id: uid("frame"), appearance: defaultAppearance, duration: 0.12 }], loop: true, fps: 8 }],
+    defaultCostume: "default",
     width: 14,
     height: 14,
     solid: false,
@@ -153,7 +184,7 @@ export function makeActorDef(name: string, char = "⭐"): ActorDef {
 }
 
 export function makeInstance(defId: string, x = 50, y = 50): ActorInstance {
-  return { id: uid("inst"), defId, x, y, scale: 1, rot: 0, visible: true, vars: {} };
+  return { id: uid("inst"), defId, x, y, scale: 1, rot: 0, costumeId: "default", visible: true, vars: {} };
 }
 
 export const KEY_OPTIONS: { value: Key; label: string }[] = [

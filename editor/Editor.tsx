@@ -1,4 +1,5 @@
 import React, { useMemo, useRef, useState } from "react";
+import { SPRITE_IDS, SpriteAsset } from "../engine/sprites";
 import { PixelEditor } from "./PixelEditor";
 import { Tester } from "./Tester";
 import {
@@ -69,6 +70,7 @@ const FieldInput: React.FC<{
     if (field.type === "scope") list.push(...SCOPE_OPTIONS);
     if (field.type === "sfx") list.push(...SFX_OPTIONS);
     if (field.type === "pattern") list.push(...PATTERN_OPTIONS);
+    if (field.type === "sprite") list.push(...SPRITE_IDS.map((value) => ({ value, label: value.replace(/-/g, " ") })));
     if (field.type === "actor") list.push(...actors.map((a) => ({ value: a.id, label: a.name })));
     if (field.type === "other")
       list.push({ value: "any", label: "Any actor" }, ...actors.map((a) => ({ value: a.id, label: a.name })));
@@ -81,7 +83,7 @@ const FieldInput: React.FC<{
     );
   if (field.type === "bool")
     return <input type="checkbox" checked={!!value} onChange={(e) => onChange(e.target.checked)} />;
-  if (["key", "op", "scope", "sfx", "pattern", "actor", "other"].includes(field.type))
+  if (["key", "op", "scope", "sfx", "pattern", "sprite", "actor", "other"].includes(field.type))
     return (
       <select value={value ?? ""} onChange={(e) => onChange(e.target.value)} className={inp + " w-auto"}>
         {opts().map((o) => (
@@ -134,7 +136,7 @@ export const Editor: React.FC<{ initial: MicrogameData; onClose: () => void }> =
 
   /* ---- actor def ops ---- */
   const addActor = () => {
-    const a = makeActorDef("Actor " + (actors.length + 1), "👾");
+    const a = makeActorDef("Actor " + (actors.length + 1), "placeholder");
     mutate((d) => {
       d.actors.push(a);
       d.scene.instances.push(makeInstance(a.id, 50, 40));
@@ -146,11 +148,36 @@ export const Editor: React.FC<{ initial: MicrogameData; onClose: () => void }> =
       const a = d.actors.find((x) => x.id === id);
       if (a) Object.assign(a, patch);
     });
-  const updateAppearance = (id: string, app: Appearance) =>
+  const updateAppearance = (id: string, app: Appearance, costumeId?: string, frameIndex = 0) =>
     mutate((d) => {
       const a = d.actors.find((x) => x.id === id);
-      if (a) a.appearance = app;
+      if (!a) return;
+      a.appearance = app;
+      const active = a.costumes.find((costume) => costume.id === (costumeId ?? a.defaultCostume)) ?? a.costumes[0];
+      if (active?.frames[frameIndex]) active.frames[frameIndex] = { ...active.frames[frameIndex], appearance: app };
     });
+  const addFrame = (id: string, costumeId: string) => {
+    const nextId = uid("frame");
+    mutate((d) => {
+      const actor = d.actors.find((x) => x.id === id);
+      const costume = actor?.costumes.find((entry) => entry.id === costumeId);
+      if (costume) {
+        const base = costume.frames[costume.frames.length - 1]?.appearance ?? actor?.appearance ?? { kind: "sprite", ref: "placeholder" };
+        costume.frames.push({ id: nextId, appearance: base, duration: 0.12 });
+      }
+    });
+    return nextId;
+  };
+  const addCostume = (id: string) => {
+    const nextId = uid("costume");
+    mutate((d) => {
+      const a = d.actors.find((x) => x.id === id);
+      if (!a) return;
+      const base = a.costumes[0]?.frames[0]?.appearance ?? a.appearance;
+      a.costumes.push({ id: nextId, name: `Costume ${a.costumes.length + 1}`, frames: [{ id: uid("frame"), appearance: base, duration: 0.12 }], loop: true, fps: 8 });
+    });
+    return nextId;
+  };
   const removeDef = (id: string) =>
     mutate((d) => {
       d.actors = d.actors.filter((a) => a.id !== id);
@@ -290,7 +317,7 @@ export const Editor: React.FC<{ initial: MicrogameData; onClose: () => void }> =
           />
         )}
         {tab === "sprite" && selDef && (
-          <SpriteTab def={selDef} updateAppearance={(app) => updateAppearance(selDef.id, app)} />
+          <SpriteTab def={selDef} updateAppearance={(app, costumeId, frameIndex) => updateAppearance(selDef.id, app, costumeId, frameIndex)} onAddCostume={() => addCostume(selDef.id)} onAddFrame={(costumeId) => addFrame(selDef.id, costumeId)} />
         )}
         {tab === "sprite" && !selDef && <Empty msg="Select an actor to draw its sprite." />}
         {tab === "events" && (
@@ -345,7 +372,7 @@ const SceneTab: React.FC<any> = ({
   };
 
   const preview = (a: ActorDef) =>
-    a.appearance.kind === "emoji" ? a.appearance.char : null;
+    a.appearance.kind === "sprite" ? <SpriteAsset id={a.appearance.ref} className="w-5 h-5" /> : null;
 
   return (
     <>
@@ -444,8 +471,8 @@ const SceneTab: React.FC<any> = ({
                   fontSize: `${def.height * 0.8}cqw`, lineHeight: 1,
                 }}
               >
-                {def.appearance.kind === "emoji" ? (
-                  def.appearance.char
+                {def.appearance.kind === "sprite" ? (
+                  <SpriteAsset id={def.appearance.ref} className="w-full h-full" />
                 ) : (
                   <div className="w-full h-full" style={{ background: def.appearance.palette[0], opacity: 0.8 }} />
                 )}
@@ -582,47 +609,57 @@ const NumRow: React.FC<{ label: string; value: number; step?: number; onChange: 
 /* ================================================================== */
 /*  Sprite tab                                                         */
 /* ================================================================== */
-const SpriteTab: React.FC<{ def: ActorDef; updateAppearance: (a: Appearance) => void }> = ({
-  def, updateAppearance,
-}) => {
-  const app = def.appearance;
-  return (
-    <div className="flex-1 overflow-y-auto p-6 flex flex-col items-center gap-4">
-      <div className="flex gap-2">
-        <button
-          onClick={() => updateAppearance({ kind: "emoji", char: app.kind === "emoji" ? app.char : "⭐" })}
-          className={`px-3 py-1.5 rounded font-bold text-sm ${app.kind === "emoji" ? "bg-fuchsia-600" : "bg-white/10"}`}
-        >
-          😀 Emoji
-        </button>
-        <button
-          onClick={() => updateAppearance(app.kind === "pixel" ? app : defaultPixel())}
-          className={`px-3 py-1.5 rounded font-bold text-sm ${app.kind === "pixel" ? "bg-fuchsia-600" : "bg-white/10"}`}
-        >
-          🎨 Draw Pixel Art
-        </button>
-      </div>
+const SpriteTab: React.FC<{
+  def: ActorDef;
+  updateAppearance: (a: Appearance, costumeId?: string, frameIndex?: number) => void;
+  onAddCostume: () => string;
+  onAddFrame: (costumeId: string) => string;
+}> = ({ def, updateAppearance, onAddCostume, onAddFrame }) => {
+  const [costumeId, setCostumeId] = useState(def.defaultCostume || def.costumes[0]?.id || "default");
+  const [frameIndex, setFrameIndex] = useState(0);
+  const costumes = def.costumes.length ? def.costumes : [{ id: "default", name: "Default", frames: [{ id: uid("frame"), appearance: def.appearance, duration: 0.12 }], loop: true, fps: 8 }];
+  const costume = costumes.find((c) => c.id === costumeId) ?? costumes[0];
+  const safeFrameIndex = Math.min(frameIndex, Math.max(0, costume.frames.length - 1));
+  const frame = costume.frames[safeFrameIndex];
+  const app = frame?.appearance ?? def.appearance;
 
-      {app.kind === "emoji" ? (
-        <div className="flex flex-col items-center gap-3">
-          <div className="bg-white/5 rounded-xl p-8 text-[80px] leading-none">{app.char}</div>
-          <input
-            value={app.char}
-            onChange={(e) => updateAppearance({ kind: "emoji", char: e.target.value.slice(0, 2) })}
-            className={inp + " text-center text-2xl w-32"}
-            placeholder="😎"
-          />
-          <div className="flex flex-wrap gap-1 max-w-xs justify-center">
-            {"😀🐰🚀⚽🍎🪙👾🤖🐱🦊⭐❤️💥🔥🧺📦🏁⚡🛸☄️🥚💎🍭".split("").map((c, i) => (
-              <button key={i} onClick={() => updateAppearance({ kind: "emoji", char: c })} className="text-2xl hover:scale-125 transition">
-                {c}
-              </button>
-            ))}
-          </div>
+  const selectCostume = (id: string) => { setCostumeId(id); setFrameIndex(0); };
+  const addCostume = () => { setCostumeId(onAddCostume()); setFrameIndex(0); };
+  const addFrame = () => { const next = onAddFrame(costume.id); setFrameIndex(costume.frames.length); void next; };
+
+  return (
+    <div className="flex-1 overflow-y-auto p-5 flex flex-col gap-4">
+      <div className="flex items-center justify-between">
+        <div><div className={lbl}>Actor costumes</div><p className="text-white/40 text-xs mt-1">Named sprite sequences can be switched by an event and interrupted by a result.</p></div>
+        <button onClick={addCostume} className="px-3 py-1.5 rounded bg-fuchsia-600 font-bold text-sm">+ New costume</button>
+      </div>
+      <div className="flex gap-2 overflow-x-auto pb-1">
+        {costumes.map((c) => (
+          <button key={c.id} onClick={() => selectCostume(c.id)} className={`min-w-28 px-3 py-2 rounded-lg border text-left ${c.id === costume.id ? "bg-fuchsia-600/30 border-fuchsia-400" : "bg-white/5 border-white/10"}`}>
+            <span className="block text-xs font-bold">{c.name}</span><span className="block text-[10px] text-white/45">{c.frames.length} frame{c.frames.length === 1 ? "" : "s"} · {c.loop ? "loop" : "one-shot"}</span>
+          </button>
+        ))}
+      </div>
+      <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[.03] p-3">
+        <div className="w-24 h-24 rounded-xl bg-black/30 border border-white/10 p-2 flex items-center justify-center"><SpriteAsset id={app.kind === "sprite" ? app.ref : "placeholder"} className="w-full h-full" /></div>
+        <div className="flex flex-col gap-2 flex-1">
+          <div className={lbl}>Frame {safeFrameIndex + 1} / {costume.frames.length} · {costume.name}</div>
+          {app.kind === "sprite" ? (
+            <select value={app.ref} onChange={(e) => updateAppearance({ kind: "sprite", ref: e.target.value, label: costume.name }, costume.id, safeFrameIndex)} className={inp}>
+              {SPRITE_IDS.map((id) => <option key={id} value={id} className="bg-zinc-800">{id.replace(/-/g, " ")}</option>)}
+            </select>
+          ) : <span className="text-xs text-white/50">Pixel frame / {app.grid}×{app.grid}</span>}
+          <div className="flex gap-2"><button onClick={() => updateAppearance(app.kind === "pixel" ? app : defaultPixel(), costume.id, safeFrameIndex)} className={`px-2 py-1 rounded text-xs font-bold ${app.kind === "pixel" ? "bg-fuchsia-600" : "bg-white/10"}`}>Draw pixel frame</button><button onClick={() => updateAppearance({ kind: "sprite", ref: "hero", label: costume.name }, costume.id, safeFrameIndex)} className={`px-2 py-1 rounded text-xs font-bold ${app.kind === "sprite" ? "bg-emerald-600" : "bg-white/10"}`}>Use sprite reference</button></div>
         </div>
-      ) : (
-        <PixelEditor value={app} onChange={updateAppearance} />
-      )}
+      </div>
+      <div className="flex items-center gap-2 flex-wrap rounded-lg border border-white/10 bg-black/20 p-2">
+        <span className="text-[11px] uppercase tracking-wide text-white/40 font-bold mr-1">Frames</span>
+        {costume.frames.map((entry, index) => <button key={entry.id} onClick={() => setFrameIndex(index)} className={`w-12 h-12 rounded-md border p-1 ${index === safeFrameIndex ? "border-fuchsia-400 bg-fuchsia-600/20" : "border-white/10 bg-white/5"}`}><SpriteAsset id={entry.appearance.kind === "sprite" ? entry.appearance.ref : "placeholder"} className="w-full h-full" /><span className="block text-[9px] text-white/40">{index + 1}</span></button>)}
+        <button onClick={addFrame} className="w-12 h-12 rounded-md border border-dashed border-emerald-400/50 text-emerald-300 text-lg">+</button>
+        <span className="text-[10px] text-white/35 ml-auto">{costume.fps} fps · {costume.loop ? "looping" : "one-shot"}</span>
+      </div>
+      {app.kind === "pixel" && <PixelEditor value={app} onChange={(next) => updateAppearance(next, costume.id, safeFrameIndex)} />}
+      <div className="rounded-lg border border-emerald-400/20 bg-emerald-400/5 p-3 text-xs text-white/55"><b className="text-emerald-300">Sprite reference pipeline:</b> placeholder IDs are replaceable asset keys. Events can switch to this costume without changing the actor or scene.</div>
     </div>
   );
 };
@@ -721,6 +758,7 @@ const EventsTab: React.FC<any> = ({
                             title="Apply to"
                           >
                             <option value="" className="bg-zinc-800">→ self</option>
+                            <option value="__other" className="bg-zinc-800">→ other (picked)</option>
                             {draft.actors.map((ax: ActorDef) => (
                               <option key={ax.id} value={ax.id} className="bg-zinc-800">→ all {ax.name}</option>
                             ))}
@@ -775,6 +813,23 @@ const SettingsTab: React.FC<{ draft: MicrogameData; mutate: (fn: (d: MicrogameDa
     <div className="max-w-xl mx-auto flex flex-col gap-4">
       <h2 className="font-black text-lg">⚙️ Game Settings</h2>
 
+      <div className="rounded-xl border border-white/10 bg-white/[.03] p-3 flex flex-col gap-2">
+        <div className={lbl}>Logical canvas / active playfield</div>
+        <select value={draft.canvas?.label ?? "GBA native"} onChange={(e) => mutate((d) => {
+          const profiles: Record<string, NonNullable<MicrogameData["canvas"]>> = {
+            "GBA native": { width: 240, height: 160, label: "GBA native", activeX: 0, activeY: 0, activeWidth: 240, activeHeight: 160 },
+            "Compact": { width: 320, height: 240, label: "Compact", activeX: 0, activeY: 0, activeWidth: 320, activeHeight: 220 },
+            "Studio": { width: 480, height: 320, label: "Studio", activeX: 20, activeY: 0, activeWidth: 440, activeHeight: 300 },
+          };
+          d.canvas = profiles[e.target.value];
+        })} className={inp}>
+          <option value="GBA native" className="bg-zinc-800">240 × 160 · GBA native</option>
+          <option value="Compact" className="bg-zinc-800">320 × 240 · Compact</option>
+          <option value="Studio" className="bg-zinc-800">480 × 320 · Studio</option>
+        </select>
+        <span className="text-[11px] text-white/40">Active region: {draft.canvas?.activeWidth ?? 240} × {draft.canvas?.activeHeight ?? 160} at ({draft.canvas?.activeX ?? 0}, {draft.canvas?.activeY ?? 0}). Art assets can be detailed without forcing an upfront style choice.</span>
+      </div>
+
       <div>
         <div className={lbl}>Instruction (shown on the beat)</div>
         <input className={inp} value={draft.instruction} onChange={(e) => mutate((d) => (d.instruction = e.target.value))} />
@@ -785,7 +840,7 @@ const SettingsTab: React.FC<{ draft: MicrogameData; mutate: (fn: (d: MicrogameDa
           <div className={lbl}>Length</div>
           <select value={draft.lengthBars} onChange={(e) => mutate((d) => (d.lengthBars = Number(e.target.value) as 2 | 4))} className={inp}>
             <option value={2} className="bg-zinc-800">2 bars</option>
-            <option value={4} className="bg-zinc-800">4 bars (framerules)</option>
+            <option value={4} className="bg-zinc-800">4 bars · extended phrase</option>
           </select>
         </div>
         <div>
@@ -948,7 +1003,7 @@ export const LibraryModal: React.FC<{
             <div key={g.id} className="rounded-xl border border-white/10 bg-zinc-800/60 p-3 flex flex-col gap-2">
               <div className="flex items-center gap-2">
                 <span className="w-7 h-7 rounded-md flex items-center justify-center text-lg" style={{ background: g.palette.screen }}>
-                  {g.actors[0]?.appearance.kind === "emoji" ? g.actors[0].appearance.char : "🎨"}
+                  {g.actors[0]?.appearance.kind === "sprite" ? <SpriteAsset id={g.actors[0].appearance.ref} className="w-5 h-5" /> : <span className="text-xs">PIX</span>}
                 </span>
                 <div className="flex-1 min-w-0">
                   <div className="font-bold truncate">{g.name}</div>
