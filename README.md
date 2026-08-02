@@ -1,12 +1,26 @@
-# WarioWare-style microgame engine — v2
+# wa — WarioWare-style microgame engine
+
+⚠️ **This branch currently contains two parallel builds.** More than one Arena session
+was pushing to `arena/019fc0aa-wa`, so rather than overwrite anyone's work both are
+kept side by side. They share `node_modules` but are otherwise independent.
+
+| build | location | entry | run |
+| --- | --- | --- | --- |
+| **Micro Mania** | repo root (`App.tsx`, `engine/`, `editor/`, `microgames/`) | `index.html` | `npm run dev` |
+| **v2 — ROM-faithful** | `v2/` | `v2/index.html` | `npm run dev:v2` |
+
+---
+
+# v2 — ROM-faithful microgame engine
 
 A data-driven microgame engine and editor, with **139 microgames recreated from the
-original GBA ROM** using real decompiled assets and logic.
+original GBA ROM** using real decompiled art and real disassembled logic.
 
 ```bash
 npm install
-npm run dev      # play + edit
-npm run build    # single-file bundle in dist/
+npm run dev:v2      # play + edit
+npm run build:v2    # single-file bundle in v2/dist/
+npm run test:v2     # headless assertions
 ```
 
 ## What's here
@@ -47,11 +61,16 @@ Key facts that drive the engine, all sourced:
   `gPressedKeys` (tap) vs 27 `gCurrentKeys` (hold).
 - **123/141** branch on `currentDifficulty` — three tiers is the norm, not a bonus.
 
-## Tests
+## Fixes from the v1 feedback
 
-```bash
-npx tsx v2/tools/test/rom-games.test.mjs
-```
+1. **Frame rules** — removed from every user-facing surface; the quantisation remains
+   internal to the scheduler, which is where the original keeps it.
+2. **Instruction text** — retimed from lingering ~1.4 beats into play to clearing
+   ~0.1 beat after control starts.
+3. **Music-note HUD** — the bottom-left `♩=BPM · BAR n · 4/4` readout is gone.
+4. **Emoji-as-sprite** — art is now a swappable `SpriteRef` behind a costume, rendered
+   through one path shared with pixels and bitmaps. This is what let 555 real ROM
+   sprites drop in with no other change.
 
 ## Note on the ROM
 
