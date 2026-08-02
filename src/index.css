@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-arcade {
+    font-family: 'Press Start 2P', monospace;
+  }
+  .font-timer {
+    font-family: 'VT323', monospace;
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  .font-silkscreen {
+    font-family: 'Silkscreen', sans-serif;
+  }
+}
+
+/* Retro Keyframe Animations */
+@keyframes text-flash {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes warioware-shake {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  20% { transform: translate(-3px, 2px) rotate(-1deg); }
+  40% { transform: translate(3px, -1px) rotate(1deg); }
+  60% { transform: translate(-2px, -2px) rotate(0deg); }
+  80% { transform: translate(2px, 3px) rotate(1deg); }
+}
+
+@keyframes siren-strobe {
+  0%, 100% { background-color: rgba(239, 68, 68, 0.45); }
+  50% { background-color: rgba(0, 0, 0, 0.65); }
+}
+
+@keyframes elevator-scroll {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-text-flash {
+  animation: text-flash 0.35s infinite;
+}
+
+.animate-wario-shake {
+  animation: warioware-shake 0.15s infinite;
+}
+
+.animate-siren-strobe {
+  animation: siren-strobe 0.25s infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s infinite ease-in-out;
+}
+
+/* Custom scrollbar for game cabinet menu */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1e1b4b;
+}
+::-webkit-scrollbar-thumb {
+  background: #ec4899;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f43f5e;
+}
+
