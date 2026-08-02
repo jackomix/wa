@@ -76,7 +76,7 @@ interface CachedSprite {
 }
 
 let _rom: Uint8Array | null = null;
-let _romLoading: Promise<Uint8Array> | null = null;
+let _romLoading: Promise<Uint8Array | null> | null = null;
 const _spriteCache = new Map<string, CachedSprite>();
 
 export async function loadROM(): Promise<Uint8Array | null> {
@@ -339,7 +339,7 @@ export async function cacheStageSprites(stageId: string): Promise<void> {
 // ROM-based Sprite Component
 // ============================================================
 
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 
 /**
  * Sprite component that renders a ROM-extracted sprite.

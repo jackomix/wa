@@ -103,7 +103,8 @@ export type Phase =
       lostLife: boolean;
     }
   | { kind: "microgame" }
-  | { kind: "gameover"; startBeat: number; restartAtBeat: number | null };
+  | { kind: "gameover"; startBeat: number; restartAtBeat: number | null }
+  | { kind: "stage_intro"; startBeat: number; stageId: string };
 
 export interface EngineSnapshot {
   bpm: number;
