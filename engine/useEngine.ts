@@ -393,6 +393,7 @@ function snapshot(c: Core): EngineSnapshot {
     doorOpen,
     instruction,
     instructionAge,
+    currentStage: c.currentStage,
   };
 }
 

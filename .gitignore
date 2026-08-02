@@ -3,5 +3,5 @@ dist/
 assets/
 .vite/
 *.log
-# Keep supplied ROMs out of new asset exports; the tracked research ROM remains tracked.
-*.gba
+tools/
+public/rom.gba

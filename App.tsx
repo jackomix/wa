@@ -14,6 +14,7 @@ import { Editor, LibraryModal } from "./editor/Editor";
 import { blankGame } from "./editor/library";
 import type { MicrogameData } from "./editor/schema";
 import { STAGES, STAGE_ORDER } from "./microgames";
+import { loadROM } from "./engine/romGfx";
 
 export default function App() {
   const { snap } = useEngine();
@@ -21,6 +22,14 @@ export default function App() {
   const [editing, setEditing] = useState<MicrogameData | null>(null);
   const [showLib, setShowLib] = useState(false);
   const [showStageSelect, setShowStageSelect] = useState(false);
+  const [romStatus, setRomStatus] = useState<"loading" | "loaded" | "unavailable">("loading");
+
+  // Load the ROM on startup
+  useEffect(() => {
+    loadROM().then(rom => {
+      setRomStatus(rom ? "loaded" : "unavailable");
+    });
+  }, []);
 
   // pause the global rhythm engine while the editor is open
   useEffect(() => {
@@ -56,6 +65,14 @@ export default function App() {
       <TitleScreen snap={snap} />
       <GameOverScreen snap={snap} />
       <RhythmHUD snap={snap} />
+
+      {/* ROM status indicator */}
+      {romStatus === "loaded" && (
+        <div className="absolute z-[85] font-bold px-2 py-1 rounded bg-black/30 text-green-400/60"
+          style={{ top: "1cqw", left: "1cqw", fontSize: "1.5cqw" }}>
+          ROM ✓
+        </div>
+      )}
 
       {/* Menu over the title screen */}
       {onTitle && !(snap.phase as any).startAtBeat && !showStageSelect && (

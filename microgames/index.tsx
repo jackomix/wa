@@ -1,6 +1,6 @@
 import React from "react";
-import { SpriteAsset, type SpriteId } from "../engine/sprites";
 import type { MicrogameDef, MgCtx, ViewCtx } from "../engine/types";
+import { WARIO_SPRITE, CAR_SPRITE, DIAMOND_SPRITE, UFO_SPRITE, SHIELD_SPRITE, type SpriteData } from "../engine/pixelArt";
 
 /* ================================================================== */
 /*  WarioWare Inc. — Faithful Microgame Recreation                     */
@@ -9,34 +9,64 @@ import type { MicrogameDef, MgCtx, ViewCtx } from "../engine/types";
 /*  beat-accurate timing system.                                       */
 /* ================================================================== */
 
-const clamp = (v: number, a: number, b: number) => Math.min(b, Math.max(a, v));
+const clamp = (v: number, a: number, b) => Math.min(b, Math.max(a, v));
 const rnd = (a: number, b: number) => a + Math.random() * (b - a);
+const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
 
-/** Sprite component — asset references, coords in % of screen.
- * Legacy authored labels are converted to registry IDs at the edge so no
- * microgame renders a text/glyph object as its art. New content should pass
- * spriteId directly. */
-const GLYPH_SPRITES: Record<string, SpriteId> = {
-  "🚗": "hurdle", "🚐": "hurdle", "🏎️": "hurdle", "😵": "face-sad", "🤸": "runner-jump", "🧍": "runner", "😈": "face-happy", "😋": "face-happy", "😎": "face-happy", "😫": "face-sad", "😮": "face-surprised", "🐹": "face-surprised", "🥳": "face-happy", "✨": "spark", "⭐": "star", "🪨": "rock", "💣": "explosion", "💥": "explosion", "💫": "spark", "💰": "spark", "💎": "spark", "🔨": "hurdle", "🔫": "gun", "🔺": "triangle", "🛸": "ufo", "🧺": "basket", "🫐": "apple", "🍇": "apple", "🍊": "apple", "🍌": "apple", "🍎": "apple", "🍓": "apple", "☕": "basket", "⚽": "rock", "🛡️": "target", "👊": "runner-jump", "👔": "hero", "🧥": "hero", "👕": "hero", "👹": "face-sad", "🧱": "hurdle",
-};
-const spriteFromNode = (node: React.ReactNode): SpriteId => {
-  if (typeof node === "string") return GLYPH_SPRITES[node] ?? "placeholder";
-  if (React.isValidElement(node)) return spriteFromNode((node.props as { children?: React.ReactNode }).children);
-  return "placeholder";
-};
+/** Sprite component — absolute-positioned emoji or pixel art, coords in % of screen */
 const Sp: React.FC<{
   x: number; y: number; size?: number; flip?: boolean;
-  rot?: number; scale?: number; z?: number; children?: React.ReactNode;
-  spriteId?: SpriteId; opacity?: number;
-}> = ({ x, y, size = 12, flip, rot = 0, scale = 1, z = 1, children, spriteId, opacity = 1 }) => (
-  <div className="absolute select-none leading-none" style={{
-    left: `${x}%`, top: `${y}%`, width: `${size}cqw`, height: `${size}cqw`, zIndex: z,
-    transform: `translate(-50%, -50%) rotate(${rot}deg) scale(${flip ? -scale : scale}, ${scale})`,
-    opacity,
-  }}>
-    <SpriteAsset id={spriteId ?? spriteFromNode(children)} className="w-full h-full" />
-  </div>
-);
+  rot?: number; scale?: number; z?: number; children: React.ReactNode;
+  opacity?: number; sprite?: SpriteData;
+}> = ({ x, y, size = 12, flip, rot = 0, scale = 1, z = 1, children, opacity = 1, sprite }) => {
+  if (sprite) {
+    return (
+      <div className="absolute select-none" style={{
+        left: `${x}%`, top: `${y}%`, zIndex: z, opacity,
+        transform: `translate(-50%, -50%) rotate(${rot}deg) scale(${flip ? -scale : scale}, ${scale})`,
+        width: `${size}cqw`, height: `${size}cqw`,
+        imageRendering: 'pixelated',
+      }}>
+        <PixelArtCanvas sprite={sprite} />
+      </div>
+    );
+  }
+  return (
+    <div className="absolute select-none leading-none" style={{
+      left: `${x}%`, top: `${y}%`, fontSize: `${size}cqw`, zIndex: z,
+      transform: `translate(-50%, -50%) rotate(${rot}deg) scale(${flip ? -scale : scale}, ${scale})`,
+      opacity,
+    }}>
+      {children}
+    </div>
+  );
+};
+
+/** Canvas-based pixel art renderer */
+const PixelArtCanvas: React.FC<{ sprite: SpriteData }> = ({ sprite }) => {
+  const ref = React.useRef<HTMLCanvasElement>(null);
+  React.useEffect(() => {
+    const c = ref.current;
+    if (!c) return;
+    const { width, height, pixels, palette } = sprite;
+    c.width = width; c.height = height;
+    const ctx = c.getContext('2d')!;
+    ctx.imageSmoothingEnabled = false;
+    const colors = palette.map(c16 => {
+      const r = (c16 & 0x1F) << 3, g = ((c16 >> 5) & 0x1F) << 3, b = ((c16 >> 10) & 0x1F) << 3;
+      return `rgb(${r},${g},${b})`;
+    });
+    for (let y = 0; y < height; y++) {
+      for (let x = 0; x < width; x++) {
+        const idx = pixels[y * width + x];
+        if (idx === 0) continue;
+        ctx.fillStyle = colors[idx] || '#ff00ff';
+        ctx.fillRect(x, y, 1, 1);
+      }
+    }
+  }, [sprite]);
+  return <canvas ref={ref} style={{ width: '100%', height: '100%', imageRendering: 'pixelated' }} />;
+};
 
 const pulse = (phase: number, amt = 0.08) => 1 + Math.max(0, 1 - phase * 3) * amt;
 const bob = (phase: number, amt = 3) => Math.sin(phase * Math.PI * 2) * amt;
@@ -195,10 +225,10 @@ const crazyCars: MicrogameDef = {
         <div className="absolute left-0 right-0 bg-[#555]" style={{ bottom: "18%", height: "14%" }}>
           <div className="absolute left-0 right-0 bg-[#ffd700]" style={{ top: "45%", height: "6%" }} />
         </div>
-        <Sp x={28} y={62 - s.warioY} size={14} flip>
+        <Sp x={28} y={62 - s.warioY} size={14} flip sprite={WARIO_SPRITE}>
           {v.outcome === "lose" ? "😵" : s.warioY > 2 ? "🤸" : "🧍"}
         </Sp>
-        <Sp x={s.carX} y={72} size={14} flip={carFlip} rot={carFlip ? 180 : 0}>
+        <Sp x={s.carX} y={72} size={14} flip={carFlip} rot={carFlip ? 180 : 0} sprite={CAR_SPRITE}>
           {carEmoji}
         </Sp>
         {v.outcome === "win" && <Sp x={28} y={50} size={9}>✨</Sp>}
@@ -231,6 +261,7 @@ const warioWhirled: MicrogameDef = {
     }
   },
   View({ s, v }: { s: WarioWhirledS; v: ViewCtx }) {
+    const norm = ((s.angle % 360) + 360) % 360;
     return (
       <div className="absolute inset-0 flex items-center justify-center">
         {/* Target zone indicator */}
@@ -240,7 +271,7 @@ const warioWhirled: MicrogameDef = {
         {/* Spinning circle */}
         <div className="rounded-full border-4 border-yellow-400 bg-gradient-to-b from-yellow-600 to-yellow-800 flex items-center justify-center"
           style={{ width: "50%", height: "60%", transform: `rotate(${s.angle}deg)`, transition: s.stopped ? "none" : undefined }}>
-          <SpriteAsset id="face-happy" style={{ width: "20cqw", height: "20cqw", transform: "rotate(0deg)" }} />
+          <span style={{ fontSize: "20cqw", transform: "rotate(0deg)" }}>😈</span>
         </div>
         {/* Target marker at top */}
         <div className="absolute" style={{ top: "8%", left: "50%", transform: "translateX(-50%)", fontSize: "8cqw", color: "#22c55e" }}>
@@ -284,8 +315,8 @@ const savingFace: MicrogameDef = {
     const objEmoji = ['🪨', '🔨', '💣'][s.objType];
     return (
       <div className="absolute inset-0">
-        <Sp x={50} y={80} size={16}>{v.outcome === "lose" ? "😵" : "😈"}</Sp>
-        <Sp x={s.shieldX} y={65} size={14}>🛡️</Sp>
+        <Sp x={50} y={80} size={16} sprite={WARIO_SPRITE}>{v.outcome === "lose" ? "😵" : "😈"}</Sp>
+        <Sp x={s.shieldX} y={65} size={14} sprite={SHIELD_SPRITE}>🛡️</Sp>
         <Sp x={s.objX} y={clamp(s.objY, -10, 90)} size={10} rot={s.objY * 5}>{objEmoji}</Sp>
         <ResultFlash v={v} />
       </div>
@@ -321,7 +352,7 @@ const diamondDig: MicrogameDef = {
     return (
       <div className="absolute inset-0">
         <div className="absolute left-0 right-0 bottom-0 bg-[#4a3728]" style={{ height: "20%" }} />
-        <Sp x={s.dx} y={clamp(s.dy, -8, 95)} size={10} rot={s.dy * 3}>💎</Sp>
+        <Sp x={s.dx} y={clamp(s.dy, -8, 95)} size={10} rot={s.dy * 3} sprite={DIAMOND_SPRITE}>💎</Sp>
         <Sp x={s.bx} y={80 + bob(v.beatPhase, 0.7)} size={14}>🧺</Sp>
         {s.caught && <Sp x={s.bx} y={76} size={7}>💎</Sp>}
         <Sp x={s.bx} y={92} size={8}>{v.outcome === "lose" ? "😫" : s.caught ? "😋" : "😮"}</Sp>
@@ -335,7 +366,7 @@ const diamondDig: MicrogameDef = {
 /*  5. DODGE BALLS — Dodge the falling balls (Intro / Wario)           */
 /* ================================================================== */
 interface DodgeBallsS {
-  lane: number; balls: { lane: number; landT: number }[];
+  px: number; balls: { x: number; landT: number }[];
 }
 const LANE_X = [22, 50, 78];
 const dodgeBalls: MicrogameDef = {
@@ -428,7 +459,7 @@ const repellion: MicrogameDef = {
         <Sp x={15} y={10} size={4}>⭐</Sp>
         <Sp x={80} y={20} size={3}>✨</Sp>
         {s.ufos.map((ufo, i) => (
-          <Sp key={i} x={ufo.x} y={ufo.y + bob(v.beatPhase, 2)} size={13}>
+          <Sp key={i} x={ufo.x} y={ufo.y + bob(v.beatPhase, 2)} size={13} sprite={ufo.alive ? UFO_SPRITE : undefined}>
             {ufo.alive ? "🛸" : "💥"}
           </Sp>
         ))}
@@ -447,6 +478,7 @@ interface WarioWearS {
   correctIdx: number; selectedIdx: number;
 }
 const WARIO_CLOTHES = ['👔', '🧥', '👕'];
+const WARIO_CLOTHES_NAMES = ['shirt', 'jacket', 't-shirt'];
 const warioWear: MicrogameDef = {
   id: "wario_wear", instruction: "PUT ON!", lengthBars: 2, timeoutOutcome: "lose",
   palette: { outer: "#2b1d4f", frame: "#eab308", screen: "#fef3c7", text: "#eab308" },
@@ -644,14 +676,14 @@ const iSpy: MicrogameDef = {
   View({ s, v }: { s: ISpyS; v: ViewCtx }) {
     return (
       <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
-        <div className="font-black flex items-center gap-2" style={{ fontSize: "6cqw", color: "#eab308" }}>
-          Find: <SpriteAsset id={spriteFromNode(s.items[s.targetIdx])} style={{ width: "8cqw", height: "8cqw" }} />
+        <div className="font-black" style={{ fontSize: "6cqw", color: "#eab308" }}>
+          Find: {s.items[s.targetIdx]}
         </div>
         <div className="grid grid-cols-2 gap-2">
           {s.items.map((item, i) => (
             <div key={i} className="rounded-xl border-2 bg-white/10 p-2 flex items-center justify-center"
               style={{ fontSize: "10cqw", borderColor: s.selectedIdx === i ? '#ffd700' : 'rgba(255,255,255,0.3)' }}>
-              <SpriteAsset id={spriteFromNode(item)} style={{ width: "10cqw", height: "10cqw" }} />
+              {item}
             </div>
           ))}
         </div>
@@ -765,7 +797,7 @@ const INTRO_GAMES: MicrogameDef[] = [
 ];
 
 // Placeholder factory for stages not yet fully implemented
-function placeholderGame(id: string, instruction: string, _stage: string, stagePalette: StageDef['palette']): MicrogameDef {
+function placeholderGame(id: string, instruction: string, stage: string, stagePalette: StageDef['palette']): MicrogameDef {
   return {
     id, instruction, lengthBars: 2, timeoutOutcome: "lose",
     palette: stagePalette,

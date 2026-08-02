@@ -125,4 +125,6 @@ export interface EngineSnapshot {
   /** instruction text currently displayed (or null) */
   instruction: string | null;
   instructionAge: number; // beats since instruction appeared
+  /** current stage ID (e.g. 'intro', 'sports', etc.) */
+  currentStage: string | null;
 }
