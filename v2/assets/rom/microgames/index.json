@@ -1,0 +1,207 @@
+[
+  {
+    "id": 2,
+    "table": "0x083CBA60",
+    "png": "mg_002_screen_083CBA60_086CD724.png"
+  },
+  {
+    "id": 3,
+    "table": "0x083CBB8C",
+    "png": "mg_003_screen_083CBB8C_086CE37C.png"
+  },
+  {
+    "id": 5,
+    "table": "0x083CBF08",
+    "png": "mg_005_screen_083CBF08_086CF254.png"
+  },
+  {
+    "id": 6,
+    "table": "0x083CC180",
+    "png": "mg_006_screen_083CC180_086CFA68.png"
+  },
+  {
+    "id": 8,
+    "table": "0x083CC328",
+    "png": "mg_008_screen_083CC328_086D0874.png"
+  },
+  {
+    "id": 10,
+    "table": "0x083CC51C",
+    "png": "mg_010_screen_083CC51C_086D115C.png"
+  },
+  {
+    "id": 13,
+    "table": "0x083CCB44",
+    "png": "mg_013_screen_083CCB44_086D38C0.png"
+  },
+  {
+    "id": 14,
+    "table": "0x083CCC4C",
+    "png": "mg_014_screen_083CCC4C_086D48E4.png"
+  },
+  {
+    "id": 16,
+    "table": "0x083CCED0",
+    "png": "mg_016_screen_083CCED0_086D714C.png"
+  },
+  {
+    "id": 19,
+    "table": "0x083CD2C0",
+    "png": "mg_019_screen_083CD2C0_086D96E0.png"
+  },
+  {
+    "id": 20,
+    "table": "0x083CD3BC",
+    "png": "mg_020_screen_083CD3BC_086DA84C.png"
+  },
+  {
+    "id": 22,
+    "table": "0x083CD67C",
+    "png": "mg_022_screen_083CD67C_086DCF20.png"
+  },
+  {
+    "id": 23,
+    "table": "0x083CD7E4",
+    "png": "mg_023_screen_083CD7E4_086DE2D0.png"
+  },
+  {
+    "id": 26,
+    "table": "0x083CDC04",
+    "png": "mg_026_screen_083CDC04_086E1030.png"
+  },
+  {
+    "id": 27,
+    "table": "0x083CDE28",
+    "png": "mg_027_screen_083CDE28_086E2684.png"
+  },
+  {
+    "id": 30,
+    "table": "0x083CE2AC",
+    "png": "mg_030_screen_083CE2AC_086E3A40.png"
+  },
+  {
+    "id": 31,
+    "table": "0x083CE490",
+    "png": "mg_031_screen_083CE490_086E44DC.png"
+  },
+  {
+    "id": 36,
+    "table": "0x083CECD8",
+    "png": "mg_036_screen_083CECD8_086E8F68.png"
+  },
+  {
+    "id": 37,
+    "table": "0x083CEDE0",
+    "png": "mg_037_screen_083CEDE0_086EA3E4.png"
+  },
+  {
+    "id": 39,
+    "table": "0x083CF0B8",
+    "png": "mg_039_screen_083CF0B8_086EBD8C.png"
+  },
+  {
+    "id": 43,
+    "table": "0x083CF900",
+    "png": "mg_043_screen_083CF900_086EDCE0.png"
+  },
+  {
+    "id": 44,
+    "table": "0x083CFA3C",
+    "png": "mg_044_screen_083CFA3C_086EF3E0.png"
+  },
+  {
+    "id": 46,
+    "table": "0x083CFC6C",
+    "png": "mg_046_screen_083CFC6C_086F0348.png"
+  },
+  {
+    "id": 47,
+    "table": "0x083D01B8",
+    "png": "mg_047_screen_083D01B8_086F137C.png"
+  },
+  {
+    "id": 49,
+    "table": "0x083D062C",
+    "png": "mg_049_screen_083D062C_086E82E0.png"
+  },
+  {
+    "id": 50,
+    "table": "0x083D074C",
+    "png": "mg_050_screen_083D074C_086F2DBC.png"
+  },
+  {
+    "id": 53,
+    "table": "0x083D09D0",
+    "png": "mg_053_screen_083D09D0_086E85C0.png"
+  },
+  {
+    "id": 55,
+    "table": "0x083D0C74",
+    "png": "mg_055_screen_083D0C74_086F4574.png"
+  },
+  {
+    "id": 57,
+    "table": "0x083D0EBC",
+    "png": "mg_057_screen_083D0EBC_086F5D2C.png"
+  },
+  {
+    "id": 58,
+    "table": "0x083D100C",
+    "png": "mg_058_screen_083D100C_086F619C.png"
+  },
+  {
+    "id": 59,
+    "table": "0x083D1120",
+    "png": "mg_059_screen_083D1120_086F66E0.png"
+  },
+  {
+    "id": 60,
+    "table": "0x083D138C",
+    "png": "mg_060_screen_083D138C_086F6BA8.png"
+  },
+  {
+    "id": 64,
+    "table": "0x083D1DAC",
+    "png": "mg_064_screen_083D1DAC_086F8734.png"
+  },
+  {
+    "id": 68,
+    "table": "0x083D247C",
+    "png": "mg_068_screen_083D247C_086FF8F4.png"
+  },
+  {
+    "id": 69,
+    "table": "0x083D247C",
+    "png": "mg_069_screen_083D247C_086FF8F4.png"
+  },
+  {
+    "id": 70,
+    "table": "0x083D259C",
+    "png": "mg_070_screen_083D259C_086FC268.png"
+  },
+  {
+    "id": 71,
+    "table": "0x083D2888",
+    "png": "mg_071_screen_083D2888_08700344.png"
+  },
+  {
+    "id": 73,
+    "table": "0x083D2AD4",
+    "png": "mg_073_screen_083D2AD4_08701328.png"
+  },
+  {
+    "id": 74,
+    "table": "0x083D2C00",
+    "png": "mg_074_screen_083D2C00_087029F0.png"
+  },
+  {
+    "id": 77,
+    "table": "0x083D2FA0",
+    "png": "mg_077_screen_083D2FA0_08705C70.png"
+  },
+  {
+    "id": 78,
+    "table": "0x083D30C0",
+    "png": "mg_078_screen_083D30C0_08706E94.png"
+  }
+]
