@@ -1,0 +1,2452 @@
+[
+  {
+    "table": "0x083A8CAC",
+    "map": "0x0854613C",
+    "tileset": "0x08544A98",
+    "png": "screen_083A8CAC_0854613C.png",
+    "painted": 9308
+  },
+  {
+    "table": "0x083A8CAC",
+    "map": "0x08546294",
+    "tileset": "0x08544A98",
+    "png": "screen_083A8CAC_08546294.png",
+    "painted": 9024
+  },
+  {
+    "table": "0x083A8CAC",
+    "map": "0x085466D0",
+    "tileset": "0x08544A98",
+    "png": "screen_083A8CAC_085466D0.png",
+    "painted": 32256
+  },
+  {
+    "table": "0x083A994C",
+    "map": "0x08547FE8",
+    "tileset": "0x08547068",
+    "png": "screen_083A994C_08547FE8.png",
+    "painted": 17700
+  },
+  {
+    "table": "0x083A994C",
+    "map": "0x085481E8",
+    "tileset": "0x08547068",
+    "png": "screen_083A994C_085481E8.png",
+    "painted": 27348
+  },
+  {
+    "table": "0x083A994C",
+    "map": "0x08548210",
+    "tileset": "0x08547068",
+    "png": "screen_083A994C_08548210.png",
+    "painted": 36928
+  },
+  {
+    "table": "0x083AB784",
+    "map": "0x0869AD2C",
+    "tileset": "0x0869AB38",
+    "png": "screen_083AB784_0869AD2C.png",
+    "painted": 6618
+  },
+  {
+    "table": "0x083AB784",
+    "map": "0x0869B990",
+    "tileset": "0x0869AB38",
+    "png": "screen_083AB784_0869B990.png",
+    "painted": 8258
+  },
+  {
+    "table": "0x083AB978",
+    "map": "0x0869B810",
+    "tileset": "0x08699540",
+    "png": "screen_083AB978_0869B810.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083ABA90",
+    "map": "0x0858C2A4",
+    "tileset": "0x0857A5B8",
+    "png": "screen_083ABA90_0858C2A4.png",
+    "painted": 12768
+  },
+  {
+    "table": "0x083ABA90",
+    "map": "0x0858DC50",
+    "tileset": "0x0857A5B8",
+    "png": "screen_083ABA90_0858DC50.png",
+    "painted": 10560
+  },
+  {
+    "table": "0x083ABFB4",
+    "map": "0x0858DC50",
+    "tileset": "0x0857A5B8",
+    "png": "screen_083ABFB4_0858DC50.png",
+    "painted": 10560
+  },
+  {
+    "table": "0x083AC170",
+    "map": "0x0858CFB0",
+    "tileset": "0x08575DE8",
+    "png": "screen_083AC170_0858CFB0.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083AC48C",
+    "map": "0x0858DDCC",
+    "tileset": "0x0857DAD8",
+    "png": "screen_083AC48C_0858DDCC.png",
+    "painted": 28076
+  },
+  {
+    "table": "0x083AC48C",
+    "map": "0x0858E1AC",
+    "tileset": "0x0857DAD8",
+    "png": "screen_083AC48C_0858E1AC.png",
+    "painted": 3045
+  },
+  {
+    "table": "0x083AC77C",
+    "map": "0x0858D290",
+    "tileset": "0x0869AB38",
+    "png": "screen_083AC77C_0858D290.png",
+    "painted": 32837
+  },
+  {
+    "table": "0x083AC77C",
+    "map": "0x0869B990",
+    "tileset": "0x0869AB38",
+    "png": "screen_083AC77C_0869B990.png",
+    "painted": 8258
+  },
+  {
+    "table": "0x083AC92C",
+    "map": "0x0858CACC",
+    "tileset": "0x085752D0",
+    "png": "screen_083AC92C_0858CACC.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083ACB70",
+    "map": "0x0858CACC",
+    "tileset": "0x085752D0",
+    "png": "screen_083ACB70_0858CACC.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083ACE9C",
+    "map": "0x0858E910",
+    "tileset": "0x0857F104",
+    "png": "screen_083ACE9C_0858E910.png",
+    "painted": 8218
+  },
+  {
+    "table": "0x083ACE9C",
+    "map": "0x0858E910",
+    "tileset": "0x0857F104",
+    "png": "screen_083ACE9C_0858E910.png",
+    "painted": 8218
+  },
+  {
+    "table": "0x083ACF14",
+    "map": "0x0858F340",
+    "tileset": "0x08580F00",
+    "png": "screen_083ACF14_0858F340.png",
+    "painted": 30816
+  },
+  {
+    "table": "0x083ACF14",
+    "map": "0x0858F340",
+    "tileset": "0x08580F00",
+    "png": "screen_083ACF14_0858F340.png",
+    "painted": 30816
+  },
+  {
+    "table": "0x083AEF48",
+    "map": "0x085AFED4",
+    "tileset": "0x085AE4BC",
+    "png": "screen_083AEF48_085AFED4.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083AF390",
+    "map": "0x085AFED4",
+    "tileset": "0x085AFC3C",
+    "png": "screen_083AF390_085AFED4.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083B169C",
+    "map": "0x085AFED4",
+    "tileset": "0x085AFC3C",
+    "png": "screen_083B169C_085AFED4.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083B1AB8",
+    "map": "0x085BB388",
+    "tileset": "0x085BB1A4",
+    "png": "screen_083B1AB8_085BB388.png",
+    "painted": 28851
+  },
+  {
+    "table": "0x083B1AB8",
+    "map": "0x085BB544",
+    "tileset": "0x085BB1A4",
+    "png": "screen_083B1AB8_085BB544.png",
+    "painted": 6425
+  },
+  {
+    "table": "0x083B3218",
+    "map": "0x085CBA0C",
+    "tileset": "0x085C98C0",
+    "png": "screen_083B3218_085CBA0C.png",
+    "painted": 30544
+  },
+  {
+    "table": "0x083B3218",
+    "map": "0x085CBB28",
+    "tileset": "0x085C98C0",
+    "png": "screen_083B3218_085CBB28.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083B3370",
+    "map": "0x085CA264",
+    "tileset": "0x085C0BCC",
+    "png": "screen_083B3370_085CA264.png",
+    "painted": 40832
+  },
+  {
+    "table": "0x083B3690",
+    "map": "0x085CAAA4",
+    "tileset": "0x085C0BCC",
+    "png": "screen_083B3690_085CAAA4.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083B3A3C",
+    "map": "0x085CAAA4",
+    "tileset": "0x085C0BCC",
+    "png": "screen_083B3A3C_085CAAA4.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083B3C08",
+    "map": "0x085CAAA4",
+    "tileset": "0x085C0BCC",
+    "png": "screen_083B3C08_085CAAA4.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083B4194",
+    "map": "0x085E9840",
+    "tileset": "0x085E4FF4",
+    "png": "screen_083B4194_085E9840.png",
+    "painted": 6208
+  },
+  {
+    "table": "0x083B4194",
+    "map": "0x085E9774",
+    "tileset": "0x085E4FF4",
+    "png": "screen_083B4194_085E9774.png",
+    "painted": 39966
+  },
+  {
+    "table": "0x083B4194",
+    "map": "0x085E9038",
+    "tileset": "0x085E4FF4",
+    "png": "screen_083B4194_085E9038.png",
+    "painted": 15530
+  },
+  {
+    "table": "0x083B5834",
+    "map": "0x085FAE38",
+    "tileset": "0x085EC2E8",
+    "png": "screen_083B5834_085FAE38.png",
+    "painted": 36108
+  },
+  {
+    "table": "0x083B5834",
+    "map": "0x085FA9BC",
+    "tileset": "0x085EC2E8",
+    "png": "screen_083B5834_085FA9BC.png",
+    "painted": 19209
+  },
+  {
+    "table": "0x083B5BE0",
+    "map": "0x085FAE58",
+    "tileset": "0x085ECC8C",
+    "png": "screen_083B5BE0_085FAE58.png",
+    "painted": 6208
+  },
+  {
+    "table": "0x083B5DB0",
+    "map": "0x085FAD68",
+    "tileset": "0x085ECC8C",
+    "png": "screen_083B5DB0_085FAD68.png",
+    "painted": 22752
+  },
+  {
+    "table": "0x083B607C",
+    "map": "0x085FAE58",
+    "tileset": "0x085ECC8C",
+    "png": "screen_083B607C_085FAE58.png",
+    "painted": 6208
+  },
+  {
+    "table": "0x083B6190",
+    "map": "0x085FAD68",
+    "tileset": "0x085ECC8C",
+    "png": "screen_083B6190_085FAD68.png",
+    "painted": 22752
+  },
+  {
+    "table": "0x083B6304",
+    "map": "0x085FAEF4",
+    "tileset": "0x085ECC8C",
+    "png": "screen_083B6304_085FAEF4.png",
+    "painted": 16060
+  },
+  {
+    "table": "0x083B6504",
+    "map": "0x085FAD68",
+    "tileset": "0x085ECC8C",
+    "png": "screen_083B6504_085FAD68.png",
+    "painted": 22752
+  },
+  {
+    "table": "0x083B668C",
+    "map": "0x085FB798",
+    "tileset": "0x085EE064",
+    "png": "screen_083B668C_085FB798.png",
+    "painted": 24458
+  },
+  {
+    "table": "0x083B69C8",
+    "map": "0x085FB08C",
+    "tileset": "0x085F0F6C",
+    "png": "screen_083B69C8_085FB08C.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083B69C8",
+    "map": "0x085FBA60",
+    "tileset": "0x085F0F6C",
+    "png": "screen_083B69C8_085FBA60.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083B69C8",
+    "map": "0x085FBC5C",
+    "tileset": "0x085F0F6C",
+    "png": "screen_083B69C8_085FBC5C.png",
+    "painted": 22720
+  },
+  {
+    "table": "0x083B69C8",
+    "map": "0x085FBECC",
+    "tileset": "0x085F0F6C",
+    "png": "screen_083B69C8_085FBECC.png",
+    "painted": 23040
+  },
+  {
+    "table": "0x083B6D38",
+    "map": "0x085FAE58",
+    "tileset": "0x085EC2E8",
+    "png": "screen_083B6D38_085FAE58.png",
+    "painted": 34880
+  },
+  {
+    "table": "0x083B6D38",
+    "map": "0x085FA9BC",
+    "tileset": "0x085EC2E8",
+    "png": "screen_083B6D38_085FA9BC.png",
+    "painted": 19209
+  },
+  {
+    "table": "0x083B6E88",
+    "map": "0x085FC354",
+    "tileset": "0x085F2A28",
+    "png": "screen_083B6E88_085FC354.png",
+    "painted": 35972
+  },
+  {
+    "table": "0x083B77EC",
+    "map": "0x085FAD68",
+    "tileset": "0x085ECC8C",
+    "png": "screen_083B77EC_085FAD68.png",
+    "painted": 22752
+  },
+  {
+    "table": "0x083B8578",
+    "map": "0x085FAD68",
+    "tileset": "0x085ECC8C",
+    "png": "screen_083B8578_085FAD68.png",
+    "painted": 22752
+  },
+  {
+    "table": "0x083B89D4",
+    "map": "0x086187BC",
+    "tileset": "0x08616A00",
+    "png": "screen_083B89D4_086187BC.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083B98E8",
+    "map": "0x08635D3C",
+    "tileset": "0x08624E64",
+    "png": "screen_083B98E8_08635D3C.png",
+    "painted": 28288
+  },
+  {
+    "table": "0x083B9B5C",
+    "map": "0x086354C8",
+    "tileset": "0x08622E80",
+    "png": "screen_083B9B5C_086354C8.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083B9C90",
+    "map": "0x086342BC",
+    "tileset": "0x0861B68C",
+    "png": "screen_083B9C90_086342BC.png",
+    "painted": 40896
+  },
+  {
+    "table": "0x083B9DA4",
+    "map": "0x0863493C",
+    "tileset": "0x0861D5BC",
+    "png": "screen_083B9DA4_0863493C.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083BA24C",
+    "map": "0x08635894",
+    "tileset": "0x08623150",
+    "png": "screen_083BA24C_08635894.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083BA3D0",
+    "map": "0x086351A0",
+    "tileset": "0x08622B28",
+    "png": "screen_083BA3D0_086351A0.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083BA58C",
+    "map": "0x086343EC",
+    "tileset": "0x0861B7A4",
+    "png": "screen_083BA58C_086343EC.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083BA6F4",
+    "map": "0x08634CE0",
+    "tileset": "0x0861B7A4",
+    "png": "screen_083BA6F4_08634CE0.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083BA8AC",
+    "map": "0x08634CE0",
+    "tileset": "0x0861B7A4",
+    "png": "screen_083BA8AC_08634CE0.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083BAB30",
+    "map": "0x08634CE0",
+    "tileset": "0x0861B7A4",
+    "png": "screen_083BAB30_08634CE0.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083BAF94",
+    "map": "0x0863B844",
+    "tileset": "0x08639420",
+    "png": "screen_083BAF94_0863B844.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083BB198",
+    "map": "0x08634CE0",
+    "tileset": "0x0861B7A4",
+    "png": "screen_083BB198_08634CE0.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083BB340",
+    "map": "0x0863B434",
+    "tileset": "0x08637798",
+    "png": "screen_083BB340_0863B434.png",
+    "painted": 15131
+  },
+  {
+    "table": "0x083BB4B0",
+    "map": "0x08635D3C",
+    "tileset": "0x08624E64",
+    "png": "screen_083BB4B0_08635D3C.png",
+    "painted": 28288
+  },
+  {
+    "table": "0x083BB684",
+    "map": "0x086354C8",
+    "tileset": "0x08622E80",
+    "png": "screen_083BB684_086354C8.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083BB7F8",
+    "map": "0x086360CC",
+    "tileset": "0x08625374",
+    "png": "screen_083BB7F8_086360CC.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083BB910",
+    "map": "0x08644EC0",
+    "tileset": "0x08642B4C",
+    "png": "screen_083BB910_08644EC0.png",
+    "painted": 2266
+  },
+  {
+    "table": "0x083BB910",
+    "map": "0x08644E5C",
+    "tileset": "0x08642B4C",
+    "png": "screen_083BB910_08644E5C.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083BC554",
+    "map": "0x0864E328",
+    "tileset": "0x08647F0C",
+    "png": "screen_083BC554_0864E328.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083BC800",
+    "map": "0x0864E9D4",
+    "tileset": "0x08647F0C",
+    "png": "screen_083BC800_0864E9D4.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083BC948",
+    "map": "0x0864EF44",
+    "tileset": "0x0864AF84",
+    "png": "screen_083BC948_0864EF44.png",
+    "painted": 30312
+  },
+  {
+    "table": "0x083BC948",
+    "map": "0x0864F10C",
+    "tileset": "0x0864AF84",
+    "png": "screen_083BC948_0864F10C.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083BCF18",
+    "map": "0x0864ED98",
+    "tileset": "0x0864AF84",
+    "png": "screen_083BCF18_0864ED98.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083BD05C",
+    "map": "0x08650314",
+    "tileset": "0x0864F718",
+    "png": "screen_083BD05C_08650314.png",
+    "painted": 22272
+  },
+  {
+    "table": "0x083BD148",
+    "map": "0x0864ED98",
+    "tileset": "0x0864AF84",
+    "png": "screen_083BD148_0864ED98.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083BD2E0",
+    "map": "0x08650314",
+    "tileset": "0x0864F718",
+    "png": "screen_083BD2E0_08650314.png",
+    "painted": 22272
+  },
+  {
+    "table": "0x083BD438",
+    "map": "0x08653BCC",
+    "tileset": "0x0864AF84",
+    "png": "screen_083BD438_08653BCC.png",
+    "painted": 40836
+  },
+  {
+    "table": "0x083BD438",
+    "map": "0x0864ED98",
+    "tileset": "0x0864AF84",
+    "png": "screen_083BD438_0864ED98.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083BD728",
+    "map": "0x0864E9D4",
+    "tileset": "0x08647F0C",
+    "png": "screen_083BD728_0864E9D4.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083BD98C",
+    "map": "0x08654054",
+    "tileset": "0x086537B0",
+    "png": "screen_083BD98C_08654054.png",
+    "painted": 7060
+  },
+  {
+    "table": "0x083BD98C",
+    "map": "0x08653F50",
+    "tileset": "0x086537B0",
+    "png": "screen_083BD98C_08653F50.png",
+    "painted": 2802
+  },
+  {
+    "table": "0x083BD98C",
+    "map": "0x08653EAC",
+    "tileset": "0x086537B0",
+    "png": "screen_083BD98C_08653EAC.png",
+    "painted": 13301
+  },
+  {
+    "table": "0x083BEDD4",
+    "map": "0x08662BEC",
+    "tileset": "0x08656E74",
+    "png": "screen_083BEDD4_08662BEC.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083BEEB4",
+    "map": "0x08662EEC",
+    "tileset": "0x08657B44",
+    "png": "screen_083BEEB4_08662EEC.png",
+    "painted": 16390
+  },
+  {
+    "table": "0x083BF3FC",
+    "map": "0x086624FC",
+    "tileset": "0x08655DF8",
+    "png": "screen_083BF3FC_086624FC.png",
+    "painted": 38208
+  },
+  {
+    "table": "0x083BF710",
+    "map": "0x086624FC",
+    "tileset": "0x08655DF8",
+    "png": "screen_083BF710_086624FC.png",
+    "painted": 38208
+  },
+  {
+    "table": "0x083BFCE8",
+    "map": "0x08662910",
+    "tileset": "0x08655DF8",
+    "png": "screen_083BFCE8_08662910.png",
+    "painted": 35840
+  },
+  {
+    "table": "0x083BFFF0",
+    "map": "0x08662910",
+    "tileset": "0x08655DF8",
+    "png": "screen_083BFFF0_08662910.png",
+    "painted": 35840
+  },
+  {
+    "table": "0x083C022C",
+    "map": "0x086732FC",
+    "tileset": "0x08655DF8",
+    "png": "screen_083C022C_086732FC.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083C022C",
+    "map": "0x08662910",
+    "tileset": "0x08655DF8",
+    "png": "screen_083C022C_08662910.png",
+    "painted": 35840
+  },
+  {
+    "table": "0x083C0414",
+    "map": "0x08672D30",
+    "tileset": "0x086711BC",
+    "png": "screen_083C0414_08672D30.png",
+    "painted": 3671
+  },
+  {
+    "table": "0x083C0414",
+    "map": "0x08673248",
+    "tileset": "0x086711BC",
+    "png": "screen_083C0414_08673248.png",
+    "painted": 25010
+  },
+  {
+    "table": "0x083C1178",
+    "map": "0x08679720",
+    "tileset": "0x08674718",
+    "png": "screen_083C1178_08679720.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083C1364",
+    "map": "0x08678D94",
+    "tileset": "0x08674718",
+    "png": "screen_083C1364_08678D94.png",
+    "painted": 38592
+  },
+  {
+    "table": "0x083C16E4",
+    "map": "0x08678D94",
+    "tileset": "0x08674718",
+    "png": "screen_083C16E4_08678D94.png",
+    "painted": 38592
+  },
+  {
+    "table": "0x083C1858",
+    "map": "0x08679720",
+    "tileset": "0x08674718",
+    "png": "screen_083C1858_08679720.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083C19F4",
+    "map": "0x08678D94",
+    "tileset": "0x08674718",
+    "png": "screen_083C19F4_08678D94.png",
+    "painted": 38592
+  },
+  {
+    "table": "0x083C1B5C",
+    "map": "0x086793B8",
+    "tileset": "0x08674718",
+    "png": "screen_083C1B5C_086793B8.png",
+    "painted": 39040
+  },
+  {
+    "table": "0x083C1B5C",
+    "map": "0x0867946C",
+    "tileset": "0x08674718",
+    "png": "screen_083C1B5C_0867946C.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083C1D6C",
+    "map": "0x08678D94",
+    "tileset": "0x08674718",
+    "png": "screen_083C1D6C_08678D94.png",
+    "painted": 38592
+  },
+  {
+    "table": "0x083C2004",
+    "map": "0x08679720",
+    "tileset": "0x08674718",
+    "png": "screen_083C2004_08679720.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083C229C",
+    "map": "0x08678D94",
+    "tileset": "0x08674718",
+    "png": "screen_083C229C_08678D94.png",
+    "painted": 38592
+  },
+  {
+    "table": "0x083C3530",
+    "map": "0x0869BB14",
+    "tileset": "0x0869AB38",
+    "png": "screen_083C3530_0869BB14.png",
+    "painted": 8425
+  },
+  {
+    "table": "0x083C3648",
+    "map": "0x0858CACC",
+    "tileset": "0x085752D0",
+    "png": "screen_083C3648_0858CACC.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083C37E4",
+    "map": "0x0858CACC",
+    "tileset": "0x085752D0",
+    "png": "screen_083C37E4_0858CACC.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083C39FC",
+    "map": "0x0869BB14",
+    "tileset": "0x0869AB38",
+    "png": "screen_083C39FC_0869BB14.png",
+    "painted": 8425
+  },
+  {
+    "table": "0x083C3C50",
+    "map": "0x0869BB14",
+    "tileset": "0x0869AB38",
+    "png": "screen_083C3C50_0869BB14.png",
+    "painted": 8425
+  },
+  {
+    "table": "0x083C3D5C",
+    "map": "0x0858CACC",
+    "tileset": "0x085752D0",
+    "png": "screen_083C3D5C_0858CACC.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083C3EB8",
+    "map": "0x08690B18",
+    "tileset": "0x0868A1C0",
+    "png": "screen_083C3EB8_08690B18.png",
+    "painted": 40896
+  },
+  {
+    "table": "0x083C4164",
+    "map": "0x0858CACC",
+    "tileset": "0x085752D0",
+    "png": "screen_083C4164_0858CACC.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083C591C",
+    "map": "0x0869BB14",
+    "tileset": "0x0869AB38",
+    "png": "screen_083C591C_0869BB14.png",
+    "painted": 8425
+  },
+  {
+    "table": "0x083C5A24",
+    "map": "0x0858CACC",
+    "tileset": "0x085752D0",
+    "png": "screen_083C5A24_0858CACC.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083C5B84",
+    "map": "0x0858CACC",
+    "tileset": "0x085752D0",
+    "png": "screen_083C5B84_0858CACC.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083C5CB8",
+    "map": "0x0869BB14",
+    "tileset": "0x0869AB38",
+    "png": "screen_083C5CB8_0869BB14.png",
+    "painted": 8425
+  },
+  {
+    "table": "0x083C5F54",
+    "map": "0x0869BB14",
+    "tileset": "0x0869AB38",
+    "png": "screen_083C5F54_0869BB14.png",
+    "painted": 8425
+  },
+  {
+    "table": "0x083C605C",
+    "map": "0x0858CACC",
+    "tileset": "0x085752D0",
+    "png": "screen_083C605C_0858CACC.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083C61F8",
+    "map": "0x0858CACC",
+    "tileset": "0x085752D0",
+    "png": "screen_083C61F8_0858CACC.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083C69B8",
+    "map": "0x0858DDCC",
+    "tileset": "0x0857DAD8",
+    "png": "screen_083C69B8_0858DDCC.png",
+    "painted": 28076
+  },
+  {
+    "table": "0x083C69B8",
+    "map": "0x0858E1AC",
+    "tileset": "0x0857DAD8",
+    "png": "screen_083C69B8_0858E1AC.png",
+    "painted": 3045
+  },
+  {
+    "table": "0x083C6BA0",
+    "map": "0x0858DC50",
+    "tileset": "0x0857A5B8",
+    "png": "screen_083C6BA0_0858DC50.png",
+    "painted": 10560
+  },
+  {
+    "table": "0x083C6E5C",
+    "map": "0x0869B598",
+    "tileset": "0x08694A9C",
+    "png": "screen_083C6E5C_0869B598.png",
+    "painted": 24367
+  },
+  {
+    "table": "0x083C729C",
+    "map": "0x086ACE0C",
+    "tileset": "0x086A16C0",
+    "png": "screen_083C729C_086ACE0C.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083C7458",
+    "map": "0x086AD13C",
+    "tileset": "0x086A16C0",
+    "png": "screen_083C7458_086AD13C.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083C75A0",
+    "map": "0x086AD458",
+    "tileset": "0x086A16C0",
+    "png": "screen_083C75A0_086AD458.png",
+    "painted": 38144
+  },
+  {
+    "table": "0x083C77E8",
+    "map": "0x0869BCA0",
+    "tileset": "0x0869AB38",
+    "png": "screen_083C77E8_0869BCA0.png",
+    "painted": 8586
+  },
+  {
+    "table": "0x083C795C",
+    "map": "0x086AD51C",
+    "tileset": "0x086A16C0",
+    "png": "screen_083C795C_086AD51C.png",
+    "painted": 19759
+  },
+  {
+    "table": "0x083C795C",
+    "map": "0x086AD5D8",
+    "tileset": "0x086A16C0",
+    "png": "screen_083C795C_086AD5D8.png",
+    "painted": 6491
+  },
+  {
+    "table": "0x083C795C",
+    "map": "0x086AE198",
+    "tileset": "0x086A16C0",
+    "png": "screen_083C795C_086AE198.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083C81E4",
+    "map": "0x086AD51C",
+    "tileset": "0x086A16C0",
+    "png": "screen_083C81E4_086AD51C.png",
+    "painted": 19759
+  },
+  {
+    "table": "0x083C81E4",
+    "map": "0x086AD5D8",
+    "tileset": "0x086A16C0",
+    "png": "screen_083C81E4_086AD5D8.png",
+    "painted": 6491
+  },
+  {
+    "table": "0x083C81E4",
+    "map": "0x086AE198",
+    "tileset": "0x086A16C0",
+    "png": "screen_083C81E4_086AE198.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083C83C4",
+    "map": "0x086ADE9C",
+    "tileset": "0x086A16C0",
+    "png": "screen_083C83C4_086ADE9C.png",
+    "painted": 5340
+  },
+  {
+    "table": "0x083C83C4",
+    "map": "0x086AE010",
+    "tileset": "0x086A16C0",
+    "png": "screen_083C83C4_086AE010.png",
+    "painted": 4747
+  },
+  {
+    "table": "0x083C8A58",
+    "map": "0x086AE488",
+    "tileset": "0x086AE3D4",
+    "png": "screen_083C8A58_086AE488.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083C8D84",
+    "map": "0x086C2680",
+    "tileset": "0x086C01CC",
+    "png": "screen_083C8D84_086C2680.png",
+    "painted": 16320
+  },
+  {
+    "table": "0x083C90F0",
+    "map": "0x086CA480",
+    "tileset": "0x086C5670",
+    "png": "screen_083C90F0_086CA480.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083C90F0",
+    "map": "0x086CA8A4",
+    "tileset": "0x086C5670",
+    "png": "screen_083C90F0_086CA8A4.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083C9B1C",
+    "map": "0x086CA09C",
+    "tileset": "0x086C46BC",
+    "png": "screen_083C9B1C_086CA09C.png",
+    "painted": 30308
+  },
+  {
+    "table": "0x083CBA60",
+    "map": "0x086CD724",
+    "tileset": "0x086CD584",
+    "png": "screen_083CBA60_086CD724.png",
+    "painted": 11880
+  },
+  {
+    "table": "0x083CBB8C",
+    "map": "0x086CE37C",
+    "tileset": "0x086CE158",
+    "png": "screen_083CBB8C_086CE37C.png",
+    "painted": 12472
+  },
+  {
+    "table": "0x083CBF08",
+    "map": "0x086CF254",
+    "tileset": "0x086CED0C",
+    "png": "screen_083CBF08_086CF254.png",
+    "painted": 30720
+  },
+  {
+    "table": "0x083CC180",
+    "map": "0x086CFA68",
+    "tileset": "0x086CF6E8",
+    "png": "screen_083CC180_086CFA68.png",
+    "painted": 22465
+  },
+  {
+    "table": "0x083CC328",
+    "map": "0x086D0874",
+    "tileset": "0x086D05FC",
+    "png": "screen_083CC328_086D0874.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083CC51C",
+    "map": "0x086D115C",
+    "tileset": "0x086D0EB0",
+    "png": "screen_083CC51C_086D115C.png",
+    "painted": 17454
+  },
+  {
+    "table": "0x083CCB44",
+    "map": "0x086D38C0",
+    "tileset": "0x086D364C",
+    "png": "screen_083CCB44_086D38C0.png",
+    "painted": 28359
+  },
+  {
+    "table": "0x083CCC4C",
+    "map": "0x086D48E4",
+    "tileset": "0x086D46BC",
+    "png": "screen_083CCC4C_086D48E4.png",
+    "painted": 12458
+  },
+  {
+    "table": "0x083CCED0",
+    "map": "0x086D714C",
+    "tileset": "0x086D6EAC",
+    "png": "screen_083CCED0_086D714C.png",
+    "painted": 12472
+  },
+  {
+    "table": "0x083CD2C0",
+    "map": "0x086D96E0",
+    "tileset": "0x086D94CC",
+    "png": "screen_083CD2C0_086D96E0.png",
+    "painted": 15808
+  },
+  {
+    "table": "0x083CD2C0",
+    "map": "0x086D97A0",
+    "tileset": "0x086D94CC",
+    "png": "screen_083CD2C0_086D97A0.png",
+    "painted": 36480
+  },
+  {
+    "table": "0x083CD2C0",
+    "map": "0x086D9DB8",
+    "tileset": "0x086D94CC",
+    "png": "screen_083CD2C0_086D9DB8.png",
+    "painted": 40796
+  },
+  {
+    "table": "0x083CD3BC",
+    "map": "0x086DA84C",
+    "tileset": "0x086DA518",
+    "png": "screen_083CD3BC_086DA84C.png",
+    "painted": 18432
+  },
+  {
+    "table": "0x083CD67C",
+    "map": "0x086DCF20",
+    "tileset": "0x086DCC78",
+    "png": "screen_083CD67C_086DCF20.png",
+    "painted": 16829
+  },
+  {
+    "table": "0x083CD7E4",
+    "map": "0x086DE2D0",
+    "tileset": "0x086DDDD0",
+    "png": "screen_083CD7E4_086DE2D0.png",
+    "painted": 35840
+  },
+  {
+    "table": "0x083CDA94",
+    "map": "0x086DFA6C",
+    "tileset": "0x086DF79C",
+    "png": "screen_083CDA94_086DFA6C.png",
+    "painted": 24960
+  },
+  {
+    "table": "0x083CDC04",
+    "map": "0x086E1030",
+    "tileset": "0x086E0F20",
+    "png": "screen_083CDC04_086E1030.png",
+    "painted": 12288
+  },
+  {
+    "table": "0x083CDE28",
+    "map": "0x086E2684",
+    "tileset": "0x086E2318",
+    "png": "screen_083CDE28_086E2684.png",
+    "painted": 39808
+  },
+  {
+    "table": "0x083CE2AC",
+    "map": "0x086E3A40",
+    "tileset": "0x086E38A0",
+    "png": "screen_083CE2AC_086E3A40.png",
+    "painted": 3648
+  },
+  {
+    "table": "0x083CE490",
+    "map": "0x086E44DC",
+    "tileset": "0x086E3CA0",
+    "png": "screen_083CE490_086E44DC.png",
+    "painted": 16320
+  },
+  {
+    "table": "0x083CE740",
+    "map": "0x086E56B0",
+    "tileset": "0x086E5478",
+    "png": "screen_083CE740_086E56B0.png",
+    "painted": 12764
+  },
+  {
+    "table": "0x083CECD8",
+    "map": "0x086E8F68",
+    "tileset": "0x086E8D94",
+    "png": "screen_083CECD8_086E8F68.png",
+    "painted": 35119
+  },
+  {
+    "table": "0x083CEDE0",
+    "map": "0x086EA3E4",
+    "tileset": "0x086E9E30",
+    "png": "screen_083CEDE0_086EA3E4.png",
+    "painted": 16384
+  },
+  {
+    "table": "0x083CEDE0",
+    "map": "0x086EA1F4",
+    "tileset": "0x086E9E30",
+    "png": "screen_083CEDE0_086EA1F4.png",
+    "painted": 25824
+  },
+  {
+    "table": "0x083CEF0C",
+    "map": "0x086EB02C",
+    "tileset": "0x086EAEBC",
+    "png": "screen_083CEF0C_086EB02C.png",
+    "painted": 11102
+  },
+  {
+    "table": "0x083CF0B8",
+    "map": "0x086EBD8C",
+    "tileset": "0x086EB844",
+    "png": "screen_083CF0B8_086EBD8C.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083CF348",
+    "map": "0x086EC51C",
+    "tileset": "0x086EC420",
+    "png": "screen_083CF348_086EC51C.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083CF348",
+    "map": "0x086ECD34",
+    "tileset": "0x086EC420",
+    "png": "screen_083CF348_086ECD34.png",
+    "painted": 16320
+  },
+  {
+    "table": "0x083CF780",
+    "map": "0x086ED8C0",
+    "tileset": "0x086ED690",
+    "png": "screen_083CF780_086ED8C0.png",
+    "painted": 12202
+  },
+  {
+    "table": "0x083CF900",
+    "map": "0x086EDCE0",
+    "tileset": "0x086EDC48",
+    "png": "screen_083CF900_086EDCE0.png",
+    "painted": 13632
+  },
+  {
+    "table": "0x083CFA3C",
+    "map": "0x086EF3E0",
+    "tileset": "0x086EF074",
+    "png": "screen_083CFA3C_086EF3E0.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083CFC6C",
+    "map": "0x086F0348",
+    "tileset": "0x086F0128",
+    "png": "screen_083CFC6C_086F0348.png",
+    "painted": 23306
+  },
+  {
+    "table": "0x083CFC6C",
+    "map": "0x086F04D0",
+    "tileset": "0x086F0128",
+    "png": "screen_083CFC6C_086F04D0.png",
+    "painted": 29298
+  },
+  {
+    "table": "0x083D0088",
+    "map": "0x086F0FB4",
+    "tileset": "0x086F0F24",
+    "png": "screen_083D0088_086F0FB4.png",
+    "painted": 7680
+  },
+  {
+    "table": "0x083D01B8",
+    "map": "0x086F137C",
+    "tileset": "0x086F1170",
+    "png": "screen_083D01B8_086F137C.png",
+    "painted": 18234
+  },
+  {
+    "table": "0x083D02D8",
+    "map": "0x086F21C0",
+    "tileset": "0x086F2074",
+    "png": "screen_083D02D8_086F21C0.png",
+    "painted": 35840
+  },
+  {
+    "table": "0x083D062C",
+    "map": "0x086E82E0",
+    "tileset": "0x086E8044",
+    "png": "screen_083D062C_086E82E0.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083D074C",
+    "map": "0x086F2DBC",
+    "tileset": "0x086F2CE4",
+    "png": "screen_083D074C_086F2DBC.png",
+    "painted": 38912
+  },
+  {
+    "table": "0x083D0964",
+    "map": "0x086E8450",
+    "tileset": "0x086E8044",
+    "png": "screen_083D0964_086E8450.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083D09D0",
+    "map": "0x086E85C0",
+    "tileset": "0x086E8044",
+    "png": "screen_083D09D0_086E85C0.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083D0A30",
+    "map": "0x086E8718",
+    "tileset": "0x086E8044",
+    "png": "screen_083D0A30_086E8718.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083D0C74",
+    "map": "0x086F4574",
+    "tileset": "0x086F441C",
+    "png": "screen_083D0C74_086F4574.png",
+    "painted": 26624
+  },
+  {
+    "table": "0x083D0EBC",
+    "map": "0x086F5D2C",
+    "tileset": "0x086F5B08",
+    "png": "screen_083D0EBC_086F5D2C.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083D100C",
+    "map": "0x086F619C",
+    "tileset": "0x086F608C",
+    "png": "screen_083D100C_086F619C.png",
+    "painted": 26624
+  },
+  {
+    "table": "0x083D1120",
+    "map": "0x086F66E0",
+    "tileset": "0x086F6500",
+    "png": "screen_083D1120_086F66E0.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083D138C",
+    "map": "0x086F6BA8",
+    "tileset": "0x086F6AA0",
+    "png": "screen_083D138C_086F6BA8.png",
+    "painted": 4608
+  },
+  {
+    "table": "0x083D1B18",
+    "map": "0x086F7C20",
+    "tileset": "0x086F7A5C",
+    "png": "screen_083D1B18_086F7C20.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083D1B18",
+    "map": "0x086F7DB0",
+    "tileset": "0x086F7A5C",
+    "png": "screen_083D1B18_086F7DB0.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083D1DAC",
+    "map": "0x086F8734",
+    "tileset": "0x086F8578",
+    "png": "screen_083D1DAC_086F8734.png",
+    "painted": 15288
+  },
+  {
+    "table": "0x083D21FC",
+    "map": "0x086FA828",
+    "tileset": "0x086FA54C",
+    "png": "screen_083D21FC_086FA828.png",
+    "painted": 28144
+  },
+  {
+    "table": "0x083D247C",
+    "map": "0x086FF8F4",
+    "tileset": "0x086FF70C",
+    "png": "screen_083D247C_086FF8F4.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083D259C",
+    "map": "0x086FC268",
+    "tileset": "0x086FBFF0",
+    "png": "screen_083D259C_086FC268.png",
+    "painted": 28954
+  },
+  {
+    "table": "0x083D259C",
+    "map": "0x086FC360",
+    "tileset": "0x086FBFF0",
+    "png": "screen_083D259C_086FC360.png",
+    "painted": 12457
+  },
+  {
+    "table": "0x083D272C",
+    "map": "0x086FE870",
+    "tileset": "0x086FE81C",
+    "png": "screen_083D272C_086FE870.png",
+    "painted": 16384
+  },
+  {
+    "table": "0x083D2888",
+    "map": "0x08700344",
+    "tileset": "0x086FFD1C",
+    "png": "screen_083D2888_08700344.png",
+    "painted": 32640
+  },
+  {
+    "table": "0x083D2AD4",
+    "map": "0x08701328",
+    "tileset": "0x087012A4",
+    "png": "screen_083D2AD4_08701328.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083D2C00",
+    "map": "0x087029F0",
+    "tileset": "0x087025F8",
+    "png": "screen_083D2C00_087029F0.png",
+    "painted": 28606
+  },
+  {
+    "table": "0x083D2C00",
+    "map": "0x087027A8",
+    "tileset": "0x087025F8",
+    "png": "screen_083D2C00_087027A8.png",
+    "painted": 10332
+  },
+  {
+    "table": "0x083D2C00",
+    "map": "0x08702A08",
+    "tileset": "0x087025F8",
+    "png": "screen_083D2C00_08702A08.png",
+    "painted": 16384
+  },
+  {
+    "table": "0x083D2D64",
+    "map": "0x0870409C",
+    "tileset": "0x08703F90",
+    "png": "screen_083D2D64_0870409C.png",
+    "painted": 10240
+  },
+  {
+    "table": "0x083D2FA0",
+    "map": "0x08705C70",
+    "tileset": "0x08705860",
+    "png": "screen_083D2FA0_08705C70.png",
+    "painted": 10560
+  },
+  {
+    "table": "0x083D2FA0",
+    "map": "0x08705AF0",
+    "tileset": "0x08705860",
+    "png": "screen_083D2FA0_08705AF0.png",
+    "painted": 39872
+  },
+  {
+    "table": "0x083D30C0",
+    "map": "0x08706E94",
+    "tileset": "0x08706AF0",
+    "png": "screen_083D30C0_08706E94.png",
+    "painted": 15538
+  },
+  {
+    "table": "0x083D30C0",
+    "map": "0x08707014",
+    "tileset": "0x08706AF0",
+    "png": "screen_083D30C0_08707014.png",
+    "painted": 10560
+  },
+  {
+    "table": "0x083D31D0",
+    "map": "0x086FA828",
+    "tileset": "0x086FA54C",
+    "png": "screen_083D31D0_086FA828.png",
+    "painted": 28144
+  },
+  {
+    "table": "0x083D3884",
+    "map": "0x086FA828",
+    "tileset": "0x086FA54C",
+    "png": "screen_083D3884_086FA828.png",
+    "painted": 28144
+  },
+  {
+    "table": "0x083D3AD8",
+    "map": "0x0870B224",
+    "tileset": "0x0870B038",
+    "png": "screen_083D3AD8_0870B224.png",
+    "painted": 13148
+  },
+  {
+    "table": "0x083D3AD8",
+    "map": "0x0870B3E4",
+    "tileset": "0x0870B038",
+    "png": "screen_083D3AD8_0870B3E4.png",
+    "painted": 13080
+  },
+  {
+    "table": "0x083D3C68",
+    "map": "0x0870CF38",
+    "tileset": "0x0870CD70",
+    "png": "screen_083D3C68_0870CF38.png",
+    "painted": 40764
+  },
+  {
+    "table": "0x083D3D94",
+    "map": "0x0870D570",
+    "tileset": "0x0870D460",
+    "png": "screen_083D3D94_0870D570.png",
+    "painted": 6592
+  },
+  {
+    "table": "0x083D3F50",
+    "map": "0x0870E300",
+    "tileset": "0x0870DF18",
+    "png": "screen_083D3F50_0870E300.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083D4100",
+    "map": "0x0870CF38",
+    "tileset": "0x0870CD70",
+    "png": "screen_083D4100_0870CF38.png",
+    "painted": 40764
+  },
+  {
+    "table": "0x083D42AC",
+    "map": "0x087105CC",
+    "tileset": "0x0870FE5C",
+    "png": "screen_083D42AC_087105CC.png",
+    "painted": 14640
+  },
+  {
+    "table": "0x083D42AC",
+    "map": "0x08710048",
+    "tileset": "0x0870FE5C",
+    "png": "screen_083D42AC_08710048.png",
+    "painted": 19560
+  },
+  {
+    "table": "0x083D42AC",
+    "map": "0x0871042C",
+    "tileset": "0x0870FE5C",
+    "png": "screen_083D42AC_0871042C.png",
+    "painted": 30720
+  },
+  {
+    "table": "0x083D4620",
+    "map": "0x08711ED4",
+    "tileset": "0x08711B44",
+    "png": "screen_083D4620_08711ED4.png",
+    "painted": 40448
+  },
+  {
+    "table": "0x083D4764",
+    "map": "0x087130C0",
+    "tileset": "0x08712EAC",
+    "png": "screen_083D4764_087130C0.png",
+    "painted": 22432
+  },
+  {
+    "table": "0x083D4764",
+    "map": "0x08713960",
+    "tileset": "0x08712EAC",
+    "png": "screen_083D4764_08713960.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083D4A4C",
+    "map": "0x08714470",
+    "tileset": "0x08714228",
+    "png": "screen_083D4A4C_08714470.png",
+    "painted": 19166
+  },
+  {
+    "table": "0x083D4F38",
+    "map": "0x0870CF38",
+    "tileset": "0x0870CD70",
+    "png": "screen_083D4F38_0870CF38.png",
+    "painted": 40764
+  },
+  {
+    "table": "0x083D50C0",
+    "map": "0x08718A30",
+    "tileset": "0x087185BC",
+    "png": "screen_083D50C0_08718A30.png",
+    "painted": 15406
+  },
+  {
+    "table": "0x083D5590",
+    "map": "0x0871CC30",
+    "tileset": "0x0871B3A8",
+    "png": "screen_083D5590_0871CC30.png",
+    "painted": 24576
+  },
+  {
+    "table": "0x083D55FC",
+    "map": "0x0871D4F0",
+    "tileset": "0x0871B3A8",
+    "png": "screen_083D55FC_0871D4F0.png",
+    "painted": 11008
+  },
+  {
+    "table": "0x083D55FC",
+    "map": "0x0871D448",
+    "tileset": "0x0871B3A8",
+    "png": "screen_083D55FC_0871D448.png",
+    "painted": 16320
+  },
+  {
+    "table": "0x083D55FC",
+    "map": "0x0871D6CC",
+    "tileset": "0x0871B3A8",
+    "png": "screen_083D55FC_0871D6CC.png",
+    "painted": 16070
+  },
+  {
+    "table": "0x083D57BC",
+    "map": "0x0871D958",
+    "tileset": "0x0871D83C",
+    "png": "screen_083D57BC_0871D958.png",
+    "painted": 18560
+  },
+  {
+    "table": "0x083D58E0",
+    "map": "0x0871DD18",
+    "tileset": "0x0871DC64",
+    "png": "screen_083D58E0_0871DD18.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083D5B20",
+    "map": "0x0871F508",
+    "tileset": "0x0871F2D8",
+    "png": "screen_083D5B20_0871F508.png",
+    "painted": 20324
+  },
+  {
+    "table": "0x083D5C68",
+    "map": "0x08720638",
+    "tileset": "0x0872051C",
+    "png": "screen_083D5C68_08720638.png",
+    "painted": 5248
+  },
+  {
+    "table": "0x083D5D7C",
+    "map": "0x087208CC",
+    "tileset": "0x0872071C",
+    "png": "screen_083D5D7C_087208CC.png",
+    "painted": 23040
+  },
+  {
+    "table": "0x083D60D4",
+    "map": "0x08721F3C",
+    "tileset": "0x08721BBC",
+    "png": "screen_083D60D4_08721F3C.png",
+    "painted": 9752
+  },
+  {
+    "table": "0x083D621C",
+    "map": "0x087226F8",
+    "tileset": "0x08722604",
+    "png": "screen_083D621C_087226F8.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083D6348",
+    "map": "0x0872407C",
+    "tileset": "0x087238D4",
+    "png": "screen_083D6348_0872407C.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083D69D0",
+    "map": "0x08727308",
+    "tileset": "0x08726FA0",
+    "png": "screen_083D69D0_08727308.png",
+    "painted": 40512
+  },
+  {
+    "table": "0x083D7148",
+    "map": "0x0872A598",
+    "tileset": "0x0872A254",
+    "png": "screen_083D7148_0872A598.png",
+    "painted": 39081
+  },
+  {
+    "table": "0x083D77C8",
+    "map": "0x0872AF20",
+    "tileset": "0x0872ABE8",
+    "png": "screen_083D77C8_0872AF20.png",
+    "painted": 37578
+  },
+  {
+    "table": "0x083D78F4",
+    "map": "0x0872B8E8",
+    "tileset": "0x0872B784",
+    "png": "screen_083D78F4_0872B8E8.png",
+    "painted": 10810
+  },
+  {
+    "table": "0x083D7A08",
+    "map": "0x0872D3DC",
+    "tileset": "0x0872D230",
+    "png": "screen_083D7A08_0872D3DC.png",
+    "painted": 40741
+  },
+  {
+    "table": "0x083D7A08",
+    "map": "0x0872D3DC",
+    "tileset": "0x0872D230",
+    "png": "screen_083D7A08_0872D3DC.png",
+    "painted": 40741
+  },
+  {
+    "table": "0x083D7B44",
+    "map": "0x0872E68C",
+    "tileset": "0x0872E434",
+    "png": "screen_083D7B44_0872E68C.png",
+    "painted": 16694
+  },
+  {
+    "table": "0x083D7C80",
+    "map": "0x0872FF74",
+    "tileset": "0x0872FC70",
+    "png": "screen_083D7C80_0872FF74.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083D7C80",
+    "map": "0x0872FF58",
+    "tileset": "0x0872FC70",
+    "png": "screen_083D7C80_0872FF58.png",
+    "painted": 24576
+  },
+  {
+    "table": "0x083D7DEC",
+    "map": "0x087322FC",
+    "tileset": "0x087320A4",
+    "png": "screen_083D7DEC_087322FC.png",
+    "painted": 10752
+  },
+  {
+    "table": "0x083D7F0C",
+    "map": "0x0873315C",
+    "tileset": "0x08732FC8",
+    "png": "screen_083D7F0C_0873315C.png",
+    "painted": 39513
+  },
+  {
+    "table": "0x083D80B8",
+    "map": "0x08733C38",
+    "tileset": "0x08733878",
+    "png": "screen_083D80B8_08733C38.png",
+    "painted": 6703
+  },
+  {
+    "table": "0x083D821C",
+    "map": "0x08734AF4",
+    "tileset": "0x0873417C",
+    "png": "screen_083D821C_08734AF4.png",
+    "painted": 2357
+  },
+  {
+    "table": "0x083D821C",
+    "map": "0x087342DC",
+    "tileset": "0x0873417C",
+    "png": "screen_083D821C_087342DC.png",
+    "painted": 38922
+  },
+  {
+    "table": "0x083D8294",
+    "map": "0x087342DC",
+    "tileset": "0x0873417C",
+    "png": "screen_083D8294_087342DC.png",
+    "painted": 38922
+  },
+  {
+    "table": "0x083D83CC",
+    "map": "0x0873657C",
+    "tileset": "0x087364D0",
+    "png": "screen_083D83CC_0873657C.png",
+    "painted": 3931
+  },
+  {
+    "table": "0x083D8A48",
+    "map": "0x08736B68",
+    "tileset": "0x087369B4",
+    "png": "screen_083D8A48_08736B68.png",
+    "painted": 22528
+  },
+  {
+    "table": "0x083D8B8C",
+    "map": "0x08738144",
+    "tileset": "0x08737E6C",
+    "png": "screen_083D8B8C_08738144.png",
+    "painted": 22528
+  },
+  {
+    "table": "0x083D8B8C",
+    "map": "0x08738438",
+    "tileset": "0x08737E6C",
+    "png": "screen_083D8B8C_08738438.png",
+    "painted": 22528
+  },
+  {
+    "table": "0x083D8CF0",
+    "map": "0x08738F98",
+    "tileset": "0x08738D18",
+    "png": "screen_083D8CF0_08738F98.png",
+    "painted": 9932
+  },
+  {
+    "table": "0x083D8CF0",
+    "map": "0x087391A0",
+    "tileset": "0x08738D18",
+    "png": "screen_083D8CF0_087391A0.png",
+    "painted": 9932
+  },
+  {
+    "table": "0x083D8EB4",
+    "map": "0x0873BFA8",
+    "tileset": "0x0873BDB8",
+    "png": "screen_083D8EB4_0873BFA8.png",
+    "painted": 10752
+  },
+  {
+    "table": "0x083D8FFC",
+    "map": "0x0873CA1C",
+    "tileset": "0x0873C960",
+    "png": "screen_083D8FFC_0873CA1C.png",
+    "painted": 3584
+  },
+  {
+    "table": "0x083D9110",
+    "map": "0x0873E634",
+    "tileset": "0x0873E380",
+    "png": "screen_083D9110_0873E634.png",
+    "painted": 32496
+  },
+  {
+    "table": "0x083D9110",
+    "map": "0x0873E824",
+    "tileset": "0x0873E380",
+    "png": "screen_083D9110_0873E824.png",
+    "painted": 18668
+  },
+  {
+    "table": "0x083D92AC",
+    "map": "0x087402B4",
+    "tileset": "0x0873FBE8",
+    "png": "screen_083D92AC_087402B4.png",
+    "painted": 30720
+  },
+  {
+    "table": "0x083D9520",
+    "map": "0x086D38C0",
+    "tileset": "0x086D364C",
+    "png": "screen_083D9520_086D38C0.png",
+    "painted": 28359
+  },
+  {
+    "table": "0x083D97F0",
+    "map": "0x087419A8",
+    "tileset": "0x08741350",
+    "png": "screen_083D97F0_087419A8.png",
+    "painted": 13223
+  },
+  {
+    "table": "0x083D985C",
+    "map": "0x08741FBC",
+    "tileset": "0x08741350",
+    "png": "screen_083D985C_08741FBC.png",
+    "painted": 14808
+  },
+  {
+    "table": "0x083D98C8",
+    "map": "0x087424E4",
+    "tileset": "0x08741350",
+    "png": "screen_083D98C8_087424E4.png",
+    "painted": 10157
+  },
+  {
+    "table": "0x083D99DC",
+    "map": "0x08744C58",
+    "tileset": "0x087448EC",
+    "png": "screen_083D99DC_08744C58.png",
+    "painted": 36480
+  },
+  {
+    "table": "0x083D9BEC",
+    "map": "0x08745358",
+    "tileset": "0x08745328",
+    "png": "screen_083D9BEC_08745358.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083DA124",
+    "map": "0x08747540",
+    "tileset": "0x08747238",
+    "png": "screen_083DA124_08747540.png",
+    "painted": 10240
+  },
+  {
+    "table": "0x083DA6AC",
+    "map": "0x0874BA54",
+    "tileset": "0x0874B5B8",
+    "png": "screen_083DA6AC_0874BA54.png",
+    "painted": 33586
+  },
+  {
+    "table": "0x083DA960",
+    "map": "0x0874D3A0",
+    "tileset": "0x0874D248",
+    "png": "screen_083DA960_0874D3A0.png",
+    "painted": 16937
+  },
+  {
+    "table": "0x083DAAB0",
+    "map": "0x0874EBA0",
+    "tileset": "0x0874E9A0",
+    "png": "screen_083DAAB0_0874EBA0.png",
+    "painted": 17316
+  },
+  {
+    "table": "0x083DAE30",
+    "map": "0x0874FAF4",
+    "tileset": "0x0874FA64",
+    "png": "screen_083DAE30_0874FAF4.png",
+    "painted": 26160
+  },
+  {
+    "table": "0x083DAFF4",
+    "map": "0x087530B4",
+    "tileset": "0x08752D34",
+    "png": "screen_083DAFF4_087530B4.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083DAFF4",
+    "map": "0x0875314C",
+    "tileset": "0x08752D34",
+    "png": "screen_083DAFF4_0875314C.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083DB174",
+    "map": "0x0875521C",
+    "tileset": "0x08754F74",
+    "png": "screen_083DB174_0875521C.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083DB4A4",
+    "map": "0x08756F58",
+    "tileset": "0x08756AF8",
+    "png": "screen_083DB4A4_08756F58.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083DB7B8",
+    "map": "0x0875A15C",
+    "tileset": "0x08759E8C",
+    "png": "screen_083DB7B8_0875A15C.png",
+    "painted": 28151
+  },
+  {
+    "table": "0x083DBA5C",
+    "map": "0x0875BFB8",
+    "tileset": "0x0875BA88",
+    "png": "screen_083DBA5C_0875BFB8.png",
+    "painted": 30720
+  },
+  {
+    "table": "0x083DBF8C",
+    "map": "0x087E1530",
+    "tileset": "0x08761678",
+    "png": "screen_083DBF8C_087E1530.png",
+    "painted": 2560
+  },
+  {
+    "table": "0x083DBF8C",
+    "map": "0x08762454",
+    "tileset": "0x08761678",
+    "png": "screen_083DBF8C_08762454.png",
+    "painted": 40959
+  },
+  {
+    "table": "0x083DBF8C",
+    "map": "0x0876252C",
+    "tileset": "0x08761678",
+    "png": "screen_083DBF8C_0876252C.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083DC2DC",
+    "map": "0x08767B68",
+    "tileset": "0x08767A60",
+    "png": "screen_083DC2DC_08767B68.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083DC6EC",
+    "map": "0x086D3C58",
+    "tileset": "0x086D364C",
+    "png": "screen_083DC6EC_086D3C58.png",
+    "painted": 25503
+  },
+  {
+    "table": "0x083DCA40",
+    "map": "0x0876BDB0",
+    "tileset": "0x0876BA70",
+    "png": "screen_083DCA40_0876BDB0.png",
+    "painted": 14352
+  },
+  {
+    "table": "0x083DCA40",
+    "map": "0x0876C040",
+    "tileset": "0x0876BA70",
+    "png": "screen_083DCA40_0876C040.png",
+    "painted": 16213
+  },
+  {
+    "table": "0x083DCB8C",
+    "map": "0x0876DDF8",
+    "tileset": "0x0876D860",
+    "png": "screen_083DCB8C_0876DDF8.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083DCB8C",
+    "map": "0x0876DA1C",
+    "tileset": "0x0876D860",
+    "png": "screen_083DCB8C_0876DA1C.png",
+    "painted": 2268
+  },
+  {
+    "table": "0x083DCD64",
+    "map": "0x0877147C",
+    "tileset": "0x08770908",
+    "png": "screen_083DCD64_0877147C.png",
+    "painted": 22656
+  },
+  {
+    "table": "0x083DCDB8",
+    "map": "0x08770B18",
+    "tileset": "0x0876EF38",
+    "png": "screen_083DCDB8_08770B18.png",
+    "painted": 5600
+  },
+  {
+    "table": "0x083DCE00",
+    "map": "0x08770B18",
+    "tileset": "0x0876EF38",
+    "png": "screen_083DCE00_08770B18.png",
+    "painted": 5600
+  },
+  {
+    "table": "0x083DD580",
+    "map": "0x08778908",
+    "tileset": "0x08778790",
+    "png": "screen_083DD580_08778908.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083DD580",
+    "map": "0x087789BC",
+    "tileset": "0x08778790",
+    "png": "screen_083DD580_087789BC.png",
+    "painted": 21120
+  },
+  {
+    "table": "0x083DD6A8",
+    "map": "0x0877DAF4",
+    "tileset": "0x0877A4F0",
+    "png": "screen_083DD6A8_0877DAF4.png",
+    "painted": 4135
+  },
+  {
+    "table": "0x083DD6A8",
+    "map": "0x0877DA14",
+    "tileset": "0x0877A4F0",
+    "png": "screen_083DD6A8_0877DA14.png",
+    "painted": 32000
+  },
+  {
+    "table": "0x083DD84C",
+    "map": "0x08780014",
+    "tileset": "0x0877FE0C",
+    "png": "screen_083DD84C_08780014.png",
+    "painted": 11520
+  },
+  {
+    "table": "0x083DD84C",
+    "map": "0x0878058C",
+    "tileset": "0x0877FE0C",
+    "png": "screen_083DD84C_0878058C.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083DD938",
+    "map": "0x08781480",
+    "tileset": "0x087810E4",
+    "png": "screen_083DD938_08781480.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083DF234",
+    "map": "0x08782484",
+    "tileset": "0x08782378",
+    "png": "screen_083DF234_08782484.png",
+    "painted": 7044
+  },
+  {
+    "table": "0x083DF5D4",
+    "map": "0x08785DE4",
+    "tileset": "0x08785B44",
+    "png": "screen_083DF5D4_08785DE4.png",
+    "painted": 34816
+  },
+  {
+    "table": "0x083DF5D4",
+    "map": "0x08785F3C",
+    "tileset": "0x08785B44",
+    "png": "screen_083DF5D4_08785F3C.png",
+    "painted": 7671
+  },
+  {
+    "table": "0x083DF918",
+    "map": "0x08788B10",
+    "tileset": "0x08787488",
+    "png": "screen_083DF918_08788B10.png",
+    "painted": 32040
+  },
+  {
+    "table": "0x083DF918",
+    "map": "0x08788FE4",
+    "tileset": "0x08787488",
+    "png": "screen_083DF918_08788FE4.png",
+    "painted": 30870
+  },
+  {
+    "table": "0x083DFA14",
+    "map": "0x0878B474",
+    "tileset": "0x0878B3C4",
+    "png": "screen_083DFA14_0878B474.png",
+    "painted": 36864
+  },
+  {
+    "table": "0x083DFA14",
+    "map": "0x0878B474",
+    "tileset": "0x0878B3C4",
+    "png": "screen_083DFA14_0878B474.png",
+    "painted": 36864
+  },
+  {
+    "table": "0x083DFC5C",
+    "map": "0x0878E190",
+    "tileset": "0x0878DE68",
+    "png": "screen_083DFC5C_0878E190.png",
+    "painted": 11440
+  },
+  {
+    "table": "0x083DFC5C",
+    "map": "0x0878E220",
+    "tileset": "0x0878DE68",
+    "png": "screen_083DFC5C_0878E220.png",
+    "painted": 23040
+  },
+  {
+    "table": "0x083DFF7C",
+    "map": "0x087910C0",
+    "tileset": "0x08790E48",
+    "png": "screen_083DFF7C_087910C0.png",
+    "painted": 30874
+  },
+  {
+    "table": "0x083E1740",
+    "map": "0x08795A50",
+    "tileset": "0x08793480",
+    "png": "screen_083E1740_08795A50.png",
+    "painted": 28764
+  },
+  {
+    "table": "0x083E19EC",
+    "map": "0x08798BC0",
+    "tileset": "0x087989C4",
+    "png": "screen_083E19EC_08798BC0.png",
+    "painted": 17318
+  },
+  {
+    "table": "0x083E1A64",
+    "map": "0x08798D78",
+    "tileset": "0x087989C4",
+    "png": "screen_083E1A64_08798D78.png",
+    "painted": 17318
+  },
+  {
+    "table": "0x083E1ADC",
+    "map": "0x08798F28",
+    "tileset": "0x087989C4",
+    "png": "screen_083E1ADC_08798F28.png",
+    "painted": 17318
+  },
+  {
+    "table": "0x083E1D70",
+    "map": "0x086DF140",
+    "tileset": "0x086DEF18",
+    "png": "screen_083E1D70_086DF140.png",
+    "painted": 2108
+  },
+  {
+    "table": "0x083E1FC0",
+    "map": "0x08767B68",
+    "tileset": "0x08767A60",
+    "png": "screen_083E1FC0_08767B68.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083E2254",
+    "map": "0x0879B5FC",
+    "tileset": "0x0879B314",
+    "png": "screen_083E2254_0879B5FC.png",
+    "painted": 15648
+  },
+  {
+    "table": "0x083E2374",
+    "map": "0x0879C4B4",
+    "tileset": "0x0879C238",
+    "png": "screen_083E2374_0879C4B4.png",
+    "painted": 17136
+  },
+  {
+    "table": "0x083E2654",
+    "map": "0x0879DC44",
+    "tileset": "0x0879DA68",
+    "png": "screen_083E2654_0879DC44.png",
+    "painted": 2499
+  },
+  {
+    "table": "0x083E2654",
+    "map": "0x0879DB90",
+    "tileset": "0x0879DA68",
+    "png": "screen_083E2654_0879DB90.png",
+    "painted": 2716
+  },
+  {
+    "table": "0x083E2F18",
+    "map": "0x0879FF00",
+    "tileset": "0x0879FDA0",
+    "png": "screen_083E2F18_0879FF00.png",
+    "painted": 16768
+  },
+  {
+    "table": "0x083E2F18",
+    "map": "0x087A00D8",
+    "tileset": "0x0879FDA0",
+    "png": "screen_083E2F18_087A00D8.png",
+    "painted": 8436
+  },
+  {
+    "table": "0x083E304C",
+    "map": "0x087A1C28",
+    "tileset": "0x087A1A84",
+    "png": "screen_083E304C_087A1C28.png",
+    "painted": 12544
+  },
+  {
+    "table": "0x083E3180",
+    "map": "0x087A2E0C",
+    "tileset": "0x087A2C50",
+    "png": "screen_083E3180_087A2E0C.png",
+    "painted": 16101
+  },
+  {
+    "table": "0x083E3314",
+    "map": "0x087A4614",
+    "tileset": "0x087A43D4",
+    "png": "screen_083E3314_087A4614.png",
+    "painted": 22876
+  },
+  {
+    "table": "0x083E3488",
+    "map": "0x087A4DF4",
+    "tileset": "0x087A4AE0",
+    "png": "screen_083E3488_087A4DF4.png",
+    "painted": 4489
+  },
+  {
+    "table": "0x083E35A8",
+    "map": "0x087A7CBC",
+    "tileset": "0x087A6ECC",
+    "png": "screen_083E35A8_087A7CBC.png",
+    "painted": 4801
+  },
+  {
+    "table": "0x083E3708",
+    "map": "0x087A97B4",
+    "tileset": "0x087A9180",
+    "png": "screen_083E3708_087A97B4.png",
+    "painted": 32640
+  },
+  {
+    "table": "0x083E386C",
+    "map": "0x087AB7C4",
+    "tileset": "0x087AB5E0",
+    "png": "screen_083E386C_087AB7C4.png",
+    "painted": 7296
+  },
+  {
+    "table": "0x083E41B0",
+    "map": "0x087B1874",
+    "tileset": "0x087B0FA0",
+    "png": "screen_083E41B0_087B1874.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083E41B0",
+    "map": "0x087B1854",
+    "tileset": "0x087B0FA0",
+    "png": "screen_083E41B0_087B1854.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083E540C",
+    "map": "0x087B42D0",
+    "tileset": "0x087B4174",
+    "png": "screen_083E540C_087B42D0.png",
+    "painted": 36864
+  },
+  {
+    "table": "0x083E5554",
+    "map": "0x087B5608",
+    "tileset": "0x087B52EC",
+    "png": "screen_083E5554_087B5608.png",
+    "painted": 8028
+  },
+  {
+    "table": "0x083E5D4C",
+    "map": "0x087BC944",
+    "tileset": "0x087BC6DC",
+    "png": "screen_083E5D4C_087BC944.png",
+    "painted": 18854
+  },
+  {
+    "table": "0x083E5D4C",
+    "map": "0x087BCD60",
+    "tileset": "0x087BC6DC",
+    "png": "screen_083E5D4C_087BCD60.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083E6474",
+    "map": "0x087BDCEC",
+    "tileset": "0x087BDCA0",
+    "png": "screen_083E6474_087BDCEC.png",
+    "painted": 33536
+  },
+  {
+    "table": "0x083E6DF0",
+    "map": "0x086F4028",
+    "tileset": "0x086F3D70",
+    "png": "screen_083E6DF0_086F4028.png",
+    "painted": 7776
+  },
+  {
+    "table": "0x083E81B4",
+    "map": "0x087C44F4",
+    "tileset": "0x087C3874",
+    "png": "screen_083E81B4_087C44F4.png",
+    "painted": 22997
+  },
+  {
+    "table": "0x083E844C",
+    "map": "0x087C6B50",
+    "tileset": "0x087C6AF8",
+    "png": "screen_083E844C_087C6B50.png",
+    "painted": 38912
+  },
+  {
+    "table": "0x083E85C0",
+    "map": "0x087CA51C",
+    "tileset": "0x087C85E0",
+    "png": "screen_083E85C0_087CA51C.png",
+    "painted": 28028
+  },
+  {
+    "table": "0x083E85C0",
+    "map": "0x087CA88C",
+    "tileset": "0x087C85E0",
+    "png": "screen_083E85C0_087CA88C.png",
+    "painted": 13892
+  },
+  {
+    "table": "0x083E8964",
+    "map": "0x087CDD1C",
+    "tileset": "0x087CDBC8",
+    "png": "screen_083E8964_087CDD1C.png",
+    "painted": 3766
+  },
+  {
+    "table": "0x083E8CD8",
+    "map": "0x087D321C",
+    "tileset": "0x087D31B4",
+    "png": "screen_083E8CD8_087D321C.png",
+    "painted": 8192
+  },
+  {
+    "table": "0x083E8CD8",
+    "map": "0x087D39C4",
+    "tileset": "0x087D31B4",
+    "png": "screen_083E8CD8_087D39C4.png",
+    "painted": 38400
+  },
+  {
+    "table": "0x083E8CD8",
+    "map": "0x087D3384",
+    "tileset": "0x087D31B4",
+    "png": "screen_083E8CD8_087D3384.png",
+    "painted": 6435
+  },
+  {
+    "table": "0x083E8E04",
+    "map": "0x087D4E98",
+    "tileset": "0x087D4C10",
+    "png": "screen_083E8E04_087D4E98.png",
+    "painted": 38912
+  },
+  {
+    "table": "0x083E92B4",
+    "map": "0x087DB56C",
+    "tileset": "0x087D9900",
+    "png": "screen_083E92B4_087DB56C.png",
+    "painted": 10012
+  },
+  {
+    "table": "0x083EB768",
+    "map": "0x087DDF68",
+    "tileset": "0x087DDD6C",
+    "png": "screen_083EB768_087DDF68.png",
+    "painted": 5794
+  },
+  {
+    "table": "0x083EB864",
+    "map": "0x087DFFC4",
+    "tileset": "0x087DFB40",
+    "png": "screen_083EB864_087DFFC4.png",
+    "painted": 40960
+  },
+  {
+    "table": "0x083EB864",
+    "map": "0x087DFCD8",
+    "tileset": "0x087DFB40",
+    "png": "screen_083EB864_087DFCD8.png",
+    "painted": 36864
+  },
+  {
+    "table": "0x083EB864",
+    "map": "0x087DFC9C",
+    "tileset": "0x087DFB40",
+    "png": "screen_083EB864_087DFC9C.png",
+    "painted": 40960
+  }
+]
