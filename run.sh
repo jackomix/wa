@@ -4,12 +4,18 @@
 #
 #  macOS script to install dependencies and launch the dev server.
 #
-#  USAGE:
-#    chmod +x run.sh
-#    ./run.sh            # runs the v1 build (default)
-#    ./run.sh v1         # same thing, explicit
-#    ./run.sh v2         # runs the v2 build
+#  This repo has TWO parallel builds that share node_modules:
 #
+#    v1  "Micro Mania"  — 40+ hand-coded microgames, emoji + pixel art
+#    v2  "ROM-faithful"  — 139 microgames from ROM decompilation, real art
+#
+#  USAGE:
+#    ./run.sh            # runs v1 (default)
+#    ./run.sh v1         # same thing, explicit
+#    ./run.sh v2         # runs the v2 ROM-faithful build
+#
+#  You can also double-click "Play WarioWare v2.command" in Finder
+#  to launch v2 without a terminal.
 # ──────────────────────────────────────────────────────────────
 
 set -e
@@ -41,10 +47,10 @@ BUILD="${1:-v1}"
 
 case "$BUILD" in
   v1)
-    echo "🎮  Starting WarioWare v1 (original emoji/pixel-art build)..."
+    echo "🎮  Starting Micro Mania (v1)..."
     echo "   ─────────────────────────────────────────────────"
-    echo "   This is the build with 40+ hand-coded microgames,"
-    echo "   stage selection, character interludes, and ROM"
+    echo "   40+ hand-coded microgames across 9 stages,"
+    echo "   character interludes, stage selection, and ROM"
     echo "   graphics loading. Uses emoji + pixel art sprites."
     echo ""
     echo "   Controls: Arrow keys = move, Space = action"
@@ -53,13 +59,13 @@ case "$BUILD" in
     ;;
 
   v2)
-    echo "🧪  Starting WarioWare v2 (ROM-faithful actor/behavior build)..."
+    echo "🧪  Starting WarioWare v2 (ROM-faithful)..."
     echo "   ─────────────────────────────────────────────────"
-    echo "   This is the newer architecture with actor/behavior/"
-    echo "   event-sheet system, ROM-extracted pixel art costumes,"
-    echo "   and data-driven microgame specs from the actual ROM."
+    echo "   139 microgames recreated from the actual ROM."
+    echo "   Actor/behavior/event-sheet system, real pixel art"
+    echo "   costumes extracted from the GBA ROM, and a"
+    echo "   Mario Paint-style editor."
     echo ""
-    echo "   ⚠️  The v2 build is still experimental/unfinished."
     echo "   Controls: Arrow keys = move, Space = action"
     echo "   ─────────────────────────────────────────────────"
     npx vite dev --config v2/vite.config.ts
@@ -70,10 +76,13 @@ case "$BUILD" in
     echo ""
     echo "Usage: $0 [v1|v2]"
     echo ""
-    echo "  v1  — Original build (40+ hand-coded microgames, emoji + pixel art)"
-    echo "  v2  — New ROM-faithful build (actor/behavior system, ROM-extracted art)"
+    echo "  v1  — Micro Mania (40+ hand-coded microgames, emoji + pixel art)"
+    echo "  v2  — ROM-faithful (139 microgames from decompilation, real art)"
     echo ""
     echo "Default is v1 if you don't specify."
+    echo ""
+    echo "Tip: You can also double-click 'Play WarioWare v2.command' in Finder"
+    echo "     to launch v2 without a terminal."
     exit 1
     ;;
 esac
